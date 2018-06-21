@@ -1,0 +1,246 @@
+/*丹溪    健康画像*/
+article.infi-main{
+  padding-top:25px;
+}
+.infi-ele-form{
+  margin-top:10px;
+  overflow: hidden;
+  width:100%;
+  >div.infi-ele-form-content{
+    width:60%;
+    float:left;
+    height:780px;
+    border:solid 1px #ccc;
+    display: inline-block;
+
+    >div.infi-ele-top-form{
+      height:100%;
+      width:100%;
+      //border-bottom:solid #ccc 1px;
+      display: inline-block;
+      >div.infi-ele-left-form{
+        height:100%;
+        width:40%;
+        float:left;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-right:1px solid #ccc;
+        display: inline-block;
+
+        >div{
+          .infi-ele-left-form-span{
+            width:90%;
+            margin:0px 15px;
+            background-color: #ddd;
+            line-height:30px;
+            display: inline-block;
+            text-align: center;
+            color:#333;
+          }
+          >div{
+            >div.row{
+              margin:0 10px;
+              font-size:12px;
+              cursor: pointer;
+              >div{
+                >a{
+                  cursor: pointer;
+                }
+                margin:0 5px;
+                padding:0;
+              }
+            }
+          }
+        }
+      }
+      >div.infi-ele-right-form{
+        display: inline-block;
+        height:100%;
+        width:60%;
+        float:left;
+        overflow-y: auto;
+
+        >.infi-content{
+          margin:10px 10px 10px 20px;
+          >.infi-content-title{
+            overflow: hidden;
+            >h5{
+              font-weight: bold;
+              display: inline-block;
+              float: left;
+              color: #16a2da;
+              //color:#AF5FF9;
+            }
+            >span{
+              float:left;
+              margin-left:10px;
+            }
+          }
+          >h5 {
+            font-weight: bold;
+          }
+          >hr{
+            border-bottom:solid #ccc 1px;
+            margin:5px 0px;
+          }
+          >.table{
+            margin-top:10px;
+          }
+          >.row{
+            margin:0;
+            >div{
+              padding:0;
+              >h5{
+                font-weight: bold;
+                display: inline-block;
+              }
+            }
+            >.col-md-1{
+              width:70px;
+            }
+          }
+        }
+      }
+    }
+    >div.infi-ele-bottom-form{
+      display: inline-block;
+      width:100%;
+      height:30%;
+      overflow-y: auto;
+      >div{
+        >div{
+          >div{
+            line-height:25px;
+            >h5{
+              font-weight: bold;
+              display: inline-block;
+              width:30%;
+            }
+            >div{
+              display: inline-block;
+              margin:0;
+              width:30%;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+  div.chart{
+    width:40%;
+    height:780px;
+    float:left;
+    border-top:solid 1px #ccc;
+    border-left:solid 1px #ccc;
+    border-bottom:solid 1px #ccc;
+
+    >div {
+      >a{//健康档案链接
+        color:#333;
+        font-size:16px;
+        float:right;
+        margin: 5px 5px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.infi-ele-form h4{
+  display: inline-block;
+  margin: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.infi-ele-form-footer h4{
+  display: inline-block;
+  margin: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.infi-ele-form-footer{
+  height:500px;
+  width:100%;
+  border-bottom:solid 1px #ccc;
+  border-left:solid 1px #ccc;
+  border-right:solid 1px #ccc;
+}
+.infi-ele-form-footer .nav li a{
+  color:#16a2da;
+}
+.infi-ele-form-footer .nav li.active a{
+  color:#666;
+}
+.infi-ele-form-footer{
+  >.marginten{
+    >.infi-dietaryAdvice{
+      >div{
+        >h5{
+          font-weight: bold;
+        }
+        >div{
+          text-indent: 2em;
+        }
+      }
+    }
+
+    >.infi-sportAdvice{
+      line-height:34px;
+      color:#666;
+    }
+
+    >.infi-medicalAdvice{
+      >.infi-head{
+        background-color: #cfe6f1;
+        margin:0;
+
+        >div{
+          text-align: center;
+          >h5{
+            font-weight:bold;
+            line-height:30px;
+          }
+        }
+      }
+
+      >.infi-content{
+        >div{
+          text-align: center;
+          >span{
+            line-height:28px;
+          }
+        }
+      }
+    }
+  }
+}
+//#chart1{
+//  >div{
+//    margin-left:30px;
+//  }
+//}
+.infi-ele-danger{
+  text-align: center;
+  line-height: 40px;
+  background: #ffdddd;
+  width:90%;
+  margin:5px auto;
+}
+.infi-ele-abnormal{
+  margin: 10px 16px;
+  color: #538800;
+  font-size: 16px;
+}
+.chart-tooltip{
+  position: absolute;
+  top:10px;
+  left:0px;
+  background-color: #eef;
+  color:#333;
+  width:30px;
+  height:auto;
+}
+.infi-ele-paragraph
+{
+  text-indent: 2em;
+}

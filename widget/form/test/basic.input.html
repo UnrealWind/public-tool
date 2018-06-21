@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		<link rel="stylesheet" type="text/css" href="../../../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../datetimepicker/css/bootstrap-datetimepicker.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../scss/infi-form.scss"/>		
+	</head>
+	<body>
+		<header class="navbar navbar-default infi-header clearfix">
+		    <div class="navbar-header infi-header-logo">
+		        <span class="logo"></span>
+		    </div>
+
+		    <div class="infi-header-title pull-left">
+		        结构化取数系统
+		    </div>
+
+		    <div class="box-user pull-right">
+		        <img src="../../../image/user-logo.png" class="user-logo"/>
+		        王中艺
+		        <i class="pull-right glyphicon glyphicon-menu-down"></i>
+		    </div>
+
+		    <div class="box-button pull-right">
+		        <i class="glyphicon glyphicon-fullscreen"></i>
+		        <i class="glyphicon glyphicon-bell"></i>
+		    </div>
+		</header>
+		<!-- 头部导航 END -->
+
+		<!-- 左部导航 -->
+		<nav class="infi-main-nav">
+		    <ul class="list-group">
+		        <li class="list-group-item" data-toggle="collapse" href="#extract-data">
+		            <i class="icon glyphicon glyphicon-list"></i>
+		            数据提取
+		            <i class="icon-angle glyphicon glyphicon-menu-down pull-right"></i>
+		            <ul class="list-group hide-nav collapse in">
+		                <li class="list-group-item btn-href list-group-active" data-href="">
+		                    <a><i class="glyphicon fa fa-circle"></i>新建任务</a>
+		                </li>
+		                <li class="list-group-item btn-href" data-href="">
+		                    <a><i class="glyphicon fa fa-circle"></i>查看任务</a>
+		                </li>
+		                <li class="list-group-item btn-href" data-href="">
+		                    <a><i class="glyphicon fa fa-circle"></i>审核任务</a>
+		                </li>
+		            </ul>
+		        </li>
+		        <li class="list-group-item" data-toggle="collapse" href="#">
+		            <i class="icon glyphicon glyphicon-list-alt"></i>多科就诊分析
+		        </li>
+		        <li class="list-group-item" data-toggle="collapse" href="#">
+		            <i class="icon glyphicon glyphicon-barcode"></i>描述统计
+		        </li>
+		    </ul>
+		</nav>
+		<!-- 左部导航 END -->
+
+		<!-- 右部内容 -->
+		<article class="infi-main" ng-app="infi-form">
+		    <div ng-controller="inputData" class="row infi-form">
+				<div class="infi-form-navi col-md-2">
+					
+				</div>
+
+				<div class="infi-form-inputs col-md-10">
+					<div ng-repeat="modal in basicInput.data.version" class="infi-modal-box">
+						<h2 class="infi-modal-name" ng-bind="modal.label"></h2>
+						<ul class="infi-modal-inputs form-inline">
+							<li ng-repeat = "input in modal.children">
+								<input-text input="input" ng-if="input.type=='小文本输入'"></input-text>
+								<input-number input="input" ng-if="input.type=='数值输入-单值'"></input-number>
+								<input-date input="input" ng-if="input.type=='时间-年月日'"></input-date>
+								<input-radio input="input" parent="parent" parent="input.children" ng-if="input.type=='单选'"></input-radio>
+								<input-checkbox input="input" parent="parent" parent="input.children" ng-if="input.type=='多选'"></input-checkbox>
+								<input-radio-extend input="input" parent="parent" parent="input.children" ng-if="input.type=='单选+扩充输入'"></input-radio-extend>
+								<input-checkbox-extend input="input" parent="parent" parent="input.children" ng-if="input.type=='多选+扩充输入'"></input-checkbox-extend>
+								<input-textarea input="input" ng-if="input.type=='大文本输入'"></input-textarea>
+							</li>
+						</ul>
+					</div><!-- end of infi-modal-box -->
+				</div> 
+
+			</div>
+		</article>
+		<!-- 右部内容 END-->
+
+		<footer class="infi-footer">
+		    <p class="infi-footer-detail">
+		        北京无极慧通科技公司 | 北京市海淀区苏州街18号长远天地大厦A1座906室 | 联系电话:010-82686850
+		    </p>
+		</footer>
+		
+	</body>
+	<script type="text/javascript" src="../../../../bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="../../../../bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="../../../../bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../../../datetimepicker/js/moment.js"></script>
+	<script type="text/javascript" src="../../../datetimepicker/js/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript" src="../../../datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="text/javascript" src="../../../../bower_components/ng-file-upload-shim/ng-file-upload.js"></script>
+	<script type="text/javascript" src="../../../../bower_components/ng-file-upload-shim/ng-file-upload-shim.js"></script>
+
+	<script type="text/javascript" src="../app.module.js"></script>
+	<script src="basic.js"></script>
+	<script src="../basic.directive.js"></script>
+	<script src="../basic.services.js"></script>
+</html>

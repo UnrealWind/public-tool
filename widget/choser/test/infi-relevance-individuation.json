@@ -1,0 +1,391 @@
+{
+    "status":"ok",
+    "description":"",
+    "data":[
+        {
+            "label":null,
+            "value":null,
+            "context":[
+                {
+                    "label": "院内类",
+                    "value": "ynl909",
+                    "order": "",
+                    "options": [
+                        {
+                            "label": "院内",
+                            "value": "yn909"
+                        },
+                        {
+                            "label": "院外",
+                            "value": "yw909"
+                        }
+                    ]
+                },
+            {
+                "label": "第几次",
+                "value": "djc101",
+                "order": "",
+                "options": [
+                    {
+                        "label": "1次",
+                        "value": "d11"
+                    },
+                    {
+                        "label": "2次",
+                        "value": "d22"
+                    },
+                    {
+                        "label": "3次",
+                        "value": "d33"
+                    }
+                ]
+            }
+        ],
+        "relation":[
+            {
+                "label":"请选择关联属性",
+                "value":"78987",
+                "tabs": [
+                    {
+                        "label": "手术时间",
+                        "value": "yzlx909",
+                        "options":""
+                    },
+                    {
+                        "label": "术前诊断",
+                        "value": "starttime909",
+                        "options":[
+                            {
+                                "label":"常见疾病",
+                                "value":"sjjb787",
+                                "tabs":[
+                                    {
+                                        "label":"冠心病",
+                                        "value":"gxb89",
+                                        "options":[
+                                            {
+                                                "label":"段心肌梗死",
+                                                "value":"dxjgs8989"
+                                            },
+                                            {
+                                                "label":"非ST段心肌梗死",
+                                                "value":"fdxjgs8989"
+                                            },
+                                            {
+                                                "label":"心绞痛",
+                                                "value":"xjt908"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label":"高血脂",
+                                        "value":"gxb89",
+                                        "options":[
+                                              {
+                                                "label":"肥胖",
+                                                "value":"fp2131"
+                                            },
+                                            {
+                                                "label":"肝脂肪",
+                                                "value":"zfg89789"
+                                            },
+                                            {
+                                                "label":"心绞痛",
+                                                "value":"xjt8988"
+                                            }
+                                        ]
+                                      }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "options":[
+                    {
+                        "label":"陈旧性心肌梗塞",
+                        "value":"cjxxjgs898"
+                    },
+                    {
+                        "label":"急性冠脉综合征",
+                        "value":"jxgzh897979"
+                    },
+                    {
+                        "label":"不稳定型心绞痛",
+                        "value":"bwd77897"
+                    },
+                    {
+                        "label":"感冒",
+                        "value":"gm23"
+                    },
+                    {
+                        "label":"慢性支气管炎",
+                        "value":"mxzqgy213"
+                    },
+                    {
+                        "label":"哮喘",
+                        "value":"xq3123"
+                    },
+                    {
+                        "label":"肺炎",
+                        "value":"fy123"
+                    },
+                    {
+                        "label":"百日咳",
+                        "value":"brk423"
+                    },
+                    {
+                        "label":"鼾症",
+                        "value":"hz65546"
+                    },
+                    {
+                        "label":"慢性腹泻",
+                        "value":"mxfx546"
+                    },
+                    {
+                        "label":"急性胃炎",
+                        "value":"jxwy67586"
+                    }
+                ],
+                "more":[
+                    {
+                        "label":"陈旧性心肌梗塞",
+                        "value":"cjxxjgs898"
+                    },
+                    {
+                        "label":"急性冠脉综合征",
+                        "value":"jxgzh897979"
+                    },
+                    {
+                        "label":"不稳定型心绞痛",
+                        "value":"bwd77897"
+                    },
+                    {
+                        "label":"感冒",
+                        "value":"gm23"
+                    },
+                    {
+                        "label":"慢性支气管炎",
+                        "value":"mxzqgy213"
+                    },
+                    {
+                        "label":"哮喘",
+                        "value":"xq3123"
+                    },
+                    {
+                        "label":"肺炎",
+                        "value":"fy123"
+                    },
+                    {
+                        "label":"百日咳",
+                        "value":"brk423"
+                    },
+                    {
+                        "label":"鼾症",
+                        "value":"hz65546"
+                    },
+                    {
+                        "label":"慢性腹泻",
+                        "value":"mxfx546"
+                    },
+                    {
+                        "label":"急性胃炎",
+                        "value":"jxwy67586"
+                    },
+                    {
+                        "label":"急性腐蚀性胃炎",
+                        "value":"jxfsxwy454"
+                    },
+                    {
+                        "label":"胃肠道功能紊乱",
+                        "value":"wcdgnwl905"
+                    },
+                    {
+                        "label":"食物中毒",
+                        "value":"swzd41234"
+                    },
+                    {
+                        "label":"腹痛",
+                        "value":"ft13213"
+                    },
+                    {
+                        "label":"偏头痛",
+                        "value":"ptt7890"
+                    }
+                ],
+                "individuation":[
+                    {
+                        "label":"冠状动脉支架植入术个性化属性",
+                        "value":"ggdmzjzrgxh6743",
+                        "options":[
+                            {
+                                "label":"无复流",
+                                "value":"wfl86345"
+                            },
+                            {
+                                "label":"支架植入总数",
+                                "value":"zjzrzs80546"
+                            },
+                            {
+                                "label":"介入治疗部位",
+                                "value":"jrzjlbw8654",
+                                "options":[
+                                    {
+                                        "label":"前降支",
+                                        "value":"qjz8654"
+                                    },
+                                    {
+                                        "label":"右冠",
+                                        "value":"yg75375"
+                                    },
+                                    {
+                                        "label":"回旋支",
+                                        "value":"hxz74678"
+                                    },
+                                    {
+                                        "label": "球囊反搏术",
+                                        "value": "zdmnq76543"
+                                    },
+                                    {
+                                        "label": "骨瘤切除术",
+                                        "value": "lggl435"
+                                    },
+                                    {
+                                        "label": "下血肿切开引流术",
+                                        "value": "mzjm5489"
+                                    },
+                                    {
+                                        "label": "骨折复位术",
+                                        "value": "lgax975"
+                                    },
+                                    {
+                                        "label": "颅骨修补术",
+                                        "value": "lgxb598"
+                                    },
+                                    {
+                                        "label": "病变切除术",
+                                        "value": "xnbqb57676"
+                                    },
+                                    {
+                                        "label": "脑干肿瘤切除术",
+                                        "value": "nglqc543"
+                                    },
+                                    {
+                                        "label": "感觉后根切断术",
+                                        "value": "scsj582"
+                                    }
+                                ],
+                                "more":[
+                                    {
+                                        "label":"前降支",
+                                        "value":"qjz8654"
+                                    },
+                                    {
+                                        "label":"右冠",
+                                        "value":"yg75375"
+                                    },
+                                    {
+                                        "label":"回旋支",
+                                        "value":"hxz74678"
+                                    },
+                                    {
+                                        "label": "动脉造影术",
+                                        "value": "gzdmzys7878"
+                                    },
+                                    {
+                                        "label": "支架植入术",
+                                        "value": "gzdmzjs9078"
+                                    },
+                                    {
+                                        "label": "扩张血管成形术",
+                                        "value": "jpgzdmqnkzs"
+                                    },
+                                    {
+                                        "label": "球囊反搏术",
+                                        "value": "zdmnq76543"
+                                    },
+                                    {
+                                        "label": "骨瘤切除术",
+                                        "value": "lggl435"
+                                    },
+                                    {
+                                        "label": "下血肿切开引流术",
+                                        "value": "mzjm5489"
+                                    },
+                                    {
+                                        "label": "骨折复位术",
+                                        "value": "lgax975"
+                                    },
+                                    {
+                                        "label": "颅骨修补术",
+                                        "value": "lgxb598"
+                                    },
+                                    {
+                                        "label": "病变切除术",
+                                        "value": "xnbqb57676"
+                                    },
+                                    {
+                                        "label": "脑干肿瘤切除术",
+                                        "value": "nglqc543"
+                                    },
+                                    {
+                                        "label": "感觉后根切断术",
+                                        "value": "scsj582"
+                                    },
+                                    {
+                                        "label": "微血管减压术",
+                                        "value": "lsjwxg19089"
+                                    },
+                                    {
+                                        "label": "松解减压术",
+                                        "value": "mbsjhuty121"
+                                    },
+                                    {
+                                        "label": "椎动脉减压术",
+                                        "value": "jdmjys1211"
+                                    },
+                                    {
+                                        "label": "脓肿切开引流术 ",
+                                        "value": "zgnqzlyks21"
+                                    },
+                                    {
+                                        "label": "多发血肿清除术",
+                                        "value": "jncxbfz12123"
+                                    }
+                                ],
+                                "relation":[
+                                    {
+                                        "label":"关联属性",
+                                        "value":"8gl9909",
+                                        "options":[
+                                            {
+                                                  "label":"植入支架名称",
+                                                  "value":"zjzrmc7569",
+                                                  "relation":[
+                                                        {
+                                                              "label":"请选择关联属性",
+                                                              "value":"qxzglsx898",
+                                                              "options":[
+                                                                    {
+                                                                      "label":"植入支架直径",
+                                                                      "value":"zrzjzj8766"
+                                                                    },
+                                                                    {
+                                                                      "label":"植入支架长度",
+                                                                      "value":"zrzjcd977"
+                                                                    }
+                                                              ]
+                                                        }
+                                                  ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+        }
+    ]
+}

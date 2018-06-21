@@ -1,0 +1,147 @@
+@import "frame";
+
+$infi-container-row-line-height: 36px;
+$infi-padding-zero: 0px;
+$infi-padding-container: 15px;
+$infi-padding-container-section: 5px;
+$infi-margin-screen-botton-top: 10px;
+$infi-margin-zero: 0px;
+$infi-border-width: 1px;
+
+@mixin border($px,$line,$color){
+  border:$px $line $color;
+}
+@mixin padding($top,$right,$bottom,$left){
+  padding:$top $right $bottom $left;
+}
+@mixin margin($top,$right,$bottom,$left){
+  margin:$top $right $bottom $left;
+}
+
+.infi-container{
+  width: $widthFull;
+  @include padding($infi-padding-zero,$infi-padding-container,$infi-padding-zero,$infi-padding-container);
+
+  >.row{
+    line-height: $infi-container-row-line-height;
+  }
+}
+.infi-container-section{
+  @include padding($infi-padding-container-section,$infi-padding-container-section,$infi-padding-container-section,$infi-padding-container-section);
+  border: $borderStyle;
+}
+
+
+/************************************修改筛选条件***************************************/
+
+$infi-screen-modify-width: 80%;
+$infi-modify-title-margin: 10px;
+$infi-title-left: 20%;
+
+.infi-logic-container{
+  >div{
+    max-height:500px;
+    overflow-y: auto;
+  }
+}
+.infi-screen-modify{
+  width: $infi-screen-modify-width;
+  border: $borderStyle;
+  min-height:300px;
+}
+.infi-screen-modify-title{
+  width: $widthFull;
+  margin: $infi-modify-title-margin $infi-margin-zero;
+  overflow: hidden;
+}
+.infi-title-left{
+  display: inline-block;
+  width: $infi-title-left;
+  text-align: center;
+  float:left;
+}
+.infi-title-right{
+  display: inline-block;
+  width: $infi-title-left;
+  text-align: center;
+  float:right;
+}
+.infi-screen-modify-content{
+  width: $infi-screen-modify-width;
+  margin: $infi-margin-zero auto;
+}
+.infi-screen-details{
+  margin-top: 20px;
+}
+.infi-screen-modify-section{
+  padding-left:75px;
+  position: relative;
+}
+.infi-section-title{
+  display: inline-block;
+  margin-right:20px;
+}
+.infi-logic-btn{
+  vertical-align: top;
+  display: inline-block;
+}
+.infi-logic-detail{
+  display: inline-block;
+  margin: 10px 20px 0 0;
+}
+.infi-chart > .infi-chart-small{
+  width:30%;
+  height:300px;
+  display: inline-block;
+}
+.infi-chart > .infi-chart-big{
+  width:80%;
+  height:600px;
+}
+.glyphicon-minus-sign{
+  cursor:pointer;
+}
+.infi-drag-detail{
+  cursor:pointer;
+  display: inline-block;
+  word-wrap: break-word;
+}
+.infi-logic-history{
+  max-height:933px;
+  overflow: auto;
+
+  table{
+    width:100%;
+
+    tr{
+      td{
+        padding:5px 0;
+      }
+
+      td:last-child {
+        width: 43px;
+        text-align: center;
+      }
+    }
+  }
+}
+.node-parent{
+  border: 1px solid #ccc;
+  padding: 10px 10px 10px 20px;
+}
+.node-outside{
+  min-height: 300px;
+}
+.infi-mark-option{
+  color:#000;
+}
+.infi-chart-demo{
+  width:30%;
+  height:300px;
+  display: inline-block;
+}
+.infi-chart-demo:last-child{
+  width:100%;
+  height:600px;
+}
+

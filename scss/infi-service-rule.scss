@@ -1,0 +1,127 @@
+.infi-rule-box{
+  padding:0px 15px;
+
+  .title{
+    font-weight: bold;
+  }
+
+  > div{
+    padding-top:10px;
+
+    span{
+      color:#333;
+      margin-left:5px;
+    }
+  }
+
+  .infi-service-boxchild{
+    padding-left:20px;
+  }
+}
+.infi-rule-kpi{
+  margin:0;
+
+  .infi-kpi-lg{
+    width:30%;
+  }
+
+  .infi-kpi-md{
+    width:18%;
+  }
+
+  .infi-child-kpi{
+    border-right:1px solid #ccc;
+    text-align: left;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .title{
+      font-weight: bold;
+    }
+
+    span{
+      color: #000;
+    }
+
+    &:last-child{
+      border-right: none;
+    }
+  }
+}
+
+.infi-rule-back{
+  float:right;
+  margin-top: -8px;
+}
+
+//规则保存样式
+.infi-rule-save{
+  .infi-m-tab{
+    label{
+      width:80px;
+      vertical-align: top;
+    }
+
+    textarea{
+      padding: 13px;
+      margin-top: 5px;
+      width: 40%;
+      min-height: 100px;
+      border-radius: 6px;
+      resize: none;
+    }
+
+    .infi-sect-detail{
+      margin:0 15px 10px 0;
+      display: inline-block;
+    }
+
+    .infi-recommand-entery {
+      cursor: pointer;
+    }
+
+    // 推荐科室列表
+    .infi-recommand-box {
+      position: relative;
+      width: 450px;
+      padding: 10px;
+      border: 1px solid #a9a9a9;
+      border-top-right-radius: 6px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background-color: #fff;
+
+      .infi-recommand-list-title{
+        display: block;
+        margin-top: 10px;
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      .recommand-close {
+        position: absolute;
+        top: 0;
+        right: 5px;
+      }
+
+      .infi-recommand-list-item {
+        display: inline-block;
+      }
+    }
+
+    .infi-selected-recommand-wrapper {
+      display: block;
+      width: 450px;
+      margin-top: 10px;
+      margin-left: -10px;
+
+      .infi-selected-recommand {
+        margin-right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+      }
+    }
+  }
+}

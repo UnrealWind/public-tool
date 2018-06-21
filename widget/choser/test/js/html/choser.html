@@ -1,0 +1,153 @@
+<section class="infi-section infi-section-choser">
+    <div>
+        <!--控件的标题-->
+        <!--<div class="infi-choser-title">-->
+            <!--<span class="infi-drug-title" ng-bind="content.label" ng-if="content"></span>-->
+        <!--</div>-->
+
+        <!--带标签-->
+        <div ng-if="contents.tabs">
+            <ul class="nav nav-tabs infi-choser-tabs type-list type-chose">
+                <li ng-repeat="tab in contents.tabs" class="type-chose" ng-class="{true:'active'}[tab.active]">
+                    <a ng-click="choseIndexType(tab)" ng-bind="tab.label"></a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active infi-chose-wrap">
+                    <ul class='infi-choser-tar list-unstyled' ng-repeat="tab in contents.tabs" ng-if="tab.active">
+                        <!--<li>-->
+                        <!--&lt;!&ndash;有前置条件的情况&ndash;&gt;-->
+                        <!---->
+                        <!--</li>-->
+                        <li>
+                            <ul class="list-unstyled infi-choser-first-li">
+                                <li ng-repeat="option in tab.options" >
+                                    <!--<label class="infi-choser-label">-->
+                                        <input type="checkbox" value="" name=""/>
+                                        <span ng-bind="option.label" ng-click="choseTabContext(option,tab.options)"></span>
+                                    <!--</label>-->
+
+                                    <div ng-if="contents.context&&option.active" class="infi-group infi-choser-tabs-context">
+                                        <button type="button" class="close" data-dismiss="modal" ng-click="closeRela(option)">
+                                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                        </button>
+
+                                        <div class="infi-group-item">
+                                            <i ng-click="addContext(contents.context)" class="glyphicon glyphicon-plus"></i>
+                                            <p class="title">添加前置条件（不设置默认为在院期间首次）</p>
+                                        </div>
+                                        <div class="infi-group-item" ng-repeat="contexts in option.context">
+                                            <select ng-change="changeContext()" ng-model="name">
+                                                <option value="{{context.label}}" ng-repeat="context in contexts" ng-bind="context.label"></option>
+                                            </select>
+                                            <div ng-repeat="context in contexts" ng-show="context.active" style="display: inline-block">
+                                                <!--<select>-->
+                                                    <!--<option value="" ng-bind="context.label"></option>-->
+                                                <!--</select>-->
+                                                <select>
+                                                    <option value="" ng-repeat="cont in context.frequency.options" ng-bind="cont.label"></option>
+                                                </select>
+                                                <select ng-show="context.names">
+                                                    <option value="" ng-repeat="cont in context.names.options" ng-bind="cont.label"></option>
+                                                </select>
+                                                <select ng-show="context.around">
+                                                    <option value="" ng-repeat="cont in context.around.options" ng-bind="cont.label"></option>
+                                                </select>
+                                                <select ng-show="context.time">
+                                                    <option value="" ng-repeat="cont in context.time.options" ng-bind="cont.label"></option>
+                                                </select>
+                                                <span>
+                                                    <i ng-click="addContext()" class="glyphicon glyphicon-plus"></i>
+                                                    <i ng-click="reduceContext()" class="glyphicon glyphicon-minus"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--具体列表项-->
+        <div ng-if="contents.options || (contents.range&&!contents.type)">
+            <!--搜索框的显示-->
+            <input ng-if='contents.more' class="form-control infi-drug-input input-sm" type="text" name="" value="" placeholder="更多搜索"/>
+
+            <ul class="list-unstyled list-inline infi-drug-list infi-choser-fist-laval" ng-if="contents.options">
+                <!--普通option的显示-->
+                <li ng-repeat="option in contents.options" ng-if="!contents.more.active">
+                    <label>
+                        <input type="checkbox" value="" name="" ng-model="option.$checked"/>
+                        <span ng-bind="option.label"></span>
+                    </label>
+                </li>
+                <!--展示全部-->
+                <li ng-repeat="option in contents.more" ng-if="contents.more.active">
+                    <label>
+                        <input type="checkbox" value="" name="" ng-model="option.$checked" />
+                        <span ng-bind="option.label"></span>
+                    </label>
+                </li>
+                <!--展示全部的按钮-->
+                <li>
+                    <!--展开收起-->
+                    <button ng-click="flexMores(contents)" ng-if="contents.more" type="button" class="infi-category-btn">
+                        <span ng-if="contents.more.active">收起全部</span>
+                        <span ng-if="!contents.more.active">显示全部</span>
+                    </button>
+                </li>
+            </ul>
+
+            <!--列表项为range和自定义-->
+            <ul  class="list-unstyled list-inline infi-drug-list infi-choser-fist-laval" ng-if="contents.range">
+                <li ng-repeat="option in contents.range">
+                    <label>
+                        <input type="checkbox" value="" name="" ng-model="option.$checked" />
+                        <span ng-bind="option.label"></span>
+                    </label>
+                </li>
+                <li ng-if="contents.customRange">
+                    <!--此处会有自定义的情况自定义会有区间输入框-->
+                    <i class="glyphicon glyphicon-plus" ng-click="showRangeGroup(contents.customRange)"></i>
+                    <div class="infi-choser-define" ng-if="contents.customRange.$checked">
+                        <div ng-repeat="range in contents.customRange">
+                            <input class="form-control infi-group-input" ng-model="range.min" type="text" placeholder="最小值" />
+                            -
+                            <input class="form-control infi-group-input" ng-model="range.max" type="text" placeholder="最大值" />
+                            <div class="infi-plus-minus">
+                                <i class="glyphicon glyphicon-plus" ng-click="addRange(contents.customRange);"></i>
+                                <i class="glyphicon glyphicon-minus" ng-click="removeRange(contents.customRange,range);"
+                                   ng-show="contents.customRange.length>1"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <!--时间，带单位，添加组-->
+        <div ng-show="contents.type && contents.type != 'group'">
+            <div class="infi-group" ng-show="contents.type == 'range' && contents.format" ng-repeat="content in contents.range">
+                <input class="form-control infi-group-input datepicker" type="text" name="startTime" placeholder="开始时间"
+                       ng-model="content.min" ng-click="triggerTimePlugin(name)"/>
+                -
+                <input class="form-control infi-group-input datepicker" type="text" name="engTime" placeholder="结束时间"
+                       ng-model="content.max"  ng-click="triggerTimePlugin(name)"/>
+            </div>
+            <div class="infi-group" ng-show="!contents.format" ng-repeat="content in contents.range">
+                <input class="form-control infi-group-input" type="text" placeholder="最小值" ng-model="content.min" />
+                -
+                <input class="form-control infi-group-input" type="text"  placeholder="最大值" ng-model="content.max" />
+                <span ng-bind="contents.unit" ng-show="contents.unit"></span>
+                <div class="infi-plus-minus" ng-show="contents.type == 'range'">
+                    <i class="glyphicon glyphicon-plus" ng-click="addRange(contents.range);"></i>
+                    <i class="glyphicon glyphicon-minus" ng-click="removeRange(contents.range,content);"
+                       ng-show="contents.range.length>1"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

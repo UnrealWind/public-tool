@@ -1,0 +1,35 @@
+<div class="modal fade" id="imgLoads" >
+     <div class="modal-dialog modal-width">
+       <div class="modal-content">
+           <div class="modal-header">
+               <button ng-disabled="!stopload" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+               <h4 class="modal-title">图片上传</h4>
+           </div>
+           <div class="modal-body">
+               <ul class="load-list list-header" >
+                   <li><b>图片待上传</b></li>
+                   <li><b></b></li>
+                   <li><b>上传结果</b></li>
+               </ul>
+
+               <div class="load-body" id="load-body">
+                   <ul class="load-list" ng-repeat="data in datas" ng-show="data.upshow">
+                       <li>{{data.name}}</li>
+                       <li class="prog"><progress value="{{data.evt}}" max="100"></progress><span class="progressSpan">{{data.evt}}%</span></li>
+                   </ul>
+               </div>
+
+               <div class="load-body loads-success" id="load-success">
+                   <ul class="load-list load-success" ng-repeat="data in upls">
+                       <li title="{{data.name}}">{{data.name}}</li>
+                       <li class="{{data.status}}">{{data.result}}</li>
+                   </ul>
+               </div>
+           </div>
+           <div class="modal-footer">
+               <!-- <button type="button" class="btn btn-primary" ng-click="stoprequest()">停止上传</button> -->
+               <button type="button" class="btn btn-primary" data-dismiss="modal" ng-disabled="!stopload">确定</button>
+           </div>
+       </div>
+     </div><!-- /.modal-dialog -->
+ </div><!-- /.modal -->

@@ -1,0 +1,34 @@
+@charset "UTF-8";
+.infi-listing > ul {
+  margin-left: 20px;
+}
+
+.infi-listing > ul > li > ul {
+  padding: 0;
+}
+
+.infi-listing > ul > li > ul > li:nth-child(2n) .extract-choser {
+  left: 0;
+}
+
+.infi-listing > ul > li > ul > li:nth-child(2n+1) .extract-choser {
+  right: 0;
+}
+
+.infi-listing-title {
+  font: bold 16px "微软雅黑";
+  margin-bottom: 5px;
+}
+
+.infi-first-li {
+  margin: 0 20px 20px 0;
+  padding-bottom: 5px;
+  width: 42%;
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+  color: #797979;
+}
+
+.infi-first-li > label {
+  cursor: pointer;
+}

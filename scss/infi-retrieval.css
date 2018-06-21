@@ -1,0 +1,91 @@
+.infi-url li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.infi-url li a {
+  cursor: pointer;
+}
+
+.infi-border-div {
+  padding: 10px 10px 1px 10px;
+  border: 1px solid #ccc;
+}
+
+.infi-case-title {
+  font-size: 15px;
+  color: #006abb;
+  cursor: pointer;
+}
+
+.infi-case-title span {
+  font-size: 15px;
+  color: #006abb;
+}
+
+.infi-case-img {
+  background-repeat: no-repeat;
+  background-size: 50px;
+  height: 60px;
+  background-position: 30px 10px;
+  width: 80px;
+  padding: 0px;
+  float: left;
+}
+
+.infi-case-img-woman {
+  background-image: url("/extract-src/image/tx_01.png");
+}
+
+.infi-case-img-man {
+  background-image: url("/extract-src/image/tx_02.png");
+}
+
+.infi-case-content {
+  font-size: 12px;
+}
+
+.infi-case-content > div {
+  padding: 6px 0px 0px 20px;
+}
+
+.infi-case-content > div .col-md-2 {
+  width: 65px;
+  float: left;
+}
+
+.infi-case-content > div .col-md-10 {
+  width: 80%;
+  float: left;
+}
+
+.infi-case-content > div .infi-show-reason {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  cursor: pointer;
+}
+
+.infi-retrieval-reason mark {
+  background: #ff0;
+}
+
+.infi-big-size {
+  font-size: 16px;
+}
+
+@media (min-width: 1250px) {
+  .infi-case-content {
+    width: 90%;
+  }
+  .infi-case-content > div .col-md-10 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .infi-case-content {
+    width: 80%;
+    float: left;
+  }
+}

@@ -1,0 +1,122 @@
+.infi-rule-box {
+  padding: 0px 15px;
+}
+
+.infi-rule-box .title {
+  font-weight: bold;
+}
+
+.infi-rule-box > div {
+  padding-top: 10px;
+}
+
+.infi-rule-box > div span {
+  color: #333;
+  margin-left: 5px;
+}
+
+.infi-rule-box .infi-service-boxchild {
+  padding-left: 20px;
+}
+
+.infi-rule-kpi {
+  margin: 0;
+}
+
+.infi-rule-kpi .infi-kpi-lg {
+  width: 30%;
+}
+
+.infi-rule-kpi .infi-kpi-md {
+  width: 18%;
+}
+
+.infi-rule-kpi .infi-child-kpi {
+  border-right: 1px solid #ccc;
+  text-align: left;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.infi-rule-kpi .infi-child-kpi .title {
+  font-weight: bold;
+}
+
+.infi-rule-kpi .infi-child-kpi span {
+  color: #000;
+}
+
+.infi-rule-kpi .infi-child-kpi:last-child {
+  border-right: none;
+}
+
+.infi-rule-back {
+  float: right;
+  margin-top: -8px;
+}
+
+.infi-rule-save .infi-m-tab label {
+  width: 80px;
+  vertical-align: top;
+}
+
+.infi-rule-save .infi-m-tab textarea {
+  padding: 13px;
+  margin-top: 5px;
+  width: 40%;
+  min-height: 100px;
+  border-radius: 6px;
+  resize: none;
+}
+
+.infi-rule-save .infi-m-tab .infi-sect-detail {
+  margin: 0 15px 10px 0;
+  display: inline-block;
+}
+
+.infi-rule-save .infi-m-tab .infi-recommand-entery {
+  cursor: pointer;
+}
+
+.infi-rule-save .infi-m-tab .infi-recommand-box {
+  position: relative;
+  width: 450px;
+  padding: 10px;
+  border: 1px solid #a9a9a9;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: #fff;
+}
+
+.infi-rule-save .infi-m-tab .infi-recommand-box .infi-recommand-list-title {
+  display: block;
+  margin-top: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.infi-rule-save .infi-m-tab .infi-recommand-box .recommand-close {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+.infi-rule-save .infi-m-tab .infi-recommand-box .infi-recommand-list-item {
+  display: inline-block;
+}
+
+.infi-rule-save .infi-m-tab .infi-selected-recommand-wrapper {
+  display: block;
+  width: 450px;
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+.infi-rule-save .infi-m-tab .infi-selected-recommand-wrapper .infi-selected-recommand {
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 5px;
+}

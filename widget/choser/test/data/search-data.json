@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "label": "汉族",
+      "id": "asplcyp909"
+    },
+    {
+      "label": "满族",
+      "id": "atfttdp121"
+    },
+    {
+      "label": "回族",
+      "id": "dgxp121"
+    },
+    {
+      "label": "阿富汗组",
+      "id": "afhz121"
+    },
+    {
+      "label": "毛族",
+      "id": "mz121"
+    },
+    {
+      "label": "土家族",
+      "id": "tjz121"
+    }
+  ],
+  "status": "ok",
+  "description": "数据请求成功"
+}

@@ -1,0 +1,300 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="../src/scss/infi-forty-two.scss" rel="stylesheet" >
+</head>
+<body>
+    <div>
+    <div class='box-form'>
+        <div class='title'>
+            登录
+        </div>
+        <form name="loginForm" ng-submit="login()">
+            <table>
+                <tr>
+                    <td colspan='2'>
+                        <div class='input-group input-group-sm'>
+                                <span class='input-group-addon'>
+                                    <span class='glyphicon glyphicon-user infi-wj-lock'></span>
+                                </span>
+                            <input class='form-control infi-login-ipt' type='text' name="username" placeholder='请输入用户名'
+                                   ng-model="credentials.username"
+                                   required/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='2'>
+                        <div class='input-group input-group-sm'>
+                                <span class='input-group-addon'>
+                                    <span class='glyphicon glyphicon-lock infi-wj-lock'></span>
+                                </span>
+                            <input class='form-control infi-login-ipt' type='password' name="password" placeholder='请输入密码'
+                                   ng-model="credentials.password"
+                                   required/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='2'>
+                        <button class='btn btn-blue btn-sm btn-block self-radius btn-submit'
+                                ng-disabled="!loginForm.$valid" >
+                            登&nbsp;&nbsp;录
+                        </button>
+                        <div class='tip'>
+                            <div ng-if="loginForm.username.$invalid">请填写用户名,并不小于6位</div>
+                            <div ng-if="loginForm.password.$invalid">请填写密码,并不小于6位</div>
+                            <div ng-if="credentials.error && loginForm.$pristine" ng-bind="credentials.error"></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class='box-bg-loop carousel slide' id='bg-loop'>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="../src/image/banner3.png">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+ -->
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title class="11">登录页</title>
+    <link href="../../../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../../src/scss/frame.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-modal.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-color.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-outside.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-listing.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-category.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-drug.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-filter.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-retrieva-record.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-from-header.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-confirm-export.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-collection-screening.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-lefttab.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-screen-name.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-screen-details.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-time-control.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-button.scss" rel="stylesheet" />
+    <link href="../../../../src/scss/infi-login.scss" rel="stylesheet" />
+</head>
+
+<body>
+<div style="
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:fixed;
+    /*overflow-y:scroll;*/
+    overflow-x:hidden;
+    z-index:50;background-color: #fff">
+<!--<div style="position:absolute;top:0;left:0;right:0;height:970px;z-index:50;background-color: #fff">-->
+<div class='login_header'>
+    <a style="height:56px;display: inline-block;overflow: hidden;">
+        <img style="position: relative;top: 4px;left: -235px;right: 0px;" src="../../../../src/image/logo.gif"/>
+    </a>
+    <div>
+        <span><b>多科中心注册登记</b></span>
+        <span><b>科研数据服务</b></span>
+        <span><b>科研课题管理</b></span>
+        <span><b>多中心数据分享</b></span>
+        <span><b>数据质量管理</b></span>
+    </div>
+</div>
+<div class="login_center">
+    <div class="infi-u-formBox">
+        <div class="loginForm">
+            <form id="loginForm" method="post" action="" class="form-horizontal">
+                <span class="control-label " ng-if="loginHeader == false" style="color: orange;margin-bottom:20px;">登录失败，请重试.</span>
+                <span class="control-label" ng-if="loginHeader == true">登录</span>
+                <!--<span class="control-label " ng-class="{true:'show',false:'hide'}[true]">登录中...</span>-->
+                <div class="control-group form-group" style='height: 51px;position: relative;top: -18px;'>
+                    <div class='login_user_img'>
+                        <img src='../../../../src/image/user.png'/>
+                    </div>
+
+                    <input type="text" id="username" name="username" ng-model="credentials.username" class="login_user input-medium required form-control"/>
+
+                </div>
+                <div class="control-group form-group">
+                    <div class='login_password_img'>
+                        <img src='../../../../src/image/password.png'/>
+                    </div>
+                    <input type="password" id="password" name="password" ng-model="credentials.password" class="login_password input-medium required form-control"/>
+                </div>
+                <div class='w_password'>
+                    <span style='color:#fff;cursor:pointer;'>忘记密码?</span>
+                </div>
+                <div class="control-group" style='margin-top:20px;'>
+                    <div class="controls">
+                        <input id="submit_btn" class="btn btn-primary" type="" ng-click="login()" value="登录"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="main-content center">
+    <div class="main-content-top">
+        <div class="main-content-data">
+            <div class="main-content-top-li">
+                <h2 class='login_main_h2'>多中心注册登记</h2>
+                <ul>
+                    <li>
+                        <a href="#">CRF表单录入</a>
+                    </li>
+                    <li>
+                        <a href="#">CRF模板管理</a>
+                    </li>
+                    <li class="border-fix">
+                        <a href="#">数据质量监控</a>
+                    </li>
+                </ul>
+                <ul class="main-content-data-botom">
+                    <li class="main-content-data-icon shadow">
+                        <a href="#">是什么？</a>
+                    </li>
+                    <li class="border-fix margin-fix">
+                        <a href="#">全面支持多中心注册登记项目</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content-personal">
+            <div class="main-content-top-li">
+                <h2 class='login_main_h2'>科研数据服务</h2>
+                <ul>
+                    <li>
+                        <a href="#">数据智能转换</a>
+                    </li>
+                    <li>
+                        <a href="#">数据智能检索</a>
+                    </li>
+                    <li class="border-fix">
+                        <a href="#">数据智能提取</a>
+                    </li>
+                </ul>
+                <ul class="main-content-personal-botom">
+                    <li class="main-content-personal-icon shadow">
+                        <a href="#">是什么？</a>
+                    </li>
+                    <li class="border-fix margin-fix">
+                        <a href="#">标准化,电子化支撑科研全流程工作</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content-total">
+            <div class="main-content-top-li">
+                <h2 class='login_main_h2'>科研课题管理</h2>
+                <ul>
+                    <li>
+                        <a href="#">科研课题创建</a>
+                    </li>
+                    <li>
+                        <a href="#">课题在线跟踪</a>
+                    </li>
+                    <li class="border-fix">
+                        <a href="#">课题数据分享</a>
+                    </li>
+                </ul>
+                <ul class="main-content-total-botom">
+                    <li class="main-content-total-icon shadow">
+                        <a href="#">是什么？</a>
+                    </li>
+                    <li class="border-fix margin-fix">
+                        <a href="#">实时,便捷跟踪课题研究全周期情况</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content-line center">
+    </div>
+
+    <div class="main-content-bottom center">
+        <div class="main-content-department">
+            <div class='login_1'>
+                <img src='../../../../src/image/chip.png' />
+            </div>
+            <h1 style=''><b>多中心数据分享</b></h1>
+            <p><a href="#">科研方案平台化,打破科研地域限制,降低科研工作成本</a></p>
+        </div>
+
+        <div class="main-content-industry">
+            <div class='login_2'>
+                <img src='../../../../src/image/magnifier.png' />
+            </div>
+            <h1><b>数据质量管理</b></h1>
+            <p><a href="#">严格的数据审核校验,数据质量管理体系,最大化保证科研工作质量</a></p>
+        </div>
+        <div class="main-content-health">
+            <div class='login_3'>
+                <img src='../../../../src/image/box.png' />
+            </div>
+            <h1><b>数据中心</b></h1>
+            <p><a href="#">丰富的知识库及数据分析模型,多角度支撑科研工作创新</a></p>
+        </div>
+    </div>
+</div>
+
+<div class='login_footer' >
+    <div style='text-align:center;'>
+        <p><!-- 武警医院 &nbsp;&nbsp;&nbsp;  -->北京无极慧通科技有限公司 &nbsp;&nbsp;&nbsp;联系电话 : 010-82686850</p>
+    </div>
+</div>
+
+
+<!--<%&#45;&#45;找回密码模态框&#45;&#45;%>-->
+
+<!--<div class="modal fade" id='login_modal' ng-controller='login_controller_modal'>-->
+    <!--<div class="modal-dialog">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-header">-->
+                <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span></button>-->
+                <!--<h1 class="modal-title">找回密码</h1>-->
+            <!--</div>-->
+            <!--<div class="modal-body p_input">-->
+                <!--<div ng-repeat='item in items'>{{item.title}} : <input type='text' ng-model='item.value' class='form-control self-radius ng-pristine ng-valid ng-touched' placeholder='{{item.text}}'/><span class='{{item.Class}}'>{{item.text1}}</span></div>-->
+            <!--</div>-->
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-primary" ng-disabled='all' ng-click='modify_password_true()'>确认</button>-->
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
+            <!--</div>-->
+            <!--<div class="modal fade" id='login_modal2'>-->
+                <!--<div class="modal-dialog">-->
+                    <!--<div class="modal-content" style='width:300px;height:120px;'>-->
+                        <!--<div class="modal-header">-->
+                            <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span></button>-->
+                            <!--<h1 class="modal-title">提示：</h1>-->
+                        <!--</div>-->
+                        <!--<div class="modal-body">-->
+                            <!--<p>密码找回链接已发至您邮箱，请前往修改！</p>-->
+                        <!--</div>-->
+                    <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+                <!--</div>&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+    <!--</div>&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+<!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+
+
+</div>
+</body>
+</html>

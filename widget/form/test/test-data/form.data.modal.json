@@ -1,0 +1,465 @@
+{
+    "data": {
+        "stableVersion": null,
+        "version": [
+            {
+                "id": null,
+                "name": "基本信息",
+                "bizName": null,
+                "label": "A 基本信息",
+                "type": "菜单",
+                "parent": null,
+                "group": null,
+                "order": 20,
+                "description": null,
+                "filterTag": null,
+                "exportTag": null,
+                "hasNecessary": false,
+                "categoryLevel": "模块",
+                "children": [
+                    {
+                        "id": null,
+                        "name": "基本信息_a_基本信息",
+                        "bizName": null,
+                        "label": "基本信息",
+                        "type": "菜单",
+                        "parent": "基本信息",
+                        "group": null,
+                        "order": 20,
+                        "description": null,
+                        "filterTag": null,
+                        "exportTag": null,
+                        "hasNecessary": false,
+                        "categoryLevel": "主题",
+                        "children": [
+                            {
+                                "id": null,
+                                "name": "基本信息_a_基本信息_a_1000",
+                                "bizName": "基本信息_a_基本信息_a_1000",
+                                "label": "上报医院",
+                                "type": "小文本输入",
+                                "parent": "基本信息_a_基本信息",
+                                "group": null,
+                                "order": 0,
+                                "description": null,
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "unit": null,
+                                "width": null,
+                                "notNull": true,
+                                "value": "首都医科大学附属北京友谊医院",
+                                "changed": false,
+                                "minTextLength": null,
+                                "maxTextLength": null,
+                                "length": 10,
+                                "children": []
+                            },
+                            {
+                                "id": null,
+                                "name": "基本信息_a_基本信息_a_1003",
+                                "bizName": "基本信息_a_基本信息_a_1003",
+                                "label": "病历号",
+                                "type": "小文本输入",
+                                "parent": "基本信息_a_基本信息",
+                                "group": null,
+                                "order": 1,
+                                "description": null,
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "unit": null,
+                                "width": null,
+                                "notNull": true,
+                                "value": "12",
+                                "changed": false,
+                                "minTextLength": null,
+                                "maxTextLength": null,
+                                "length": 10,
+                                "children": []
+                            },
+                            {
+                                "id": null,
+                                "name": "基本信息_a_基本信息_a_1004",
+                                "bizName": "基本信息_a_基本信息_a_1004",
+                                "label": "第几次入院",
+                                "type": "数值输入-单值",
+                                "parent": "基本信息_a_基本信息",
+                                "group": null,
+                                "order": 2,
+                                "description": "限定为数字",
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "unit": null,
+                                "width": null,
+                                "notNull": true,
+                                "value": "21",
+                                "changed": false,
+                                "min": null,
+                                "max": null,
+                                "range": false,
+                                "children": []
+                            },
+                            {
+                                "id": null,
+                                "name": "基本信息_a_基本信息_a_1006",
+                                "bizName": "基本信息_a_基本信息_a_1006",
+                                "label": "性别",
+                                "type": "单选",
+                                "parent": "基本信息_a_基本信息",
+                                "group": null,
+                                "order": 3,
+                                "description": null,
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "unit": null,
+                                "width": null,
+                                "notNull": true,
+                                "value": "男",
+                                "changed": false,
+                                "dimension": {
+                                    "id": null,
+                                    "label": "1006",
+                                    "name": "1006",
+                                    "options": [
+                                        {
+                                            "id": null,
+                                            "label": "男",
+                                            "value": "男",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 10,
+                                            "children": []
+                                        },
+                                        {
+                                            "id": null,
+                                            "label": "女",
+                                            "value": "女",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 20,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                "extendable": false,
+                                "children": []
+                            },
+                            {
+                                "id": null,
+                                "name": "基本信息_a_基本信息_a_1008",
+                                "bizName": "基本信息_a_基本信息_a_1008",
+                                "label": "出生日期",
+                                "type": "时间-年月日",
+                                "parent": "基本信息_a_基本信息",
+                                "group": null,
+                                "order": 4,
+                                "description": null,
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "unit": null,
+                                "width": null,
+                                "notNull": false,
+                                "value": null,
+                                "changed": false,
+                                "format": "yyyy-mm-dd",
+                                "children": []
+                            },
+                            {
+                                "id": null,
+                                "name": "基本信息_a_基本信息_a_1028",
+                                "bizName": "基本信息_a_基本信息_a_1028",
+                                "label": "婚姻状况",
+                                "type": "单选",
+                                "parent": "基本信息_a_基本信息",
+                                "group": null,
+                                "order": 5,
+                                "description": null,
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "unit": null,
+                                "width": null,
+                                "notNull": false,
+                                "value": null,
+                                "changed": false,
+                                "dimension": {
+                                    "id": null,
+                                    "label": "1028",
+                                    "name": "1028",
+                                    "options": [
+                                        {
+                                            "id": null,
+                                            "label": "未婚",
+                                            "value": "未婚",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 10,
+                                            "children": []
+                                        },
+                                        {
+                                            "id": null,
+                                            "label": "已婚",
+                                            "value": "已婚",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 20,
+                                            "children": []
+                                        },
+                                        {
+                                            "id": null,
+                                            "label": "离异或丧偶",
+                                            "value": "离异或丧偶",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 30,
+                                            "children": []
+                                        },
+                                        {
+                                            "id": null,
+                                            "label": "不详",
+                                            "value": "不详",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 40,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                "extendable": false,
+                                "children": []
+                            },
+                            {
+                                "id": null,
+                                "name": "基本信息_a_基本信息_a_1049",
+                                "bizName": "基本信息_a_基本信息_a_1049",
+                                "label": "有无固定性伴",
+                                "type": "单选",
+                                "parent": "基本信息_a_基本信息",
+                                "group": null,
+                                "order": 6,
+                                "description": null,
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "unit": null,
+                                "width": null,
+                                "notNull": false,
+                                "value": null,
+                                "changed": false,
+                                "dimension": {
+                                    "id": null,
+                                    "label": "1049",
+                                    "name": "1049",
+                                    "options": [
+                                        {
+                                            "id": null,
+                                            "label": "有",
+                                            "value": "有",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 10,
+                                            "children": []
+                                        },
+                                        {
+                                            "id": null,
+                                            "label": "无",
+                                            "value": "无",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 20,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                "extendable": false,
+                                "children": []
+                            },
+                            {
+                                "id": null,
+                                "name": "基本信息_a_基本信息_a_1050",
+                                "bizName": "基本信息_a_基本信息_a_1050",
+                                "label": "配偶/固定性伴的HIV感染状况",
+                                "type": "单选",
+                                "parent": "基本信息_a_基本信息",
+                                "group": null,
+                                "order": 7,
+                                "description": null,
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "unit": null,
+                                "width": null,
+                                "notNull": false,
+                                "value": null,
+                                "changed": false,
+                                "dimension": {
+                                    "id": null,
+                                    "label": "1050",
+                                    "name": "1050",
+                                    "options": [
+                                        {
+                                            "id": null,
+                                            "label": "阳性",
+                                            "value": "阳性",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 10,
+                                            "children": []
+                                        },
+                                        {
+                                            "id": null,
+                                            "label": "阴性",
+                                            "value": "阴性",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 20,
+                                            "children": []
+                                        },
+                                        {
+                                            "id": null,
+                                            "label": "未查/不详",
+                                            "value": "未查/不详",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 30,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                "extendable": false,
+                                "children": []
+                            },
+                            {
+                                "id": null,
+                                "name": "基本信息_a_基本信息_a_1051",
+                                "bizName": "基本信息_a_基本信息_a_1051",
+                                "label": "有无子女",
+                                "type": "单选",
+                                "parent": "基本信息_a_基本信息",
+                                "group": null,
+                                "order": 8,
+                                "description": null,
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "unit": null,
+                                "width": null,
+                                "notNull": false,
+                                "value": null,
+                                "changed": false,
+                                "dimension": {
+                                    "id": null,
+                                    "label": "1051",
+                                    "name": "1051",
+                                    "options": [
+                                        {
+                                            "id": null,
+                                            "label": "有",
+                                            "value": "有",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 10,
+                                            "children": []
+                                        },
+                                        {
+                                            "id": null,
+                                            "label": "无",
+                                            "value": "无",
+                                            "name": null,
+                                            "description": null,
+                                            "order": 20,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                "extendable": false,
+                                "children": [
+                                    {
+                                        "id": null,
+                                        "name": "基本信息_a_基本信息_a_1051_a_有",
+                                        "bizName": null,
+                                        "label": "有",
+                                        "type": "虚拟菜单",
+                                        "parent": "基本信息_a_基本信息",
+                                        "group": null,
+                                        "order": 0,
+                                        "description": null,
+                                        "filterTag": null,
+                                        "exportTag": null,
+                                        "hasNecessary": false,
+                                        "value": "有",
+                                        "index": null,
+                                        "children": [
+                                            {
+                                                "id": null,
+                                                "name": "基本信息_a_基本信息_a_1051_a_有_a_1052",
+                                                "bizName": "基本信息_a_基本信息_a_1052",
+                                                "label": "子女HIV感染状况",
+                                                "type": "单选",
+                                                "parent": "基本信息_a_基本信息_a_1051_a_有",
+                                                "group": null,
+                                                "order": 9,
+                                                "description": null,
+                                                "filterTag": null,
+                                                "exportTag": null,
+                                                "hasNecessary": false,
+                                                "unit": null,
+                                                "width": null,
+                                                "notNull": false,
+                                                "value": null,
+                                                "changed": false,
+                                                "dimension": {
+                                                    "id": null,
+                                                    "label": "1052",
+                                                    "name": "1052",
+                                                    "options": [
+                                                        {
+                                                            "id": null,
+                                                            "label": "阳性",
+                                                            "value": "阳性",
+                                                            "name": null,
+                                                            "description": null,
+                                                            "order": 10,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "id": null,
+                                                            "label": "阴性",
+                                                            "value": "阴性",
+                                                            "name": null,
+                                                            "description": null,
+                                                            "order": 20,
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "id": null,
+                                                            "label": "未查/不详",
+                                                            "value": "未查/不详",
+                                                            "name": null,
+                                                            "description": null,
+                                                            "order": 30,
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                },
+                                                "extendable": false,
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "count": 0
+    },
+    "status": "ok",
+    "description": "数据请求成功"
+}

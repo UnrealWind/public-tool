@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重置密码</title>
+    <link href="../../../../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../../scss/frame.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-outside.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-password.scss" rel="stylesheet" />
+</head>
+<body ng-app="infi-basic" ng-controller="HomeController">
+<!-- 头部导航 -->
+<header class="navbar navbar-default infi-header clearfix" style="position: static;">
+    <div class="navbar-header infi-header-logo">
+        <span class="logo"></span>
+    </div>
+    <div class="infi-header-title pull-left">重置密码</div>
+    <div class="box-user pull-right">
+        <p class="infi-header-name" ng-bind="name"></p>
+    </div>
+</header>
+<!-- 头部导航 END -->
+<form name="form" class="infi-pwd-form">
+    <div class="main">
+        <ul ng-if="password.showHtml == 'next'">
+            <li>
+                <div>验证码:</div>
+                <input type="text" class="form-control infi-inline-block" ng-model="password.checkCode"
+                       placeholder="请输入手机验证码" ng-change="passwordChange()" required />
+                <i class="text-danger">*</i>
+            </li>
+        </ul>
+        <ul ng-if="password.showHtml == 'password'">
+            <li>
+                <div>新密码:</div>
+                <input type="password" class="form-control infi-inline-block" ng-model="password.newWord"
+                       placeholder="请输入新密码" ng-change="passwordChange()" required />
+                <i class="text-danger">*</i>
+            </li>
+            <li>
+                <div style="margin-top:15px;">再次输入新密码:</div>
+                <input type="password" class="form-control infi-inline-block" ng-model="password.newWordAgain"
+                       placeholder="请再次输入新密码" ng-change="passwordChange()" required />
+                <i class="text-danger">*</i>
+            </li>
+            <li class="error-tip">
+                <span ng-show="password.newWord != password.newWordAgain" class="text-danger">两次输入的密码不同</span>
+            </li>
+        </ul>
+        <div style="text-align: center;" ng-if="password.showHtml == 'next'">
+            <input ng-disabled="!form.$valid || !checkedPass" ng-click="nextStep()"
+                   type="submit" class="btn btn-primary" value="下一步" />
+        </div>
+        <div style="text-align: center;" ng-if="password.showHtml == 'password'">
+            <input ng-disabled="!form.$valid || (password.newWord != password.newWordAgain)||!checkedPass" ng-click="commitPassword()"
+                   type="submit" class="btn btn-primary" value="确认修改" />
+        </div>
+    </div>
+</form>
+<footer class="infi-footer">
+    <p class="infi-footer-detail">
+        北京无极慧通科技公司 | 北京市海淀区苏州街18号长远天地大厦A1座906室 | 联系电话:010-82686850
+    </p>
+</footer>
+<div sys-tip></div>
+</body>
+</html>
+<script type="text/javascript" src="../../../../bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../../../../bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="../../../../src/md5.js"></script>
+<script type="text/javascript" src="utils.js"></script>
+<script type="text/javascript" src="constant.js"></script>
+<script type="text/javascript" src="home.controller.js"></script>
+
+
+
+
+
+

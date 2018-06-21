@@ -1,0 +1,58 @@
+.infi-analysis-main{
+  padding: 80px 0px  70px 0px;
+  margin:0;
+}
+.infi-header-ul{
+  border:1px solid #ccc;
+  text-align: center;
+  overflow:auto;
+  box-shadow: 2px 2px 2px #dcdcdc;
+  margin:0;
+}
+.infi-header-ul > li{
+  float:left;
+  width:16.66%;
+  height:57px;
+  line-height:57px;
+  color:#797979;
+  background-color:#e0edf8;
+}
+
+.infi-header-ul-3 > li{
+  width:33.33%;
+}
+
+.infi-header-ul >.infi-header-active{
+  position:relative;
+  font-weight:bold;
+  font-size:15px;
+  box-shadow:0 0 10px 2px #dcdcdc;
+  background-color: #0099CC;
+  > a{
+    color:#fff;
+  }
+  > span{
+    color:#fff;
+  }
+}
+.infi-header-ul >.infi-analysis-modifyed{
+  background-color: #66CC99;
+}
+.infi-analysis-background{
+  background-color: #ddd;
+}
+.font-bold{
+  font-size:15px;
+  font-weight:bold;
+}
+.backgroud-ddd{
+  background-color: #ddd;
+  border-radius: 3px;
+}
+.paddingten{
+  padding:10px;
+}
+.backgroud-blue{
+  background-color: #e0edf8;
+  border-radius: 3px;
+}

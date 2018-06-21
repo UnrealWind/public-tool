@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "description": "数据请求成功",
+  "data": {
+    "page":{
+      "content":[
+        {
+          "id": 69,
+          "patientId": "a102",
+          "hospitalId": "a102",
+          "medicalId": "1",
+          "visitId": "1",
+          "updator": null,
+          "number": "1",
+          "name": "张三",
+          "clinic": "12",
+          "createdtime": "2016-01-01",
+          "changetime":"2016-01-01",
+          "operat":"详情/修改"
+        }
+      ],
+      "sort": [
+        {
+          "direction": "DESC",
+          "property": "id",
+          "ignoreCase": false,
+          "nullHandling": "NATIVE",
+          "ascending": false
+        }
+      ],
+      "totalPages": 2,
+      "firstPage": true,
+      "lastPage": true,
+      "numberOfElements": 4,
+      "totalElements": 8,
+      "size": 4,
+      "number": 0
+    },
+    "status":"ok",
+    "description":"数据请求成功"
+  }
+}

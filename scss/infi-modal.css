@@ -1,0 +1,22 @@
+.infi-modal-header {
+  padding: 15px;
+  border-bottom: #ccc 2px solid;
+  background-color: #f8f9fd;
+}
+
+.infi-modal-header > h4 {
+  display: inline-block;
+  margin: 0px;
+}
+
+.infi-screen-modal {
+  display: block;
+}
+
+.infi-details-modal {
+  display: block;
+}
+
+.infi-modal-half-width {
+  width: 50%;
+}

@@ -1,0 +1,21 @@
+{
+  "data":[
+    {
+      "label": null,
+      "value": null,
+//      "parent":null,
+//      "type":"time/group/unit",
+//      "options":[  可以后台传过来，也可以自己添加
+//        {
+//          "min":"",
+//          "max":"",
+//          "value":""
+//        }
+//      ],
+      "range": "78",
+      "unit":"天",
+      "status": "ok",
+      "description": "数据请求成功"
+    }
+    ]
+}

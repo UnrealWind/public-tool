@@ -1,0 +1,16 @@
+<div>	
+	<input-text-detail  ng-if="input.type=='小文本输入' || input.type == '超链接' ||input.type == '量表'"></input-text-detail>
+	<input-text-double-detail input="input" ng-if="input.type=='文本输入-双值'"></input-text-double-detail>
+	<input-number-detail  ng-if="input.type=='数值输入-单值'"></input-number-detail>
+	<input-date-detail  ng-if="input.type.indexOf('时间')>-1"></input-date-detail>
+	<input-radio-detail  ng-if="input.type=='单选'"></input-radio-detail>
+	<input-radio-extend-detail  ng-if="input.type=='单选+扩充输入'"></input-radio-extend-detail>
+	<input-checkbox-detail  ng-if="input.type=='多选'"></input-checkbox-detail>
+	<input-checkbox-extend-detail  ng-if="input.type=='多选+扩充输入'"></input-checkbox-extend-detail>
+	
+	<input-scale-detail ng-if="input.type=='量表'"></input-scale-detail>
+	<input-textarea-detail  ng-if="input.type=='大文本输入'"></input-textarea-detail>
+	<input-half-textarea-detail input="input" ng-if="input.type=='中文本输入'"></input-half-textarea-detail>
+	<input-upload-detail  ng-if="input.type.indexOf('文件')>-1"></input-upload-detail>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="infi-input-box">
+    <div class = "infi-input-left">
+        <p ng-class="{'true':'self-font-red'}[input.changed]">
+            <span ng-if="input.notNull" class="self-font-red">*</span>
+            <span ng-bind="input.label"></span>
+        </p>
+    </div>
+    <div class = "infi-input-right">
+        <div class="infi-input-opt">
+            <label class="">
+                <input multiple="true" type="file"  name="file" input-file-upload input="input">
+            </label>
+        </div>
+    </div>
+</div>

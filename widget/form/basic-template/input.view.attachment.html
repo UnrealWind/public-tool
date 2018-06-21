@@ -1,0 +1,96 @@
+<div class="infi-view-attachment">
+	<div class="infi-attachment-btn">
+		<span ng-click="showModal()">数据源参考</span>
+	</div>
+	<div class="infi-attachment-box modal-body" ng-if="show">
+		<div class="infi-attachment-nav">
+			<ul class="row">
+				<li class="col-md-4" ng-click="changeAttachmentDataNavi('image')" ng-class="{'true':'infi-attachment-nav-bg'}[tagData.fileType === 'image']">病历图片</li>
+				<li class="col-md-4" ng-click="changeAttachmentDataNavi('descrip')" ng-class="{'true':'infi-attachment-nav-bg'}[tagData.fileType === 'descrip']">文本描述</li>
+				<li class="col-md-4" ng-click="changeAttachmentDataNavi('file')" ng-class="{'true':'infi-attachment-nav-bg'}[tagData.fileType === 'file']">病历文件</li>
+			</ul>
+		</div>
+		<div class="infi-attachment-imgArea" ng-if="tagData.fileType === 'image'">
+
+			<!-- 为了方便做，现在相当于将原有的三个directive个并称为一个，这部分是上传 -->
+			<div class="infi-attachment-upload">
+				<label class="checkbox-inline">{{input.label}}
+					<input multiple="true" type="file"  name="file" ngf-select="onFileSelect($files,input,'image','attachment')">
+				</label>
+			</div>
+			<div ng-if="imgId">
+				<!-- 这部分是图片详情查看 -->
+				<div class="row infi-attachment-detail">
+					<div class="col-md-2">
+						<span ng-click = "getImgData(prevImgId,callBackData)" class="btn-left glyphicon glyphicon-chevron-left {{prevBtn}}" aria-hidden="true"></span>
+					</div>
+					<div class="col-md-8">
+						<img ng-mouseover="changeImgSize('event')" ng-mouseleave="endWheelEvent()" class="tagImg img-imgDirection{{imgDirection}}" ng-src="{{SYS.url}}/subject/record/image/{{imgId}}?{{SYS.imgBack}}&fileId={{imgId}}"/>
+					</div>
+					<div class="col-md-2">
+						<span ng-click = "getImgData(nextImgId,callBackData)" class="btn-right glyphicon glyphicon-chevron-right {{nextBtn}}" aria-hidden="true"></span>
+					</div>
+					<div class="col-md-12 infi-img-tool">
+						<div>
+						    <a ng-click="changeImgSize(1)">+</a>
+						    <a ng-click="changeImgSize('init')">{{ImgSizeDirection.size}}%</a>
+						    <a ng-click="changeImgSize(-1)">-</a>
+						</div>
+						<div>
+						    <a ng-click="rotateImg(-1)">逆时针旋转</a>
+						    <a ng-click="rotateImg('init')">初始位置</a>
+						    <a ng-click="rotateImg(1)">顺指针旋转</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- 这部分是图片描述 -->
+				<div class="infi-attachment-imgDiscribe">
+					图片描述：
+					<textarea class="form-control" ng-if="opt.show" ng-repeat = "opt in imagesGroup" ng-model="input.files[$index].remark"></textarea>
+				</div>
+
+				<!-- 这部分是图片切换 -->
+				<div class="infi-attachment-thumbnail">
+					<ul class= "imgs-thumbnail">
+						<div><span ng-click = "changeImgArea('prev')" class="btn-left glyphicon glyphicon-chevron-left {{prevBtnState}}" aria-hidden="true"></span></div>
+						    <li ng-repeat="opt in imagesGroup" class="makeImgSame {{opt.show}}">
+							    <img ng-src="{{SYS.url}}/subject/record/image/{{opt.id}}?{{SYS.imgBack}}&fileId={{opt.id}}" ng-click = "getImgData(opt.id,callBackData)"/>
+							    <a ng-click="deleteFileSelect($index)" class="infi-del-img-btn">x</a>
+						    </li>
+						<div><span ng-click = "changeImgArea('next')" class="btn-right glyphicon glyphicon-chevron-right {{nextBtnState}}" aria-hidden="true"></span></div>
+					</ul>
+				</div>
+				<div class="infi-m-btn">
+					<a class="btn btn-default" ng-click="saveAttachment()">保存病历图片</a>
+				</div>
+
+			</div>
+			
+		</div>
+
+		<div class="infi-attachment-descripArea" ng-if="tagData.fileType === 'descrip'">
+			<p>请填写病历描述：</p>
+			<textarea class="form-control" ng-model="input.value"></textarea>
+			<div class="infi-m-btn">
+				<a class="btn btn-default" ng-click="saveAttachment()">保存病历描述</a>
+			</div>
+		</div>
+
+		<div class="infi-attachment-fileArea" ng-if="tagData.fileType === 'file'">
+			<div>
+			 	<input multiple="true" type="file"  name="file" ngf-select="onFileSelect($files,input,'file','attachment')">
+			 	<div ng-if = "input.value !== null">
+					<p ng-if="input.type.indexOf('文件')>-1" ng-repeat = "opt in input.value track by $index">
+						<a href="{{SYS.url}}/subject/record/load/{{input.value[$index]}}?{{SYS.imgBack}}">{{input.files[$index].originName}},点击下载</a>
+						<span ng-click = "deleteFileSelect($index)" class="deleteImg">删除！</span>
+					</p>
+				</div>
+			 	<img-loads datas='datas' stopload='stopload' upls='upls'></img-loads>
+			 </div>
+		 	<div class="infi-m-btn">
+				<a class="btn btn-default" ng-click="saveAttachment()">保存病历文件</a>
+			</div>
+		</div>
+	</div>
+</div>

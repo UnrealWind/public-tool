@@ -1,0 +1,36 @@
+@charset "UTF-8";
+.infi-obstertrics-print-table > table > tbody > tr > td {
+  font-size: 14px;
+}
+
+.infi-obstertrics-print-table > table.infi-two-cell > tbody > tr > td {
+  width: 50%;
+  font-size: 14px;
+}
+
+.infi-obstertrics-print-table > table.infi-two-cell > tbody > tr > td > .infi-print-master {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+.infi-obstertrics-print-description > span {
+  margin: 0 6px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #333;
+}
+
+.infi-obstertrics-print-description > span > span {
+  font-weight: normal;
+  font-size: 14px;
+  font-family: "宋体";
+}
+
+.infi-print-btn {
+  margin-bottom: 10px;
+}
+
+.infi-output-bottom {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,219 @@
+{
+    "status":"ok",
+    "description":"数据请求成功",
+    "data":[
+        {
+            "label": "常见药品标签",
+            "value": "hspcjypbq",
+            "tabs": [
+                {
+                    "label":"他汀类",
+                    "value":"ttl34",
+                    "options":[
+                        {
+                            "label":"阿托伐他汀",
+                            "value":"atftt121"
+                        },
+                        {
+                            "label":"辛伐他汀",
+                            "value":"xftt121"
+                        },
+                        {
+                            "label":"洛伐他汀",
+                            "value":"lftt121"
+                        }
+                    ]
+                },
+                {
+                    "label":"硝酸酯类",
+                    "value":"xszl121",
+                    "options":[
+                        {
+                            "label":"消心痛",
+                            "value":"xxt121"
+                        },
+                        {
+                            "label":"硝酸甘油",
+                            "value":"xsgy121"
+                        }
+                    ]
+                }
+            ],
+            "options":[
+            {
+                "label": "阿司匹林肠溶片",
+                "value": "asplcyp909"
+            },
+            {
+                "label": "阿托伐他汀钙片",
+                "value": "atfttdp121"
+            },
+            {
+                "label": "颉沙坦胶囊",
+                "value": "dgxp121"
+            },
+            {
+                "label": "依诺沙星",
+                "value": "ynsx121"
+            },
+            {
+                "label": "阿米卡星",
+                "value": "amkx121"
+            },
+            {
+                "label": "环丙沙星",
+                "value": "hbsx121"
+            },
+            {
+                "label": "头孢噻吩",
+                "value": "tbsf121"
+            },
+            {
+                "label": "头孢氨苄",
+                "value": "tbak121"
+            },
+            {
+                "label": "头孢拉定",
+                "value": "tbld121"
+            }
+        ],
+            "more": [
+            {
+                "label": "阿司匹林肠溶片",
+                "value": "asplcyp909"
+            },
+            {
+                "label": "阿托伐他汀钙片",
+                "value": "atfttdp121"
+            },
+            {
+                "label": "颉沙坦胶囊",
+                "value": "dgxp121"
+            },
+            {
+                "label": "依诺沙星",
+                "value": "ynsx121"
+            },
+            {
+                "label": "阿米卡星",
+                "value": "amkx121"
+            },
+            {
+                "label": "环丙沙星",
+                "value": "hbsx121"
+            },
+            {
+                "label": "头孢噻吩",
+                "value": "tbsf121"
+            },
+            {
+                "label": "头孢氨苄",
+                "value": "tbak121"
+            },
+            {
+                "label": "头孢拉定",
+                "value": "tbld121"
+            },
+            {
+                "label": "妥布霉素",
+                "value": "tbms121"
+            },
+            {
+                "label": "土霉素",
+                "value": "tms1211"
+            },
+            {
+                "label": "多西环素",
+                "value": "dxhs121"
+            },
+            {
+                "label": "角沙霉素",
+                "value": "jsms12123"
+            }
+        ],
+            "context": [
+                {
+                    "label": "院内类",
+                    "value": "ynl909",
+                    "order": "",
+                    "options": [
+                        {
+                            "label": "院内",
+                            "value": "yn909"
+                        },
+                        {
+                            "label": "院外",
+                            "value": "yw909"
+                        }
+                    ]
+                },
+                {
+                    "label": "第几次",
+                    "value": "djc909",
+                    "order": "",
+                    "options": [
+                        {
+                            "label": "1次",
+                            "value": "d1"
+                        },
+                        {
+                            "label": "2次",
+                            "value": "d2"
+                        },
+                        {
+                            "label": "3次",
+                            "value": "d3"
+                        }
+                    ]
+                }
+            ],
+            "context":[
+                {
+                    "label":"院内",
+                    "value":"",
+                    "frequency":[{
+                        "label":"首次",
+                        "value":""
+                    },{
+                        "label":"末次",
+                        "value":""
+                    }]
+                },{
+                    "label":"手术",
+                    "value":"",
+                    "frequency":[{
+                        "label":"院内首次",
+                        "value":""
+                        },{
+                            "label":"院内末次",
+                            "value":""
+                        }],
+                    "options":[{
+                        "label":"冠状动脉造影数",
+                        "value":""
+                        },{
+                            "label":"冠状动脉造影数1",
+                            "value":""
+                        }],
+                    "around":[{
+                        "label":"前",
+                        "value":""
+                        },{
+                        "label":"后",
+                        "value":""
+                        },{
+                        "label":"前后",
+                        "value":""
+                        }],
+                    "time":[{
+                        "label":"最近一次",
+                        "value":""
+                        }]
+                },{
+                    "label":"用药",
+                    "value":""
+                }
+            ]
+        }
+    ]
+}

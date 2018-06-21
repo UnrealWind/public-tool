@@ -1,0 +1,81 @@
+{
+    "data": {
+        "stableVersion": null,
+        "version": [
+            {
+                "id": null,
+                "name": "Day0_a_基本信息",
+                "bizName": null,
+                "label": "A0 基本信息",
+                "type": "菜单",
+                "parent": "Day0",
+                "group": null,
+                "order": 20,
+                "description": null,
+                "filterTag": null,
+                "exportTag": null,
+                "hasNecessary": false,
+                "categoryLevel": "模块",
+                "children": [
+                    {
+                        "id": null,
+                        "name": "Day0_a_基本信息_a_11",
+                        "bizName": "Day0_a_基本信息_a_11",
+                        "label": "上传视频",
+                        "type": "文件上传-多个",
+                        "parent": "Day0_a_基本信息",
+                        "group": null,
+                        "order": 10,
+                        "description": null,
+                        "filterTag": null,
+                        "exportTag": null,
+                        "hasNecessary": false,
+                        "unit": null,
+                        "width": null,
+                        "notNull": false,
+                        "value": null,
+                        "changed": false,
+                        "fileType": "VIDEOS",
+                        "suffix": [
+                            "mp4"
+                        ],
+                        "limitMaxBytes": 20480,
+                        "limitMaxSize": null,
+                        "fileTypeStr": "VIDEOS",
+                        "children": []
+                    },
+                    {
+                        "id": null,
+                        "name": "Day0_a_基本信息_a_12",
+                        "bizName": "Day0_a_基本信息_a_12",
+                        "label": "上传图片",
+                        "type": "图片上传-多个",
+                        "parent": "Day0_a_基本信息",
+                        "group": null,
+                        "order": 10,
+                        "description": null,
+                        "filterTag": null,
+                        "exportTag": null,
+                        "hasNecessary": false,
+                        "unit": null,
+                        "width": null,
+                        "notNull": false,
+                        "value": null,
+                        "changed": false,
+                        "fileType": "VIDEOS",
+                        "suffix": [
+                            "dicom"
+                        ],
+                        "limitMaxBytes": 20480,
+                        "limitMaxSize": null,
+                        "fileTypeStr": "VIDEOS",
+                        "children": []
+                    }
+                ]
+            }
+        ],
+        "count": 0
+    },
+    "status": "ok",
+    "description": "数据请求成功"
+}

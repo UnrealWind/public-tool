@@ -1,0 +1,41 @@
+//定义一级标题页面常量
+$infi-first-li-color:#797979;
+$infi-first-li-pd-bottom:5px;
+$infi-first-li-wth:42%;
+$infi-first-li-border-bottom:1px solid #ccc;
+$infi-first-li-margin:0 20px 20px 0;
+.infi-listing{
+  >ul{
+    margin-left:20px;
+
+    >li>ul{
+      padding:0;
+      //position: relative;
+
+      >li:nth-child(2n) .extract-choser{
+        left:0;
+      }
+
+      >li:nth-child(2n+1) .extract-choser{
+        right:0;
+      }
+    }
+  }
+}
+.infi-listing-title{
+  font:bold 16px "微软雅黑";
+  margin-bottom:5px;
+}
+.infi-first-li{
+  //position: relative;
+  margin:$infi-first-li-margin;
+  padding-bottom:$infi-first-li-pd-bottom;
+  width: $infi-first-li-wth;
+  border-bottom: $infi-first-li-border-bottom;
+  display: inline-block;
+  color: #797979;
+
+  >label{
+    cursor: pointer;
+  }
+}

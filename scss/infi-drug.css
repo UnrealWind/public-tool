@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.infi-drug-input {
+  width: 220px;
+}
+
+.infi-drug-title {
+  font: bold 16px "微软雅黑";
+  margin-bottom: 5px;
+}
+
+.infi-drug-list {
+  color: #797979;
+  width: 90%;
+  position: relative;
+}
+
+.infi-drug-list > li {
+  width: 150px;
+}
+
+.infi-drug-list > li > label {
+  cursor: pointer;
+}
+
+.infi-drug-list .infi-list-content {
+  position: relative;
+}

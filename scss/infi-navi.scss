@@ -1,0 +1,319 @@
+
+.infi-navi-box {
+	margin:72px 0 0 0;
+	display:inline-block;
+	float:left;
+
+	.infi-navi-icon>img{
+		width:16px;
+		position:relative;
+		top:-4px;
+	}
+
+	.shrinkNavi {
+		
+		line-height:38px;
+		font-size:14px;
+		text-align:center;
+		cursor:pointer;
+		span {
+			color: #00c1de;
+		}
+	}
+	.shrinkNavi:hover {
+		background:#f2f4f4;
+	}
+	div>ul:first-child {
+		width: 180px;
+	}
+	div>ul{
+		height: 87vmin;
+		float:left;
+		
+		li {
+			width:180px;
+			line-height:1.4;
+			font-size:14px;
+			padding:0;
+			cursor:pointer;
+			
+			p {
+				padding:9px 20px;
+				margin:0;
+				position:relative;
+				height:40px;
+				line-height:22px;
+				font-size:13px;
+
+			}
+			p:hover{
+				background:#f2f4f4;
+			}
+			
+			i:first-child {
+				font-size: 9px;
+			}
+			a{
+				text-decoration:none;
+				position:absolute;
+				left:50px;
+			}
+		}
+	}
+	.shrink.infi-first-navi {
+		width:50px;
+		.shrinkNavi {
+			width:50px;
+		}
+
+	}
+	.shrinkNavi {
+		.naviAbsolute{
+		    position: absolute;
+		    top: 40% ;
+		    display: inline-block;
+		    line-height: 50px;
+		    width:19px;
+		   
+		    background-color: #eee;
+    		border: 1px solid #ddd;
+    		color:#000;
+		}
+		.glyphicon {
+			z-index:1;
+		}
+		.glyphicon-menu-left {
+			border-radius: 5px 0 0 5px;
+			left: 121px;
+		}
+		.glyphicon-menu-right {
+			left: 0px;
+			border-radius: 0 5px 5px 0;
+		}
+	}
+	.shrink.infi-second-navi {
+		width:19px;
+		overflow:hidden;
+		box-shadow:none;
+		background-color:#fff;
+	}
+
+	.shrink.infi-first-navi {
+		
+	}
+
+	.infi-first-navi {
+
+		>ul>li {
+			>ul {
+				background:#eeeff1;
+			}
+		}
+		background-color: #ddd;
+		overflow:hidden;
+		float:left;
+
+		.active {
+			background-color:#00c1de;
+			color: #fff;
+			a{color: #fff;}
+			img{
+				filter: brightness(10);
+			}
+		}
+	}
+
+	.infi-second-navi {
+
+//	记一下，出现那个问题的原因就是因为这里没有增加display:inline-block,所以盒子并没有宽度
+//	很迷，明明display-block 的默认状态就是可以设置高度的啊- - 不知道为啥，但是还是找到了原因
+
+		display: inline-block;
+		background-color: #eee;
+		position:relative;
+		overflow:hidden;
+		width:140px;
+		line-height:40px;
+		>ul{
+			height:84vmin;
+		}
+		.secondTitle {
+			height:67px;
+			a {
+				display:inline-block;
+				margin:0;
+				padding:13px 20px;
+				height:100% ;
+				text-decoration:none;
+				font-size:12px;
+			}
+		}
+		li>p>a{
+			left:44px;
+			font-size:12px;
+		}
+		>ul>li>p>a{
+			left:32px;
+		}
+		li p {
+			padding-left:12px;
+		}
+		.active {
+			background-color:#fff;
+		}
+	}
+		
+}
+
+//记一下，两个div一个定宽,左浮动，另外一个写overflow hidden;第二个会自动充满宽度
+article.infi-main {
+	margin-left:0;
+}
+body {
+	height:100% ;
+}
+
+//模仿阿里云的想法，给主体部分定高并且overflow auto
+article {
+	height:98vmin;
+	overflow:auto;
+}
+
+.list-group-active{
+	background-color: #eeeff1;
+	>a{
+		color: rgb(110,193,235);
+	}
+}
+
+
+//css3 的
+
+
+//先最大支持10个子菜单的，再多的调大最后的那个值就行了，
+@for $i from 1 through 100 {
+
+  	@keyframes shrink-#{$i}
+	{
+		from {height:$i*40px;}
+		to {height:0px;}
+	}
+
+	@-webkit-keyframes shrink-#{$i}
+	{
+		from {height:$i*40px;}
+		to {height:0px;}
+	}
+
+	@keyframes open-#{$i}
+	{
+		from {height:0px;}
+		to {height:$i*40px;}
+	}
+
+	@-webkit-keyframes open-#{$i}
+	{
+		from {height:0px;}
+		to {height:$i*40px;}
+	}
+
+    .infi-child-navi.shrinkChild-#{$i} {
+		height:0px;
+		animation:shrink-#{$i} 0.5s;
+		-webkit-animation:shrink-#{$i} 0.5s;
+	}
+
+	.infi-child-navi.openChild-#{$i} {
+		animation:open-#{$i} 0.5s;
+		-webkit-animation:open-#{$i} 0.5s;
+	}
+
+}
+
+@keyframes shrink-first
+{
+	from {width:180px;}
+	to {width:50px;}
+}
+
+@-webkit-keyframes shrink-first
+{
+	from {width:180px;}
+	to {width:50px;}
+}
+
+@keyframes open-first
+{
+	from {width:50px;}
+	to {width:180px;}
+}
+
+@-webkit-keyframes open-first
+{
+	from {width:50px;}
+	to {width:180px;}
+}
+
+
+
+@keyframes shrink-second
+{
+	from {width:180px;}
+	to {width:19px;}
+}
+
+@-webkit-keyframes shrink-second
+{
+	from {width:180px;}
+	to {width:19px;}
+}
+
+@keyframes open-second
+{
+	from {width:19px;}
+	to {width:140px;}
+}
+
+@-webkit-keyframes open-second
+{
+	from {width:19px;}
+	to {width:140px;}
+}
+
+.shrink-first {
+	width:50px !important;
+	animation:shrink-first 0.5s;
+	-webkit-animation:shrink-first 0.5s;
+	.shrinkNavi {
+		>span{
+			transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			filter:progid:DXImageTransform.Microsoft.BasicImage(Rotation=2);
+		}
+	}
+}
+
+.shrink-second {
+	width:19px !important;
+	background:#fff !important;
+	animation:shrink-second 0.5s;
+	-webkit-animation:shrink-second 0.5s;
+}
+
+.open-first {
+	animation:open-first 0.5s;
+	-webkit-animation:open-first 0.5s;
+}
+
+.open-second {
+	animation:open-second 0.5s;
+	-webkit-animation:open-second 0.5s;
+}
+
+
+.infi-child-navi{
+	overflow:hidden;
+}
+

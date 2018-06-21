@@ -1,0 +1,40 @@
+<div ng-show="relations">
+    <!--取数-关联属性的显示-->
+    <h5 class="title">关联属性</h5>
+    <ul class="list-unstyled infi-choser-first-li">
+        <li ng-repeat="tag in relations">
+            <input type="checkbox" value="" name="" ng-model="tag.$checked" ng-change="setTagCheck(tag,relations,'input')" class="select-item"/>
+            <label class="infi-listing-attribute">
+                <span ng-bind="tag.label" class="select-item" ng-click="setTagCheck(tag,relations,'label')"></span>
+            </label>
+            <span class="infi-triangle-up" ng-if="(tag.tabs || tag.options || tag.relation)&&tag.$active"></span>
+            <div modal-position class="infi-group infi-choser-tabs-context infi-level" ng-if="(tag.tabs || tag.options)&&tag.$active">
+                <!--带标签-->
+                <div ng-if="tag.tabs" choser-tab tabs="tag.tabs" contents="tag" catogary="catogary"></div>
+
+                <!--搜索框的显示-->
+                <div style="padding:8px 0;" ng-if='tag.searchId != ""'>
+                    <input ng-model="tag.keyword" class="form-control infi-drug-input input-sm" type="text"
+                           placeholder="更多搜索" ng-change="searchMore({tag:tag})" />
+                </div>
+
+                <!--普通option的显示-->
+                <div choser-options options="tag.options" contents="tag" catogary="catogary"
+                     ng-if="tag.options && (!tag.keyword || tag.keyword=='')"></div>
+
+                <!--搜索到的内容展示-->
+                <div choser-options options="tag.searchData.data" contents="tag" catogary="catogary"
+                     ng-if="tag.keyword && tag.keyword!=''&&tag.searchData.status == SYS.STATUS_SUCCESS"></div>
+                <!--未搜到内容做提示-->
+                <div ng-if="tag.searchData.status != SYS.STATUS_SUCCESS&&tag.keyword&&tag.keyword!=''"
+                     ng-bind="tag.searchData.description"></div>
+
+                <!--关联属性 option或者tab包含的关联属性-->
+                <div choser-relations contents="tag" relations = "tag.relation" catogary="catogary" ng-if="tag.relation"></div>
+            </div>
+            <!--关联属性 关联属性包含的关联属性-->
+            <div class="infi-group infi-choser-tabs-context infi-level" choser-relations contents="tag" relations = "tag.relation"
+                 ng-if="tag.relation && tag.$active && (!tag.tabs && !tag.options)" catogary="catogary"></div>
+        </li>
+    </ul>
+</div>

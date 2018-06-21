@@ -1,0 +1,202 @@
+body {
+  font-size: 16px;
+}
+
+.margin {
+  margin: 1rem;
+}
+
+.alert {
+  margin: 0;
+  padding: 0.5em;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+}
+
+.row {
+  margin: 0;
+}
+
+.col-xs-7, .col-xs-5 {
+  line-height: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+}
+
+.col-xs-7 {
+  text-align: right;
+}
+
+.col-xs-5 {
+  text-align: left;
+  padding: 0 0 0 1rem;
+}
+
+.infi-main .infi-ele-phone-header {
+  background-color: #eee;
+  height: 4.2rem;
+  line-height: 4.5rem;
+  text-align: left;
+  width: 100%;
+  padding: 0 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.infi-main .infi-ele-phone-header h3, .infi-main .infi-ele-phone-header a {
+  margin: 0;
+  padding: 0;
+  height: 4rem;
+  line-height: 4rem;
+}
+
+.infi-main .infi-ele-phone-header a {
+  float: right;
+}
+
+.infi-main .infi-ele-phone-header h3 {
+  font-size: 1.8rem;
+}
+
+.infi-main .infi-ele-phone-header h3 span {
+  position: relative;
+  top: 0.2rem;
+}
+
+.infi-main .infi-ele-phone-title {
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 2rem;
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+}
+
+.infi-main .infi-ele-diagnosis-content h5 {
+  height: 3.5rem;
+  line-height: 3.5rem;
+  padding: 0 0 0 2rem;
+  margin: 0;
+  width: 40%;
+  color: #337ab7;
+  font-size: 1.6rem;
+}
+
+.infi-main .infi-ele-diagnosis-content .progress {
+  height: 1.8rem;
+  position: relative;
+  top: 2.2rem;
+}
+
+.infi-main .infi-ele-diagnosis-content p {
+  padding: 0 3rem;
+  line-height: 2.5rem;
+  text-indent: 1rem;
+}
+
+.infi-main .infi-ele-phone-tabs {
+  display: inline-block;
+  height: 3rem;
+  line-height: 3rem;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.infi-main .nav-tabs > li > a {
+  border: 0;
+  margin: 0;
+}
+
+.infi-main .nav-tabs > li {
+  border-right: 1px solid #ccc;
+}
+
+.infi-main .marginten h5 {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0.5rem 1.5rem 0;
+  font-size: 1.6rem;
+  margin: 0.5rem 0 0 0;
+  color: #337ab7;
+}
+
+.infi-main .marginten > div {
+  min-height: 100vmax;
+  line-height: 1.5em;
+}
+
+.infi-main .marginten > div > div > div {
+  padding: 1rem 2rem;
+  line-height: 2.5rem;
+  text-indent: 1rem;
+}
+
+.infi-main .infi-sportAdvice > div {
+  padding: 1rem 2rem;
+  line-height: 2.5rem;
+  text-indent: 1rem;
+}
+
+.infi-main .infi-medicalAdvice {
+  padding: 1rem;
+  line-height: 2.5rem;
+  text-indent: 1rem;
+}
+
+.infi-main .infi-ele-unscramble-content {
+  padding: 1rem;
+}
+
+.infi-main .infi-ele-unscramble-content .unscramble-title-back {
+  float: right;
+  margin-top: 0.8rem;
+}
+
+.infi-main .infi-ele-unscramble-content h5 {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 0.5rem;
+  font-size: 1.8rem;
+  margin: 1.5rem 0 0 0;
+  color: #337ab7;
+}
+
+.infi-main .infi-ele-unscramble-content .unscramble-title {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 0.5rem;
+  font-size: 1.8rem;
+  margin: 0.5rem 0 0 0;
+  display: inline-block;
+}
+
+.infi-main .infi-ele-unscramble-content .unscramble-title-back {
+  color: #666;
+}
+
+.infi-main .infi-ele-unscramble-content .infi-ele-paragraph {
+  text-indent: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.infi-main .infi-ele-unscramble-content p {
+  text-indent: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.infi-main .infi-mobile-buttom {
+  height: 4rem;
+  line-height: 4rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  width: 95%;
+  margin: 0 auto 2rem;
+  background: #488aff;
+  text-align: center;
+}
+
+.infi-main .infi-mobile-buttom a {
+  color: #fff;
+  font-size: 2rem;
+}

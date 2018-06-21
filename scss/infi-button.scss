@@ -1,0 +1,89 @@
+@import "frame";
+
+@mixin background($shape,$webkit-start,$webkit-end,$color-start,$color-end,$moz-start,$color){
+  background:-webkit-gradient($shape, $webkit-start, $webkit-end, from($color-start), to($color-end));
+  background:-moz-linear-gradient($moz-start, $color-start, $color-end);
+  background-color: $color;
+}
+
+.infi-btn-linear-default {
+  @include background(linear,left top,left bottom,#f9f9f9,#dddedf,top,#dddedf);
+  border: $borderStyle;
+
+  &.active,&:active,&:hover{
+    @include background(linear,left top,left bottom, #eaeaea, #ababab,top,#ababab);
+    border: $borderStyle;
+  }
+
+  &:hover{
+    @include background(linear,left top,left bottom, #d4d4d4, #eaeaea,top,#eaeaea);
+    border: $borderStyle;
+  }
+}
+
+.infi-btn-linear-green-l {
+  @include background(linear,left top,left bottom,#40c0e0,#089ec3,top,#12abd1);
+  border-color: #12abd1;
+  color: #FFF;
+  >span{
+    color: #fff;
+  }
+  >a{
+    color: #fff;
+    >span{
+      color: #fff;
+    }
+  }
+  &:hover{
+    @include background(linear,left top,left bottom,#089ec3,#40c0e0,top,#22bbe1);
+    border-color: #22bbe1;
+    color: #FFF;
+  }
+
+  &:focus{
+    color: #FFF;
+  }
+}
+
+.infi-btn-linear-green {
+  @include background(linear,left top,left bottom,#04c1af,#04ad9a,top,#04ad9a);
+  color: #FFF;
+
+  &:hover{
+    @include background(linear,left top,left bottom,#04ad9a,#04c1af,top,#04c1af);
+    color: #FFF;
+  }
+
+  &:focus{
+    color: #FFF;
+  }
+}
+.record-input-save{
+  text-align: right;
+}
+
+.out{
+  border-top: 40px #e4eef8 solid;
+  width: 100%;
+  height: 0px;
+  border-left: 99px #f8f8f8 solid;
+  position: relative;
+
+  >b{
+    font-style:normal;
+    display:block;
+    position:absolute;
+    top:-40px;
+    left:-40px;
+    width:35px;
+  }
+
+  >em{
+    font-style:normal;
+    display:block;
+    position:absolute;
+    top:-25px;
+    left:-109px;
+    width:55px;
+  }
+}

@@ -1,0 +1,104 @@
+@charset "UTF-8";
+.infi-analysis-main {
+  padding: 0px 0px  70px 0px;
+  margin: 0;
+}
+
+.infi-header-ul {
+  border: 1px solid #ccc;
+  text-align: center;
+  overflow: auto;
+  box-shadow: 2px 2px 2px #dcdcdc;
+  margin: 0;
+}
+
+.infi-header-ul > li {
+  float: left;
+  width: 16.666%;
+  height: 57px;
+  line-height: 57px;
+  color: #797979;
+  background-color: #e0edf8;
+}
+
+.infi-header-ul-3 > li {
+  width: 33.33%;
+}
+
+.infi-header-ul > .infi-header-active {
+  position: relative;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 0 0 10px 2px #dcdcdc;
+  background-color: #0099CC;
+}
+
+.infi-header-ul > .infi-header-active > a {
+  color: #fff;
+}
+
+.infi-header-ul > .infi-header-active > span {
+  color: #fff;
+}
+
+.infi-header-ul > .infi-analysis-modifyed {
+  background-color: #66CC99;
+}
+
+.infi-analysis-background {
+  background-color: #ddd;
+}
+
+.font-bold {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.backgroud-ddd {
+  background-color: #ddd;
+  border-radius: 3px;
+}
+
+.paddingten {
+  padding: 10px;
+}
+
+.backgroud-blue {
+  background-color: #e0edf8;
+  border-radius: 3px;
+}
+
+.not-wrap {
+  width: 31em;
+  word-break: keep-all;
+  /* 不换行 */
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 内容超出宽度时隐藏超出部分的内容 */
+  text-overflow: ellipsis;
+}
+
+.infi-variable-list {
+  text-align: center;
+  padding: 0;
+  border: 1px solid #9d9d9d;
+}
+
+.infi-variable-list .infi-variable-content {
+  height: 54px;
+}
+
+.infi-variable-list .infi-variable-header {
+  border-radius: 0px;
+}
+
+.infi-model-fenzhu {
+  background: #fff;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.displayNone {
+  display: none;
+}

@@ -1,0 +1,29 @@
+<ul class="list-unstyled infi-choser-first-li">
+    <!--取数-普通属性带有options的显示-->
+    <!--普通option的显示. tabs的options-->
+    <li ng-repeat="option in options">
+        <label class="infi-listing-attribute" ng-click="setTagCheck(option)">
+            <input type="checkbox" value="" name="" ng-model="option.$checked" class="select-item" />
+            <span ng-bind="option.label" class="select-item"></span>
+        </label>
+        <!--点击图标显示前置条件-->
+        <i class="glyphicon glyphicon-cog pointer select-item" title="前置条件"
+           ng-click="showContext(option)" ng-if="(option.contextCheck||option.contextRange)"></i>
+        <!--前置条件-->
+        <span class="infi-triangle-up" ng-if="contents.context && option.$contextActive"></span>
+        <div class="infi-group infi-choser-tabs-context infi-level" modal-position
+             ng-if="(option.contextCheck||option.contextRange) && option.$contextActive">
+            <div choser-contexts option="option" contents="contents" catogary="catogary" type="type"></div>
+        </div>
+    </li>
+
+    <!--自定义的range-->
+    <li ng-if="contents.customRange">
+        <!--此处会有自定义的情况自定义会有区间输入框-->
+        <i class="glyphicon glyphicon-plus pointer select-item" ng-click="showRangeGroup(contents.customRange)"></i>
+        <!--添加分组-->
+        <div class="infi-level" ng-if="contents.customRange.$checked">
+            <div choser-group-ranges class="infi-choser-define" ranges="contents.customRange" contents="contents"></div>
+        </div>
+    </li>
+</ul>

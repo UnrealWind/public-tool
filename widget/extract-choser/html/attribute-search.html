@@ -1,0 +1,30 @@
+<div class="infi-mask">
+    <!--取数-条件筛选中前置条件药品或者手术的更多搜索-->
+    <div class="infi-mask-content" style="width:600px;padding: 10px;" context-more-modal >
+        <div>
+            <!--搜索框的显示-->
+            <div style="padding:5px 0;" ng-if='contents.searchId != ""'>
+                <input ng-model="contents.keyword" class="form-control infi-drug-input input-sm" type="text"
+                       placeholder="更多搜索" ng-change="searchMore(contents)" />
+            </div>
+            <!--搜索到的内容展示-->
+            <ul class="list-unstyled infi-choser-first-li" ng-if="contents.keyword && contents.keyword!=''&&contents.searchData.status == SYS.STATUS_SUCCESS">
+                <li ng-repeat="option in contents.searchData.data">
+                    <label class="infi-listing-attribute">
+                        <input type="radio" value="{{option.value}}" name="search_name" ng-model="contents.searchData.data.value" class="select-item" />
+                        <span ng-bind="option.label" class="select-item"></span>
+                    </label>
+                </li>
+            </ul>
+
+            <div ng-if="contents.keyword==''||!contents.keyword">请输入关键词进行搜索</div>
+            <!--未搜到内容做提示-->
+            <div class="text-danger" ng-if="contents.searchData.status != SYS.STATUS_SUCCESS&&contents.keyword!=''"
+                 ng-bind="contents.searchData.description"></div>
+        </div>
+        <div class="modal-footer infi-confirm-export-footer">
+            <button type="button" class="btn infi-btn-linear-default select-item" data-dismiss='modal' ng-click="optSearchData(contents,'no')">关闭</button>
+            <button type="button" class="btn infi-btn-linear-green-l select-item" ng-click="optSearchData(contents,'ok')">确定</button>
+        </div>
+    </div>
+</div>

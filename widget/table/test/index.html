@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>基于构建工具开发的新前端</title>
+
+    <link href="../../../../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../../scss/frame.scss" rel="stylesheet" />
+</head>
+
+<body ng-app="infi-basic" ng-controller="tableController">
+    <div class="tab-content">
+        <div infi-table columns="columns" data-ng-if="columns" content="content"
+            update-page="changePage(page)"></div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="../../../../bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="../../../../bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="../../../../bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../angular-ui-bootstrap.js"></script>
+<!-- 通过bower下载的angular-ui-bootstrap  -->
+<!--<script type="text/javascript" src="../../../../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>-->
+<!--<script type="text/javascript" src="../../../../bower_components/angular-ui-bootstrap/src/pagination/pagination.js"></script>-->
+<script type="text/javascript" src="../../constant.js"></script>
+<script type="text/javascript" src="../table.js"></script>
+<script type="text/javascript" src="table.test.js"></script>

@@ -1,0 +1,152 @@
+//===============标签导图样式
+.pointer{
+  cursor: pointer;
+}
+.mind-chart-box{
+  padding:20px;
+
+  .infi-title{
+    margin-top: 0;
+
+    .glyphicon{
+      margin-right: 5px;
+      font-size: 17px;
+      float: left;
+    }
+  }
+
+  .infi-box{
+    border:1px solid #ccc;
+    box-shadow: 2px 2px 2px #dcdcdc;
+    background-color: #FFF;
+    padding: 22px;
+    > h4{
+      border-bottom: #3f8ecb solid 1px;
+      padding-bottom:5px;
+      color:#006abb;
+      font-size: 16px;
+    }
+    > .infi-box-containter{
+      border: #e9e7e7 solid 1px;
+      padding:13px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.mind-chart{
+  .node{
+    circle,rect,polygon{
+      fill: #fff;
+      stroke-width: 2px;
+    }
+
+    rect{
+      x: -8px;
+      y: -7px;
+    }
+
+    text {
+      font-size: 12px;
+    }
+  }
+
+  .term{
+    circle,rect,polygon{
+      stroke: #f4606c;
+    }
+  }
+
+  .enum{
+    circle,rect,polygon{
+      stroke: steelblue;
+    }
+  }
+
+  .date{
+    circle,rect,polygon{
+      stroke: #d1ba74;
+    }
+  }
+
+  .numberic{
+    circle,rect,polygon{
+      stroke: #8cc7b5;
+    }
+  }
+
+  .noValue{
+    circle,rect,polygon{
+      stroke: #333;
+    }
+  }
+  .chart-container{
+    border:1px solid #ccc;
+    padding:10px;
+    width:350px;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    position: absolute;
+
+    .chart-demo{
+      circle,rect,polygon{
+        fill: #fff;
+        stroke: #ccc;
+        stroke-width: 2px;
+      }
+    }
+
+    .color-demo{
+      >div{
+        width:15px;
+        height:10px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+
+      .term{
+        background: #f4606c;
+      }
+
+      .enum{
+        background:steelblue;
+      }
+
+      .date{
+        background:#d1ba74;
+      }
+
+      .numberic{
+        background:#8cc7b5;
+      }
+
+      .noValue{
+        background:#333;
+      }
+    }
+  }
+
+  .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+  }
+
+  .linkColor{
+    stroke: #199ce2;
+    stroke-width: 1px;
+  }
+
+  .tool-tip{
+    display: none;
+    position: absolute;
+    border:1px solid #ccc;
+    background: #fff;
+    padding:7px;
+    max-width:200px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+  }
+}

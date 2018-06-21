@@ -1,0 +1,243 @@
+<section class="infi-section infi-section-choser">
+    <!--带标签-->
+    <div ng-if="contents.tabs">
+        <ul class="nav nav-tabs infi-choser-tabs type-list type-chose">
+            <li ng-repeat="tab in contents.tabs" class="type-chose" ng-class="{true:'active'}[tab.active]">
+                <a ng-click="choseIndexType(tab,contents.tabs)" ng-bind="tab.label"></a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade in active infi-chose-wrap">
+                <ul class='infi-choser-tar list-unstyled' ng-repeat="tab in contents.tabs" ng-if="tab.active">
+                    <li>
+                        <ul class="list-unstyled infi-choser-first-li">
+                            <li ng-repeat="option in tab.options" >
+                                <label class="infi-choser-label">
+                                    <input type="checkbox" value="" name="" ng-model="option.$checked"/>
+                                    <span ng-bind="option.label" ng-click="choseContext(option,tab.options,contents.context)"></span>
+                                </label>
+                                <div class="infi-group infi-choser-tabs-context" ng-if="contents.context && option.active">
+                                    <div choser-context></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--具体列表项-->
+    <div ng-if="contents.options || (contents.range&&!contents.type)">
+        <!--搜索框的显示-->
+        <input ng-if='contents.more' class="form-control infi-drug-input input-sm" type="text" name="" value=""
+               placeholder="更多搜索" ng-change="searchMore(contents)" ng-model="contents.keywords"/>
+
+        <ul class="list-unstyled infi-choser-first-li" ng-if="contents.options">
+            <!--普通option的显示-->
+            <li ng-repeat="option in contents.options" ng-if="!contents.more.active && (!contents.keywords || contents.keywords=='')">
+                <label>
+                    <input type="checkbox" value="" name="" ng-model="option.$checked" />
+                    <span ng-bind="option.label" ng-click="choseContext(option,contents.options,contents.context)"></span>
+                </label>
+                <div class="infi-group infi-choser-tabs-context" ng-if="contents.context && option.active">
+                    <div choser-context></div>
+                </div>
+
+            </li>
+            <!--展示全部-->
+            <li ng-repeat="option in contents.more" ng-if="contents.more.active && (!contents.keywords || contents.keywords=='')">
+                <label>
+                    <input type="checkbox" value="" name="" ng-model="option.$checked" />
+                    <span ng-bind="option.label" ng-click="choseContext(option,contents.more,contents.context)"></span>
+                </label>
+                <div class="infi-group infi-choser-tabs-context" ng-if="contents.context && option.active">
+                    <div choser-context></div>
+                </div>
+            </li>
+
+            <!--搜索到的内容展示-->
+            <li ng-repeat="option in contents.searchData" ng-if="contents.keywords && contents.keywords!=''">
+                <label>
+                    <input type="checkbox" value="" name="" ng-model="option.$checked" />
+                    <span ng-bind="option.label" ng-click="choseContext(option,contents.searchData,contents.context)"></span>
+                </label>
+                <div class="infi-group infi-choser-tabs-context" ng-if="contents.context && option.active">
+                    <div choser-context></div>
+                </div>
+            </li>
+            <!--展示全部的按钮-->
+            <li>
+                <!--展开收起-->
+                <button ng-click="flexMores(contents)" ng-if="contents.more&&(!contents.keywords || contents.keywords=='')"
+                        type="button" class="infi-category-btn">
+                    <span ng-if="contents.more.active">收起全部</span>
+                    <span ng-if="!contents.more.active">显示全部</span>
+                </button>
+            </li>
+        </ul>
+
+        <!--列表项为range和自定义-->
+        <ul  class="list-unstyled infi-choser-first-li" ng-if="contents.range">
+            <li ng-repeat="option in contents.range">
+                <label>
+                    <input type="checkbox" value="" name="" ng-model="option.$checked" />
+                    <span ng-bind="option.label" ng-click="choseContext(option,contents.range,contents.context)"></span>
+                </label>
+                <div class="infi-group infi-choser-tabs-context" ng-if="contents.context && option.active">
+                    <div choser-context></div>
+                </div>
+            </li>
+            <li ng-if="contents.customRange">
+                <!--此处会有自定义的情况自定义会有区间输入框-->
+                <i class="glyphicon glyphicon-plus" ng-click="showRangeGroup(contents.customRange)"></i>
+                <div class="infi-choser-define" ng-if="contents.customRange.$checked">
+                    <div ng-repeat="range in contents.customRange">
+                        <input class="form-control infi-group-input" ng-model="range.min" type="text" placeholder="最小值" />
+                        -
+                        <input class="form-control infi-group-input" ng-model="range.max" type="text" placeholder="最大值" />
+                        <div class="infi-plus-minus">
+                            <i class="glyphicon glyphicon-plus" ng-click="addRange(contents.customRange);"></i>
+                            <i class="glyphicon glyphicon-minus" ng-click="removeRange(contents.customRange,$index);"
+                               ng-show="contents.customRange.length>1"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+    <!--时间，带单位，添加组-->
+    <div ng-if="contents.type && contents.type != 'group'">
+        <div class="infi-group" ng-show="contents.type == 'range' && contents.format" ng-repeat="content in contents.range">
+            <input infi-date class="form-control infi-group-input datepicker" ng-model="content.min" placeholder="开始时间"/>
+            -
+            <input infi-date class="form-control infi-group-input datepicker" ng-model="content.max" placeholder="结束时间"/>
+        </div>
+        <div class="infi-group" ng-show="!contents.format" ng-repeat="content in contents.range">
+            <input class="form-control infi-group-input" type="text" placeholder="最小值" ng-model="content.min" />
+            -
+            <input class="form-control infi-group-input" type="text"  placeholder="最大值" ng-model="content.max" />
+            <span ng-bind="contents.unit" ng-show="contents.unit"></span>
+            <div class="infi-plus-minus" ng-show="contents.type == 'range'">
+                <i class="glyphicon glyphicon-plus" ng-click="addRange(contents.range);"></i>
+                <i class="glyphicon glyphicon-minus" ng-click="removeRange(contents.range,$index);"
+                   ng-show="contents.range.length>1"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--前置条件-->
+    <div ng-if="contents.context && !contents.options" choser-context></div>
+    <!--关联属性-->
+    <!--<div ng-if="contents.relation">-->
+    <!--<h5 class="title">关联属性</h5>-->
+    <!--<ul class="list-unstyled infi-choser-first-li">-->
+    <!--<li ng-repeat="tag in contents.relation">-->
+    <!--<label>-->
+    <!--<input type="checkbox" value="" name="" ng-model="tag.$checked" />-->
+    <!--<span ng-bind="tag.label"></span>-->
+    <!--</label>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--关联属性-->
+    <div ng-if="contents.relation">
+        <h5 class="title">关联属性</h5>
+        <ul class="list-unstyled infi-choser-first-li">
+            <li ng-repeat="tag in contents.relation">
+                <label>
+                    <input type="checkbox" value="" name="" ng-model="tag.$checked" />
+                    <span ng-bind="tag.label" ng-click="choseRelation(tag,contents.relation)"></span>
+                </label>
+                <div class="infi-group infi-choser-tabs-context" ng-if="(tag.tabs || tag.options)&& tag.active">
+                    <!--带标签-->
+                    <div ng-if="tag.tabs && tag.active">
+                        <ul class="nav nav-tabs infi-choser-tabs type-list type-chose">
+                            <li ng-repeat="tab in tag.tabs" class="type-chose" ng-class="{true:'active'}[tab.active]">
+                                <a ng-click="choseIndexType(tab,tag.tabs)" ng-bind="tab.label"></a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active infi-chose-wrap">
+                                <ul class='infi-choser-tar list-unstyled' ng-repeat="tab in tag.tabs" ng-if="tab.active">
+                                    <li>
+                                        <ul class="list-unstyled infi-choser-first-li">
+                                            <li ng-repeat="option in tab.options" >
+                                                <label class="infi-choser-label">
+                                                    <input type="checkbox" value="" name="" ng-model="option.$checked"/>
+                                                    <span ng-bind="option.label" ng-click="choseContext(option,tab.options,tag.context)"></span>
+                                                </label>
+                                                <div class="infi-group infi-choser-tabs-context" ng-if="tag.context && option.active">
+                                                    <div choser-context></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--具体列表项-->
+                    <div ng-if="tag.options && tag.active">
+                        <!--搜索框的显示-->
+                        <input ng-if='tag.more' class="form-control infi-drug-input input-sm" type="text" name="" value=""
+                               placeholder="更多搜索" ng-change="searchMore(tag)" ng-model="tag.keywords"/>
+
+                        <ul class="list-unstyled infi-choser-first-li" ng-if="tag.options">
+                            <!--普通option的显示-->
+                            <li ng-repeat="option in tag.options" ng-if="!tag.more.active && (!tag.keywords || tag.keywords=='')">
+                                <label>
+                                    <input type="checkbox" value="" name="" ng-model="option.$checked" />
+                                    <span ng-bind="option.label" ng-click="choseContext(option,tag.options,tag.context)"></span>
+                                </label>
+                                <div class="infi-group infi-choser-tabs-context" ng-if="tag.context && option.active">
+                                    <div choser-context></div>
+                                </div>
+
+                            </li>
+                            <!--展示全部-->
+                            <li ng-repeat="option in tag.more" ng-if="tag.more.active && (!tag.keywords || tag.keywords=='')">
+                                <label>
+                                    <input type="checkbox" value="" name="" ng-model="option.$checked" />
+                                    <span ng-bind="option.label" ng-click="choseContext(option,tag.more,tag.context)"></span>
+                                </label>
+                                <div class="infi-group infi-choser-tabs-context" ng-if="tag.context && option.active">
+                                    <div choser-context></div>
+                                </div>
+                            </li>
+
+                            <!--搜索到的内容展示-->
+                            <li ng-repeat="option in tag.searchData" ng-if="tag.keywords && tag.keywords!=''">
+                                <label>
+                                    <input type="checkbox" value="" name="" ng-model="option.$checked" />
+                                    <span ng-bind="option.label" ng-click="choseContext(option,tag.searchData,tag.context)"></span>
+                                </label>
+                                <div class="infi-group infi-choser-tabs-context" ng-if="tag.context && option.active">
+                                    <div choser-context></div>
+                                </div>
+                            </li>
+                            <!--展示全部的按钮-->
+                            <li>
+                                <!--展开收起-->
+                                <button ng-click="flexMores(tag)" ng-if="tag.more&&(!tag.keywords || tag.keywords=='')"
+                                        type="button" class="infi-category-btn">
+                                    <span ng-if="tag.more.active">收起全部</span>
+                                    <span ng-if="!tag.more.active">显示全部</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+    <div ng-if="contents.personal">
+        <h5 class="title">关联属性</h5>
+        <ul class="list-unstyled infi-choser-first-li">
+            <li></li>
+        </ul>
+    </div>
+</section>

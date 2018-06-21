@@ -1,0 +1,39 @@
+<div style="float:right;">
+    <button class="btn infi-btn-linear-green-l btn-sm" ng-click="extract_collection()">已收藏的筛选条件</button>
+    <a href="#"><button class="btn infi-btn-linear-green-l btn-sm">excel导入方式新建取数任务</button></a>
+</div>
+<h4 class="infi-title" style="margin-bottom: 20px;"><i class="glyphicon glyphicon-globe"></i>用户筛选 -> 属性提取</h4>
+<link rel="import" href="../../../../template/infi-from-header.html?__inline">
+<div class="infi-box">
+    <div class="infi-box-containter">
+        <div class="dir-nav-container">
+            <div class="row">
+                <div >
+                    <!--左侧tab筛选LP-->
+                    <!--<link rel="import" href="../../src/template/infi-lefttab.html?__inline">-->
+                    <div class="col-xs-10">
+                        <div choser-detail ng-repeat="summary in summaryData.data" contents="summary"></div>
+                        <!--<div class="tab-content" choser-detail ng-repeat="summary in summaryData.data"></div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="text-align: right ;margin:10px;">
+    <a href="#"><button class="btn infi-btn-linear-green-l">下一步，设置筛选逻辑</button></a>
+</div>
+
+<div class="modal fade"  id="infi-collection">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">筛选名称</h4>
+            </div>
+            <div class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

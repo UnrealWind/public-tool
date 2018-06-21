@@ -1,0 +1,22 @@
+{
+  "status":"ok",
+  "description":"数据读取成功",
+  "data":[
+    {
+      "label":"第几次修改",
+      "name":"modifyCount"
+    },{
+      "label":"修改时间",
+      "name":"updateTime"
+    },{
+      "label":"修改属性",
+      "name":"attribute"
+    },{
+      "label":"修改前值",
+      "name":"preValue"
+    },{
+      "label":"修改后值",
+      "name":"postValue"
+    }
+  ]
+}

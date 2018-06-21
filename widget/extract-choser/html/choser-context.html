@@ -1,0 +1,102 @@
+<div>
+    <!--取数-前置条件弹出框-->
+    <button type="button" class="close select-item" data-dismiss="modal" ng-click="closeRela(option)" ng-show="contents.options||contents.tabs">
+        &times;
+    </button>
+
+    <div class="infi-group" ng-show="option.contextRange" style="margin-top:10px;">
+        <div class="infi-group-item">
+            <i ng-click="addRangeContext(option,contents)" class="glyphicon glyphicon-plus"></i>
+            <p class="title" style="display: inline-block;">添加组和前置条件</p>
+        </div>
+        <div ng-repeat="range in option.contextRange" style="border-bottom: 1px solid #ccc;padding:5px 5px;">
+            <div ng-show="option.valueType == 'numberic'" style="display: inline-block;">
+                <input class="form-control infi-group-input" type="text" placeholder="最小值" ng-model="range.min" ng-change="setExportRecord()" style="width:55px;"/>
+                -
+                <input class="form-control infi-group-input" type="text"  placeholder="最大值" ng-model="range.max" ng-change="setExportRecord()" style="width:55px;"/>
+                <span class="infi-error-tip {{range | InputCheck:'range'}}">输入必须是数字</span>
+            </div>
+            <div ng-show="option.valueType == 'term'" class="infi-inline-block">
+                <input type="text" ng-model="range.text" class="form-control infi-group-input" ng-change="setExportRecord()" />
+            </div>
+            <div class="infi-plus-minus">
+                <!--检验名称的id，只有检验名称此处才显示字-->
+                <span ng-show="contents.id == 49">(不设置检验项目值默认检索是否做过所选项目)</span>
+                <i ng-click="removeRangeContext(option,$index)" class="glyphicon glyphicon-minus"></i>
+            </div>
+            <div>
+                <div class="infi-group-item">
+                    <p class="title" class="infi-inline-block">
+                        <i ng-click="addContext(range,contents,option)" class="glyphicon glyphicon-plus"></i>
+                        添加前置条件（不设置默认为在院期间首次）
+                    </p>
+                </div>
+                <div class="infi-group-item" ng-repeat="contexts in range.contextCheck">
+                    <select ng-model="contexts.$select" ng-change="setExportRecord()">
+                        <option value="{{context.id}}" ng-repeat="context in contexts" ng-bind="context.label"
+                                ng-selected="context.id == contexts.$select"></option>
+                    </select>
+                    <div ng-repeat="context in contexts" style="display: inline-block" ng-show="contexts.$select == context.id">
+                        <select ng-show="context.eventPosition" ng-model="context.eventPosition.value" ng-change="setExportRecord()">
+                            <option ng-repeat="cont in context.eventPosition.options" ng-bind="cont.label" value="{{cont.id}}"></option>
+                        </select>
+                        <select ng-show="context.eventNames" ng-model="context.eventNames.value" ng-change="setExportRecord(context.eventNames)" style="width:100px;">
+                            <option ng-repeat="cont in context.eventNames.options" ng-bind="cont.label" value="{{cont.id}}"></option>
+                            <option value="more" ng-show="context.eventNames.searchId!=''">更多</option>
+                        </select>
+                        <select ng-show="context.relationship" ng-model="context.relationship.value" ng-change="setExportRecord()">
+                            <option ng-repeat="cont in context.relationship.options" ng-bind="cont.label" value="{{cont.id}}"></option>
+                        </select>
+                        <input type="text" ng-show="context.customAttributes"  ng-change="setExportRecord()"
+                               ng-model="context.customAttributes.label" class="infi-context-input"/>
+                        <select ng-show="context.attributePosition" ng-model="context.attributePosition.value" ng-change="setExportRecord()">
+                            <option ng-repeat="cont in context.attributePosition.options" ng-bind="cont.label" value="{{cont.id}}"></option>
+                        </select>
+                    </div>
+                    <div class="infi-plus-minus">
+                        <i ng-click="addContext(range,contents,option)" class="glyphicon glyphicon-plus"></i>
+                        <i ng-click="removeContext(range,$index,option)" class="glyphicon glyphicon-minus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="option.contextCheck">
+        <div class="infi-group-item">
+            <p class="title" style="display: inline-block;">
+                <i ng-click="addContext(option,contents)" class="glyphicon glyphicon-plus"></i>
+                添加前置条件（不设置默认为在院期间首次）
+            </p>
+        </div>
+        <div class="infi-group-item" ng-repeat="contexts in option.contextCheck">
+            <select ng-model="contexts.$select" ng-change="setExportRecord()">
+                <option value="{{context.id}}" ng-repeat="context in contexts" ng-bind="context.label"
+                        ng-selected="context.id == contexts.$select"></option>
+            </select>
+            <div ng-repeat="context in contexts" style="display: inline" ng-show="contexts.$select == context.id">
+                <select ng-show="context.eventPosition" ng-model="context.eventPosition.value" ng-change="setExportRecord()">
+                    <option ng-repeat="cont in context.eventPosition.options" ng-bind="cont.label" value="{{cont.id}}"></option>
+                </select>
+                <select ng-show="context.eventNames" ng-model="context.eventNames.value" ng-change="setExportRecord(context.eventNames)" style="width:100px;">
+                    <option ng-repeat="cont in context.eventNames.options" ng-bind="cont.label" value="{{cont.id}}"></option>
+                    <option value="more" ng-show="context.eventNames.searchId!=''">更多</option>
+                </select>
+                <select ng-show="context.relationship" ng-model="context.relationship.value" ng-change="setExportRecord()">
+                    <option ng-repeat="cont in context.relationship.options" ng-bind="cont.label" value="{{cont.id}}"></option>
+                </select>
+                <input type="text" ng-show="context.customAttributes" ng-change="setExportRecord()"
+                       ng-model="context.customAttributes.label" class="infi-context-input"/>
+                <select ng-show="context.attributePosition" ng-model="context.attributePosition.value" ng-change="setExportRecord()">
+                    <option ng-repeat="cont in context.attributePosition.options" ng-bind="cont.label" value="{{cont.id}}"></option>
+                </select>
+            </div>
+            <div class="infi-plus-minus">
+                <i ng-click="addContext(option,contents)" class="glyphicon glyphicon-plus"></i>
+                <i ng-click="removeContext(option,$index)" class="glyphicon glyphicon-minus"></i>
+            </div>
+        </div>
+    </div>
+
+    <div context-search contents="eventsSelect" catogary="catogary" ng-if="eventsSelect.showModel"></div>
+</div>

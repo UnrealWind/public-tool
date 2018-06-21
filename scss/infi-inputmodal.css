@@ -1,0 +1,12 @@
+.infi-inputmodal {
+  margin: 10px 0;
+}
+
+.infi-inputmodal > label {
+  width: 76px;
+}
+
+.infi-inputmodal > input {
+  width: 50%;
+  display: inline-block;
+}

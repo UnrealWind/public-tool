@@ -1,0 +1,578 @@
+@import "frame.scss";
+@import "infi-modal.scss";
+@import "infi-color.scss";
+@import "infi-outside.scss";
+@import "infi-listing.scss";
+@import "infi-category.scss";
+@import "infi-drug.scss";
+@import "infi-filter.scss";
+@import "infi-retrieva-record.scss";
+@import "infi-from-header.scss";
+@import "infi-confirm-export.scss";
+@import "infi-collection-screening.scss";
+@import "infi-lefttab.scss";
+@import "infi-screen-name.scss";
+@import "infi-screen-details.scss";
+@import "infi-time-control.scss";
+@import "infi-button.scss";
+@import "infi-timeline.scss";
+@import "infi-wj-print.scss";
+@import "infi-wj.scss";
+@import "infi-navi.scss";
+@import "infi-forty-two.scss";
+
+body {
+  .alert {
+    margin-top:10px;
+  }
+  ul {
+    list-style: none;
+  }
+  .clear-both {
+    clear:both;
+  }
+  .cursor {
+    cursor: pointer;
+  }
+  article.infi-main {
+    .center p{
+      text-align: center !important;
+    }
+    .infi-template-topNav {
+      ul {
+        margin:0 0 20px 0;
+        li {
+          margin:5px;
+          padding: 5px 10px;
+          display: inline-block;
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 700;
+          }
+        }
+        li.active {
+          background-color: #8dc9f9;
+          border:1px solid #8dc9f9;
+          border-radius:2px;
+          a {
+            color:#fff;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .infi-wj-table,.cursor {
+      tbody tr {
+       // cursor: pointer;
+      }
+    }
+    .infi-set-width {
+      width:1185px;
+    }
+    .infi-main-content-box {
+      margin-left:210px;
+    }
+    background-color: #f1f1f1 !important;
+    .infi-wj-title {
+      font-weight:600;
+      height:40px;
+      line-height: 40px;
+      >div {
+        display: inline-block;
+        margin-left:20px;
+        p {
+          display: inline-block;
+          margin-left: 20px;
+        }
+      }
+    }
+    .infi-row {
+      text-align: center;
+      .infi-wj-title {
+        text-align: left;
+
+      }
+      display: inline-block;
+      .infi-wj-self-box {
+        width:24.5%;
+        display: inline-block;
+        margin:15px 4px 0 0;
+        height:270px;
+        float:left;
+      }
+    }
+    .infi-wj-title {
+      .glyphicon {
+        margin:0 5px 0 0;
+      }
+    }
+    background-color: #fafafa;
+    .infi-wj-self-box {
+      border-bottom: 1px solid #ccc;
+      box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+      margin:15px 0 0 0;
+      .infi-wj-part {
+        .col-md-2-min {
+          width:14%;
+          position: relative;
+          min-height: 1px;
+          padding-right: 15px;
+          padding-left: 15px;
+          float:left;
+        }
+        .row>div {
+          padding-right: 0;
+          vertical-align: top;
+          p {
+            display: inline-block;
+            vertical-align: top;
+          }
+        }
+        .row>.col-md-7>p:last-child{
+          max-width: 450px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        .row>.col-md-5>p:last-child{
+          max-width: 250px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        .row>.col-md-2 {
+          p {
+            max-width: 90px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+
+          }
+
+        }
+      }
+    }
+    .infi-wj-table {
+      margin:0;
+      thead>tr,tbody > tr {
+        td,th {
+          padding:0;
+          p {
+            margin:0;
+            padding:5px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+            padding:5px 10px;
+            text-indent:0;
+          }
+        }
+        .self-wj-label {
+          width:80px;
+          padding-right: 10px;
+          p {
+            text-align: right;
+
+          }
+
+        }
+        .long-p {
+          overflow:hidden;
+          text-overflow:ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+        }
+        .hideLongP {
+          max-width: 400px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      thead>tr {
+        border-bottom: 1px solid #ccc;
+      }
+      tbody > tr:hover {
+        background-color:#e8ebff;
+      }
+      tbody >.infi-related-table:hover{
+        background-color:#fff;
+      }
+    }
+    .nav-tabs {
+      li {
+        cursor: pointer;
+      }
+    }
+    .infi-top-nav {
+      margin:20px 0 0 0;
+    }
+    .infi-left-nav {
+      position: fixed;
+      width: 185px;
+      margin-left:10px;
+      max-height: 66vmin;
+      overflow: auto;
+      @each $name in menzhen, hosp,tijian {
+        .infi-navi-icon-#{$name} {
+          background: url('../src/image/timeline/#{$name}.png') no-repeat scroll 0 0 transparent;
+          display: inline-block;
+          background-size:20px 20px;
+          width: 20px;
+          height:20px;
+          position: relative;
+          top: 4px;
+        }
+      }
+
+      ul{
+        background-color: rgba(250, 250, 250, 0.6);
+      }
+      ul.active {
+        background-color: rgb(241, 241, 241);
+        -webkit-box-shadow:0px 3px 7px rgba(220, 220, 220, 0.89) inset;
+        -moz-box-shadow:0px 3px 7px rgba(220, 220, 220, 0.89) inset;
+        box-shadow:0px 3px 7px rgba(220, 220, 220, 0.89) inset;
+      }
+      ul.active ul.active {
+        background-color: #fff;
+        -webkit-box-shadow:0px 3px 7px rgba(195, 195, 195, 0.89) inset;
+        -moz-box-shadow:0px 3px 7px rgba(195, 195, 195, 0.89) inset;
+        box-shadow:0px 3px 7px rgba(195, 195, 195, 0.89) inset;
+      }
+      li {
+        cursor:pointer;
+        list-style: none;
+        p {
+          border: 1px solid #ddd;
+          border-top:0;
+          padding-left:10px;
+          line-height: 40px;
+          height:40px;
+          margin-bottom: 0;
+          font-size: 15px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          background-color: #eee;
+          span {
+            line-height: 40px;
+            height:40px;
+            color:#563d7c;
+            font-size:13px;
+            margin: 0 6px 0 0;
+          }
+        }
+        p.active{
+          background-color: rgb(250, 250, 250);
+          color:#563d7c;
+          font-weight:700;
+        }
+        li p {
+          padding-left:15px;
+          font-size: 14px;
+          padding-right: 15px;
+        }
+        li p.active {
+          background-color:rgba(33, 150, 243, 0.51);
+          font-weight:700;
+          color:#fff;
+        }
+        li li p {
+          background-color: rgb(250, 250, 250);
+          padding-left:20px;
+        }
+        li li p.active {
+          color:#34a9df;
+          font-weight:700;
+          background-color: rgb(250, 250, 250);
+        }
+
+        p:hover{
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+
+  .infi-content-box {
+    background: #fff;
+    border:1px solid #ddd;
+    min-height: 625px;
+    overflow: hidden;
+    padding: 20px;
+    .infi-word-template {
+      h1 {
+        text-align: center;
+        font-size:22px;
+      }
+      h2 {
+        text-align: center;
+        font-size:17px;
+        border-bottom: 1px solid #ccc;
+        padding:20px;
+        font-weight: 700;
+      }
+      .infi-word-title {
+        border-bottom: 1px solid #ccc;
+        margin:0;
+        overflow: hidden;
+        .infi-name {
+          float: left;
+          span {
+            color:#000;
+            display: block;
+          }
+        }
+
+        .infi-patiId {
+          float:right;
+          text-align: right;
+          span {
+            color:#000;
+            display: block;
+          }
+        }
+      }
+      .infi-info-box {
+        border-bottom: 1px solid #ccc;
+        overflow: hidden;
+        padding: 20px;
+      }
+    }
+
+    .infi-content {
+      h3 {
+        text-align: center;
+        overflow: hidden;
+        font-size:17px;
+        margin-top:20px;
+        font-weight:700;
+        position: relative;
+        height:25px;
+        span {
+          color:#444;
+        }
+        .align-left {
+          float:left;
+          position:absolute;
+          left:0;
+        }
+      }
+      .infi-name {
+        float:right;
+      }
+      p {
+        text-indent:20px;
+        line-height: 1.8;
+        font-size:14px;
+        clear:both;
+        >span.infi-record-supplement{
+          text-indent: 58px;
+          display: block;
+          color:#333;
+          line-height:1.8;
+        }
+        >span.infi-record-mark{
+          width:95px;
+          font-weight: 700;
+          color:#333;
+          display: inline-block;
+          text-align: right;
+        }
+      }
+      >.infi-record-content-list{
+        width:100%;
+        >ul{
+          margin-left:30px;
+          >li{
+            >span{
+              width: 40%;
+              display: inline-block;
+              line-height: 1.8;
+              color:#333;
+            }
+          }
+        }
+      }
+      .infi-doctorName-box {
+        margin-top:40px;
+        float: right;
+        span {
+          margin:20px;
+          color:#000;
+        }
+      }
+      table {
+        thead {
+          margin-top:10px;
+          border-bottom: 1px solid #ccc;
+          p {
+            margin:0;
+            line-height: 2.5;
+          }
+        }
+      }
+
+      .infi-diagnosis-box {
+        border:1px solid #ccc;
+        border-top: 0;
+        padding: 10px;
+        overflow: hidden;
+        >h4{
+          margin-top: 10px;
+          text-indent: 0;
+          >span {
+            width:32%;
+            display: inline-block;
+            color:#000;
+            font-size:14px;
+          }
+        }
+      }
+    }
+  }
+  .no-border-top {
+    border-top:0;
+  }
+  /******************************************体检  &&  门诊**************************************/
+  .infi-wj-whole{
+    .row{
+      line-height:28px;
+      >.title{
+        color:#666;
+        text-align: right;
+        width:145px;
+      }
+    }
+  }
+  article.infi-main{
+    .infi-wj-self-box{
+      .infi-wj-part{
+        .infi-wj-division{
+          h5{
+            color:#2a8fbd;
+            border-bottom: solid #2a8fbd 1px;
+          }
+          >div{
+            margin-bottom:10px;
+          }
+          .row{
+            >.col-md-3{
+              >p:nth-child(1){
+                width: 112px;
+                max-width: 112px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: right;
+              }
+              >p:nth-child(2){
+                max-width:100px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: right;
+              }
+            }
+            .col-md-4{
+              >p:nth-child(1){
+                width: 118px;
+                margin-right:10px;
+                text-align: right;
+              }
+              >p:nth-child(2){
+                max-width: 178px;
+              }
+            }
+          }
+          .row:nth-of-type(1){
+            margin-top:15px;
+          }
+        }
+      }
+      .infi-menzhen-basic{
+        .row{
+          .col-md-3{
+            >p:nth-child(1){
+              max-width:90px;
+              overflow: hidden;
+              text-overflow:ellipsis;
+              white-space: nowrap;
+              text-align: right;
+            }
+          }
+          .col-md-6{
+            >p:nth-child(2){
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              max-width: 384px;
+            }
+          }
+        }
+      }
+      .infi-menzhen-diag{
+        .row{
+          .col-md-2{
+            text-align: right;
+            color:rgb(108, 145, 183);
+          }
+        }
+      }
+    }
+  }
+  article.infi-main .infi-wj-part table.infi-drug-table{
+    >thead{
+      >tr{
+        border-bottom: solid #ccc 2px;
+      }
+    }
+    >tbody{
+      >tr{
+        >td{
+          >p{
+            color:#666;
+          }
+        }
+      }
+    }
+  }
+  /******************************************体检**************************************/
+}
+
+/*********************************************************时间轴样式  start**************************************************/
+img{-ms-interpolation-mode:bicubic;}
+.box { width:940px;margin:18px auto 0 auto; }
+.event_list { width:930px;background:url('../image/retro/dian3.png') 7px 0 repeat-y;margin:10px 0 20px 0; }
+.event_list>div> h3 { margin:0 0 10px 0px;font-size:24px;font-family:Georgia;color:#34a9df;padding-left:25px;background:url('../image/retro/jian.png') 0 -45px no-repeat;height:38px;line-height:30px;font-style:italic; }
+.event_list >div>li { background:url('../image/retro/jian.png') 97px -80px no-repeat; }
+.event_list>div> li >span { width:76px;text-align:right;display:block;float:left;margin-top:10px; }
+.event_list>div> li >p { width:910px;margin-left:24px;display:inline-block;padding-left:10px;line-height:25px;_float:left; }
+.event_list li p a { display:inline-block;color:#797979;text-decoration:none;cursor:pointer;width:900px;text-align:left;border-bottom:2px solid #DDD;padding:10px 15px;background:#f0f0f0;margin:0; }
+.event_list>div> li> p> span { width:650px;text-align:left;border-bottom:2px solid #DDD;padding:10px 15px;background:#f0f0f0;margin:0; }
+.copyright { width:1050px;margin:0 auto;padding:20px 0;text-align:center;color:#999;display:table;margin-left:180px; }
+/*********************************************************时间轴样式  start**************************************************/
+
+body article.infi-main .infi-wj-table thead > tr th p,
+body article.infi-main .infi-wj-table tbody > tr td p {
+  padding: 5px 0;
+}
+.event_list  .timeline-tpl-detail {
+  margin: 10px 0 20px 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 900px;
+  padding:10px;
+  overflow: hidden;
+  h4 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+}

@@ -1,0 +1,58 @@
+<div>
+    <!--ng-if="loginStatus != SYS.STATUS_AUTH_PASSED"-->
+    <div class='box-form'>
+        <div class='title'>
+            登录
+            <!--<button class="fa fa-close" ng-click="hideLogin()"></button>-->
+        </div>
+        <form name="loginForm" ng-submit="login()">
+            <table>
+                <tr>
+                    <td colspan='2'>
+                        <div class='input-group input-group-sm'>
+                                <span class='input-group-addon'>
+                                    <span class='glyphicon glyphicon-user infi-wj-lock'></span>
+                                </span>
+                            <input class='form-control infi-login-ipt' type='text' name="username" placeholder='请输入用户名'
+                                   ng-model="credentials.username"
+                                   required/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='2'>
+                        <div class='input-group input-group-sm'>
+                            <span class='input-group-addon'>
+                                <span class='glyphicon glyphicon-lock infi-wj-lock'></span>
+                            </span>
+                            <input class='form-control infi-login-ipt' type='password' name="password" placeholder='请输入密码'
+                                   ng-model="credentials.password"
+                                   required/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='2'>
+                        <button class='btn btn-blue btn-sm btn-block self-radius btn-submit'
+                                ng-disabled="!loginForm.$valid" >
+                            登&nbsp;&nbsp;录
+                        </button>
+                        <div class='tip'>
+                            <div ng-if="loginForm.username.$invalid">请填写用户名,并不小于6位</div>
+                            <div ng-if="loginForm.password.$invalid">请填写密码,并不小于6位</div>
+                            <div ng-if="credentials.error && loginForm.$pristine" ng-bind="credentials.error"></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <!--gqm_debug 加上背景图有点怪怪的，而且刷新的时候头部会一闪而过-->
+    <div class='box-bg-loop carousel slide' id='bg-loop'>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="../src/image/banner3.png">
+            </div>
+        </div>
+    </div>
+</div>

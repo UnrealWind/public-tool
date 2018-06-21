@@ -1,0 +1,36 @@
+#infi-u-scale .infi-box-containter {padding:10px;}
+#infi-u-scale label {font-size:20px;}
+.modal-header {overflow:hidden;}
+.modal-title {font-size:24px;}
+.modal-body {
+    overflow: hidden;
+    h1{position:unset;font-size:18px;}
+}
+.healthtestnav {margin: 0 auto;text-align: center;}
+.healthtestnav ul { display: inline-block; margin-left: auto; margin-right: auto;}
+.healthtestnav li {display: inline-block;float: left !important;margin: 0 2px; text-align: center;width: 35px;}
+.healthtestnav li a.active {background-color: #d2e4f7;color: black;}
+.healthtestnav li a {cursor: pointer;display: inline-block; width: 35px;font-size: 20px;}
+.healthtestnav li span.active {background-color: #d2e4f7;color: black;}
+.healthtestnav li span {cursor: pointer;display: inline-block; width: auto;padding: 0px 6px;}
+.text-check {float: left; line-height: 30px;margin-left: 15px;margin-top: -10px; width: 1000px;}
+.prev {cursor: pointer;display: inline-block;height: 250px;width: 125px;}
+.to-left {float: left;font-size: 90px;height: 250px;opacity: 0.5;overflow: hidden;padding-top: 100px;width: 125px;}
+.next { cursor: pointer; display: inline-block;height: 250px;width: 125px;}
+.to-right { float: left; font-size: 90px; height: 250px;opacity: 0.5;overflow: hidden;padding-top: 100px;width: 125px;}
+.text-check input { margin-left: 4px;margin-right: 9px;margin-top: 7px;}
+.modal-footer .btn-submit { float: right;height: 35px;margin: -1px 81px 0 20px !important;}
+.text-check input {margin-left: 4px;margin-right: 9px;margin-top: 7px;}
+.btn-fix {background: #3071a9 none repeat scroll 0 0;float: right;height: 35px;}
+.text-check ul { float: left;margin-top: 20px;min-height: 289px; overflow: hidden; width: 700px;}
+.text-check li { float: left;margin: 20px 0 0 20px; overflow: hidden;position: relative;width: 500px;}
+.text-check p {font-size: 20px;font-weight: 600;}
+.radio {margin-left: 30px;}
+.text-check input { margin-left: 4px;margin-right: 9px;margin-top: 7px;}
+.modal-lg {width: 1020px;}
+.text-check ul li {display:none;}
+.text-check .active {display:block;}
+.detail-main {margin-bottom:10px;}
+.infi-alert {font-size: 24px;font-weight: 600;margin: 20px 20px 0; padding: 30px 20px;}
+.infi-errorTip {color:ccc;font-size: 16px;padding:6px 12px;}
+#infi-u-scale a:hover {text-decoration: none;}

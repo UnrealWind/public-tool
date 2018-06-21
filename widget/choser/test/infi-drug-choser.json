@@ -1,0 +1,239 @@
+{
+    "status":"ok",
+    "description":"数据请求成功",
+    "data":[
+        {
+            "label":"常见药品清单",
+            "value":"cjdruglist1",
+            "tabs":[
+                {
+                    "label":"他汀类",
+                    "value":"ttl34",
+                    "options":[
+                        {
+                            "label":"阿托伐他汀",
+                            "value":"atftt121"
+                        },
+                        {
+                            "label":"辛伐他汀",
+                            "value":"xftt121"
+                        },
+                        {
+                            "label":"洛伐他汀",
+                            "value":"lftt121"
+                        }
+                    ]
+                },
+                {
+                    "label":"硝酸酯类",
+                    "value":"xszl121",
+                    "options":[
+                        {
+                            "label":"消心痛",
+                            "value":"xxt121"
+                        },
+                        {
+                            "label":"硝酸甘油",
+                            "value":"xsgy121"
+                        }
+                    ]
+                }
+            ],
+            "options":[
+                {
+                    "label":"阿司匹林肠溶片",
+                    "value":"asplcyp12t1"
+                },
+                {
+                    "label":"阿托伐他汀钙片",
+                    "value":"atfttdp12y1"
+                },
+                {
+                    "label":"地高辛片",
+                    "value":"dgxp12y1"
+                },
+                {
+                    "label":"阿司匹林肠溶片",
+                    "value":"asplsdcyp12ty1"
+                },
+                {
+                    "label":"阿托伐他汀钙片",
+                    "value":"atfttsdp1y21"
+                },
+                {
+                    "label":"颉沙坦胶囊",
+                    "value":"dgxpsds1y21"
+                },
+                {
+                    "label":"依诺沙星",
+                    "value":"ynssdsx1y21"
+                },
+                {
+                    "label":"阿米卡星",
+                    "value":"amsdskx12y1"
+                },
+                {
+                    "label":"环丙沙星",
+                    "value":"hbssdsx1y21"
+                },
+                {
+                    "label":"头孢噻吩",
+                    "value":"tbsdssf1d21"
+                },
+                {
+                    "label":"头孢氨苄",
+                    "value":"tbsdsak1d21"
+                },
+                {
+                    "label":"头孢拉定",
+                    "value":"tbsdadald1d21"
+                }
+            ],
+            "more":[
+                {
+                    "label":"阿司匹林肠溶片",
+                    "value":"asplcyp12t1"
+                },
+                {
+                    "label":"阿托伐他汀钙片",
+                    "value":"atfttdp12y1"
+                },
+                {
+                    "label":"地高辛片",
+                    "value":"dgxp12y1"
+                },
+                {
+                    "label":"阿司匹林肠溶片",
+                    "value":"asplsdcyp12ty1"
+                },
+                {
+                    "label":"阿托伐他汀钙片",
+                    "value":"atfttsdp1y21"
+                },
+                {
+                    "label":"颉沙坦胶囊",
+                    "value":"dgxpsds1y21"
+                },
+                {
+                    "label":"依诺沙星",
+                    "value":"ynssdsx1y21"
+                },
+                {
+                    "label":"阿米卡星",
+                    "value":"amsdskx12y1"
+                },
+                {
+                    "label":"环丙沙星",
+                    "value":"hbssdsx1y21"
+                },
+                {
+                    "label":"头孢噻吩",
+                    "value":"tbsdssf1d21"
+                },
+                {
+                    "label":"头孢氨苄",
+                    "value":"tbsdsak1d21"
+                },
+                {
+                    "label":"头孢拉定",
+                    "value":"tbsdadald1d21"
+                },
+                {
+                    "label":"妥布霉素",
+                    "value":"tbasdams12d1"
+                },
+                {
+                    "label":"土霉素",
+                    "value":"tmasdas121d1"
+                },
+                {
+                    "label":"多西环素",
+                    "value":"dxhasdass1d21"
+                },
+                {
+                    "label":"角沙霉素",
+                    "value":"dsasadasd3d4"
+                }
+            ],
+            "context":[
+                {
+                    "label": "院内类",
+                    "value": "ynl909",
+                    "order": "",
+                    "options": [
+                        {
+                            "label": "院内",
+                            "value": "yn101"
+                        },
+                        {
+                            "label": "院外",
+                            "value": "yw101"
+                        }
+                    ]
+                },
+                {
+                    "label": "第几次",
+                    "value": "djc101",
+                    "order": "",
+                    "options": [
+                        {
+                            "label": "1次",
+                            "value": "d11"
+                        },
+                        {
+                            "label": "2次",
+                            "value": "d22"
+                        },
+                        {
+                            "label": "3次",
+                            "value": "d33"
+                        }
+                    ]
+                },
+                {
+                    "label":"手术",
+                    "value":"ss101",
+                    "options":[
+                        {
+                            "label": "冠状动脉造影术",
+                            "value": "gzzys"
+                        },
+                        {
+                            "label": "心导管射频消融术",
+                            "value": "xdgspxrs"
+                        }
+                    ]
+                },
+                {
+                    "label":"部位",
+                    "value":"options101",
+                    "options":[
+                        {
+                            "label": "前",
+                            "value": "q101"
+                        },
+                        {
+                            "label": "后",
+                            "value": "h189"
+                        }
+                    ]
+                },
+                {
+                    "label":"时间",
+                    "value":"time",
+                    "options":[
+                        {
+                            "label": "小时",
+                            "value": "hour"
+                        },
+                        {
+                            "label": "分钟",
+                            "value": "min"
+                        }
+                    ]
+                }
+            ],
+            "filter":"ioi"
+        }
+    ]
+}

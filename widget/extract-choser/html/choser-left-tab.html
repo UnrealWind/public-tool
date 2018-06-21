@@ -1,0 +1,11 @@
+<nav class="infi-lefttab">
+    <!--取数-条件选取左侧导航-->
+    <ul class="infi-lefttab-ul" ng-show="summaryData.status == SYS.STATUS_SUCCESS">
+        <li ng-repeat="tab in summaryData.data" title="{{tab.label}}" ng-class="{'infi-lefttab-active':tab.$active}"
+            ng-click="leftTabChoice(tab)">
+            <a href="javascript:void(0);" ng-bind="tab.label"></a>
+            <span></span>
+        </li>
+    </ul>
+    <div ng-show="summaryData.status != SYS.STATUS_SUCCESS" ng-bind="summaryData.description"></div>
+</nav>

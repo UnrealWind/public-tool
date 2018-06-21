@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>基于构建工具开发的新前端</title>
+
+        <link href="../../../../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="../../../scss/frame.scss" rel="stylesheet" />
+        <link href="../../../scss/infi-outside.scss" rel="stylesheet" />
+        <link href="../../../scss/infi-from-header.scss" rel="stylesheet" />
+        <link href="../../../scss/infi-button.scss" rel="stylesheet" />
+        <link href="../../../scss/infi-screen-details1.scss" rel="stylesheet" />
+    </head>
+
+    <body ng-app="infi-basic" ng-controller="LogicController">
+        <!-- 头部导航 -->
+        <header class="navbar navbar-default infi-header clearfix">
+            <div class="navbar-header infi-header-logo">
+                <span class="logo"></span>
+            </div>
+
+            <div class="infi-header-title pull-left">
+                结构化取数系统
+            </div>
+
+            <div class="box-user pull-right">
+                <img src="../../../image/user-logo.png" class="user-logo"/>
+                王中艺
+                <i class="pull-right glyphicon glyphicon-menu-down"></i>
+            </div>
+
+            <div class="box-button pull-right">
+                <i class="glyphicon glyphicon-fullscreen"></i>
+                <i class="glyphicon glyphicon-bell"></i>
+            </div>
+        </header>
+        <!-- 头部导航 END -->
+
+        <!-- 左部导航 -->
+        <nav class="infi-main-nav">
+            <ul class="list-group">
+                <li class="list-group-item" data-toggle="collapse" href="#extract-data">
+                    <i class="icon glyphicon glyphicon-list"></i>
+                    数据提取
+                    <i class="icon-angle glyphicon glyphicon-menu-down pull-right"></i>
+                    <ul class="list-group hide-nav collapse in">
+                        <li class="list-group-item btn-href" data-href="">
+                            <a><i class="glyphicon fa fa-circle"></i>新建任务</a>
+                        </li>
+                        <li class="list-group-item btn-href" data-href="">
+                            <a><i class="glyphicon fa fa-circle"></i>查看任务</a>
+                        </li>
+                        <li class="list-group-item btn-href" data-href="">
+                            <a><i class="glyphicon fa fa-circle"></i>审核任务</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item" data-toggle="collapse" href="#">
+                    <i class="icon glyphicon glyphicon-list-alt"></i>多科就诊分析
+                </li>
+                <li class="list-group-item" data-toggle="collapse" href="#">
+                    <i class="icon glyphicon glyphicon-barcode"></i>描述统计
+                </li>
+            </ul>
+        </nav>
+        <!-- 左部导航 END -->
+
+        <!--右部内容-->
+        <article class="infi-main">
+            <h4 class="infi-title"><i class="glyphicon glyphicon-globe"></i>数据提取</h4>
+            <link rel="import" href="../../../template/infi-from-header.html?__inline" />
+
+            <!--<div class="infi-box">-->
+                <!--<h4>属性筛选</h4>-->
+                <!--<div class="infi-box-containter">-->
+                    <!--<div class="dir-nav-container">-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-xs-2">-->
+                                <!--<ul ng-show = "recordData.status == 'ok'" style="position: fixed;">-->
+                                   <!--<li ng-repeat="entity in recordData.data">-->
+                                       <!--<label ng-bind="entity.label" id="{{entity.value}}" draggable="true" ondragstart="formLogic2.drag(event)" class="infi-drag"></label>&nbsp;:&nbsp;-->
+                                       <!--<span ng-repeat="tag in entity.values" id="{{tag.value}}" draggable="true" ondragstart="drag1(event)">{{tag.label}},</span>-->
+                                <!--</ul>-->
+                                <!--<p ng-show = "recordData.status != 'ok'" ng-bind = "recordData.message"></p>-->
+                            <!--</div>-->
+                            <!--<div class="col-xs-10">-->
+                                <!--<div class="" style="text-align: right">-->
+                                    <!--<button class="btn infi-btn-linear-green-l btn-sm" id="collectLogic" ng-click="drag1(event)">收藏筛选条件</button>-->
+                                <!--</div>-->
+                                <!--<div ondragover="FormLogic.allowDrop(event)" ondrop="FormLogic.drop(event)" class="node-parent node-outside" style="border:1px solid #ccc;min-height:300px;padding-bottom:100px;"></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div ng-view></div>
+
+
+        </article>
+        <!-- 右部内容 END-->
+
+        <footer class="infi-footer">
+            <p class="infi-footer-detail">
+                北京无极慧通科技公司 | 北京市海淀区苏州街18号长远天地大厦A1座906室 | 联系电话:010-82686850
+            </p>
+        </footer>
+    </body>
+</html>
+<script type="text/javascript" src="../../../../bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="../../../../bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="../../app.module.js"></script>
+<script type="text/javascript" src="logic.js"></script>
+<script type="text/javascript" src="logic-route.js"></script>
+<script type="text/javascript" src="../form.logic.js"></script>
+

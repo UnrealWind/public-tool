@@ -1,0 +1,39 @@
+<div class="infi-box">
+    <h4>属性筛选</h4>
+    <div class="infi-box-containter">
+        <div class="dir-nav-container">
+            <div class="row">
+                <div class="col-xs-2">
+                    <ul ng-show = "recordData.status == 'ok'" style="position: fixed;">
+                        <li ng-repeat="entity in recordData.data">
+                            <label ng-bind="entity.label" id="{{entity.value}}" draggable="true" ondragstart="formLogic.drag(event)" class="infi-drag"></label>&nbsp;:&nbsp;
+                            <span ng-repeat="tag in entity.values" id="{{tag.value}}" draggable="true" ondragstart="formLogic.drag(event)">{{tag.label}},</span>
+                    </ul>
+                    <p ng-show = "recordData.status != 'ok'" ng-bind = "recordData.message"></p>
+                </div>
+                <div class="col-xs-10">
+                    <div class="" style="text-align: right">
+                        <button class="btn infi-btn-linear-green-l btn-sm" id="collectLogic">收藏筛选条件</button>
+                    </div>
+                    <div ondragover="formLogic.allowDrop(event)" ondrop="formLogic.drop(event)" class="node-parent node-outside" style="border:1px solid #ccc;min-height:300px;padding-bottom:100px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var scope = $(".infi-box").scope();
+    formLogic = FormLogic(scope.recordData,scope.configureData,$(".node-outside"));
+    $(".dir-nav-container").on('click', '.add-group', function (){
+        formLogic.addGroup($(this));
+    })
+    $(".dir-nav-container").on('click', '.glyphicon-minus-sign', function () {
+        formLogic.removeOption($(this).closest('.infi-logic-detail'),$(this).closest('.node-parent'));
+    })
+    $(".node-outside").on('click', '.infi-logic-btn .btn', function () {
+        formLogic.choseLogic($(this));
+    })
+    $('#collectLogic').click(function () {
+        console.log(formLogic.getFilterData(),89);
+    })
+</script>

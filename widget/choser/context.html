@@ -1,0 +1,39 @@
+<div>
+    <button type="button" class="close" data-dismiss="modal" ng-click="closeRela(option)" ng-show="contents.options">
+        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+    </button>
+    <div>
+        <div class="infi-group-item">
+            <i ng-click="addContext(option.context)" class="glyphicon glyphicon-plus"></i>
+            <p class="title">添加前置条件（不设置默认为在院期间首次）</p>
+        </div>
+        <div class="infi-group-item" ng-repeat="contexts in option.context">
+            <select ng-model="option.context.$select">
+                <option value="{{context.id}}" ng-repeat="context in contexts" ng-bind="context.label"
+                        ng-selected="context.id== option.context.$select"></option>
+            </select>
+            <div ng-repeat="context in contexts" ng-show="option.context.$select == context.id" style="display: inline-block">
+                <!--<select>-->
+                <!--<option value="" ng-bind="context.label"></option>-->
+                <!--</select>-->
+                <select>
+                    <option value="" ng-repeat="cont in context.frequency.options" ng-bind="cont.label"></option>
+                </select>
+                <select ng-show="context.names">
+                    <option value="" ng-repeat="cont in context.names.options" ng-bind="cont.label"></option>
+                </select>
+                <select ng-show="context.around">
+                    <option value="" ng-repeat="cont in context.around.options" ng-bind="cont.label"></option>
+                </select>
+                <select ng-show="context.time">
+                    <option value="" ng-repeat="cont in context.time.options" ng-bind="cont.label"></option>
+                </select>
+                <div class="infi-plus-minus">
+                    <i ng-click="addContext(option.context)" class="glyphicon glyphicon-plus"></i>
+                    <i ng-click="reduceContext()" class="glyphicon glyphicon-minus"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

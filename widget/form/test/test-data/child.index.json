@@ -1,0 +1,331 @@
+{
+    "data": {
+        "stableVersion": null,
+        "version": [
+            {
+                "id": null,
+                "name": "Day0_a_基本信息",
+                "bizName": null,
+                "label": "A0 基本信息",
+                "type": "菜单",
+                "parent": "Day0",
+                "group": null,
+                "order": 20,
+                "description": null,
+                "filterTag": null,
+                "exportTag": null,
+                "hasNecessary": false,
+                "categoryLevel": "模块",
+                "children": [
+                    {
+                        "id": null,
+                        "name": "Day0_a_基本信息_a_9",
+                        "bizName": "Day0_a_基本信息_a_9",
+                        "label": "入院病历陈述者与患者关系",
+                        "type": "单选+扩充输入",
+                        "parent": "Day0_a_基本信息",
+                        "group": null,
+                        "order": 8,
+                        "description": null,
+                        "filterTag": null,
+                        "exportTag": null,
+                        "hasNecessary": false,
+                        "unit": null,
+                        "width": null,
+                        "notNull": false,
+                        "value": null,
+                        "changed": false,
+                        "dimension": {
+                            "id": null,
+                            "label": "9",
+                            "name": "9",
+                            "options": [
+                                {
+                                    "id": null,
+                                    "label": "配偶",
+                                    "value": "配偶",
+                                    "name": null,
+                                    "description": null,
+                                    "order": 10,
+                                    "children": []
+                                },
+                                {
+                                    "id": null,
+                                    "label": "父母",
+                                    "value": "父母",
+                                    "name": null,
+                                    "description": null,
+                                    "order": 20,
+                                    "children": []
+                                },
+                                {
+                                    "id": null,
+                                    "label": "同事",
+                                    "value": "同事",
+                                    "name": null,
+                                    "description": null,
+                                    "order": 30,
+                                    "children": []
+                                },
+                                {
+                                    "id": null,
+                                    "label": "其他",
+                                    "value": "其他",
+                                    "name": null,
+                                    "description": null,
+                                    "order": 40,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        "extendable": false,
+                        "children": [
+                            {
+                                "id": null,
+                                "name": "Day0_a_基本信息_a_9_a_同事",
+                                "bizName": null,
+                                "label": "同事",
+                                "type": "虚拟菜单",
+                                "parent": "Day0_a_基本信息",
+                                "group": "入院病历陈述者与患者关系",
+                                "order": 0,
+                                "description": null,
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "value": "同事",
+                                "index": "Day0",
+                                "children": [
+                                    {
+                                        "id": null,
+                                        "name": "Day0_a_基本信息_a_9_a_同事_a_10",
+                                        "bizName": "Day0_a_基本信息_a_10",
+                                        "label": "同事",
+                                        "type": "小文本输入",
+                                        "parent": "Day0_a_基本信息_a_9_a_同事",
+                                        "group": null,
+                                        "order": 9,
+                                        "description": null,
+                                        "filterTag": null,
+                                        "exportTag": null,
+                                        "hasNecessary": false,
+                                        "unit": null,
+                                        "width": null,
+                                        "notNull": false,
+                                        "value": null,
+                                        "changed": false,
+                                        "minTextLength": null,
+                                        "maxTextLength": null,
+                                        "length": 10,
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": null,
+                        "name": "Day0_a_基本信息_a_3",
+                        "bizName": "Day0_a_基本信息_a_3",
+                        "label": "上报医院",
+                        "type": "多选+扩充输入",
+                        "parent": "Day0_a_基本信息",
+                        "group": null,
+                        "order": 2,
+                        "description": null,
+                        "filterTag": null,
+                        "exportTag": null,
+                        "hasNecessary": false,
+                        "unit": null,
+                        "width": null,
+                        "notNull": true,
+                        "value": null,
+                        "changed": false,
+                        "dimension": {
+                            "id": null,
+                            "label": "3",
+                            "name": "3",
+                            "options": [
+                                {
+                                    "id": null,
+                                    "label": "北京同仁医院",
+                                    "value": "北京同仁医院",
+                                    "name": null,
+                                    "description": null,
+                                    "order": 10,
+                                    "children": []
+                                },
+                                {
+                                    "id": null,
+                                    "label": "北京天坛医院",
+                                    "value": "北京天坛医院",
+                                    "name": null,
+                                    "description": null,
+                                    "order": 20,
+                                    "children": []
+                                },
+                                {
+                                    "id": null,
+                                    "label": "北京宣武医院",
+                                    "value": "北京宣武医院",
+                                    "name": null,
+                                    "description": null,
+                                    "order": 30,
+                                    "children": []
+                                },
+                                {
+                                    "id": null,
+                                    "label": "北京儿童医院",
+                                    "value": "北京儿童医院",
+                                    "name": null,
+                                    "description": null,
+                                    "order": 40,
+                                    "children": []
+                                },
+                                {
+                                    "id": null,
+                                    "label": "其他医院",
+                                    "value": "其他医院",
+                                    "name": null,
+                                    "description": null,
+                                    "order": 50,
+                                    "children": []
+                                },
+                                {
+                                    "id": null,
+                                    "label": "其他机构",
+                                    "value": "其他机构",
+                                    "name": null,
+                                    "description": null,
+                                    "order": 60,
+                                    "children": []
+                                },
+                                {
+                                    "id": null,
+                                    "label": "其他",
+                                    "value": "其他",
+                                    "name": null,
+                                    "description": null,
+                                    "order": 60,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        "extendable": false,
+                        "children": [
+                            {
+                                "id": null,
+                                "name": "Day0_a_基本信息_a_3_a_其他机构",
+                                "bizName": null,
+                                "label": "其他机构",
+                                "type": "虚拟菜单",
+                                "parent": "Day0_a_基本信息",
+                                "group": "上报医院",
+                                "order": 0,
+                                "description": null,
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "value": "其他机构",
+                                "index": "Day0",
+                                "children": [
+                                    {
+                                        "id": null,
+                                        "name": "Day0_a_基本信息_a_3_a_其他机构_a_4",
+                                        "bizName": "Day0_a_基本信息_a_4",
+                                        "label": "其他机构",
+                                        "type": "小文本输入",
+                                        "parent": "Day0_a_基本信息_a_3_a_其他机构",
+                                        "group": null,
+                                        "order": 3,
+                                        "description": null,
+                                        "filterTag": null,
+                                        "exportTag": null,
+                                        "hasNecessary": false,
+                                        "unit": null,
+                                        "width": null,
+                                        "notNull": false,
+                                        "value": null,
+                                        "changed": false,
+                                        "minTextLength": null,
+                                        "maxTextLength": null,
+                                        "length": 10,
+                                        "children": []
+                                    },
+                                    {
+                                        "id": null,
+                                        "name": "Day0_a_基本信息_a_3_a_其他机构1_a_999",
+                                        "bizName": "Day0_a_基本信息_a_4",
+                                        "label": "其他机构1",
+                                        "type": "小文本输入",
+                                        "parent": "Day0_a_基本信息_a_3_a_其他机构",
+                                        "group": null,
+                                        "order": 3,
+                                        "description": null,
+                                        "filterTag": null,
+                                        "exportTag": null,
+                                        "hasNecessary": false,
+                                        "unit": null,
+                                        "width": null,
+                                        "notNull": false,
+                                        "value": null,
+                                        "changed": false,
+                                        "minTextLength": null,
+                                        "maxTextLength": null,
+                                        "length": 10,
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": null,
+                                "name": "Day0_a_基本信息_a_3_a_其他医院",
+                                "bizName": null,
+                                "label": "其他医院",
+                                "type": "虚拟菜单",
+                                "parent": "Day0_a_基本信息",
+                                "group": "上报医院",
+                                "order": 0,
+                                "description": null,
+                                "filterTag": null,
+                                "exportTag": null,
+                                "hasNecessary": false,
+                                "value": "其他医院",
+                                "index": "Day0",
+                                "children": [
+                                    {
+                                        "id": null,
+                                        "name": "Day0_a_基本信息_a_3_a_其他医院_a_5",
+                                        "bizName": "Day0_a_基本信息_a_5",
+                                        "label": "其他上报医院",
+                                        "type": "小文本输入",
+                                        "parent": "Day0_a_基本信息_a_3_a_其他医院",
+                                        "group": null,
+                                        "order": 4,
+                                        "description": null,
+                                        "filterTag": null,
+                                        "exportTag": null,
+                                        "hasNecessary": false,
+                                        "unit": null,
+                                        "width": null,
+                                        "notNull": false,
+                                        "value": null,
+                                        "changed": false,
+                                        "minTextLength": null,
+                                        "maxTextLength": null,
+                                        "length": 10,
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+
+                ]
+            }
+        ],
+        "count": 0
+    },
+    "status": "ok",
+    "description": "数据请求成功"
+}

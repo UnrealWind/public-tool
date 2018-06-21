@@ -1,0 +1,82 @@
+@import "frame";
+
+$infi-container-row-line-height: 36px;
+$infi-padding-zero: 0px;
+$infi-padding-container: 15px;
+$infi-padding-container-section: 5px;
+$infi-margin-screen-botton-top: 10px;
+$infi-margin-zero: 0px;
+$infi-border-width: 1px;
+
+@mixin border($px,$line,$color){
+  border:$px $line $color;
+}
+@mixin padding($top,$right,$bottom,$left){
+  padding:$top $right $bottom $left;
+}
+@mixin margin($top,$right,$bottom,$left){
+  margin:$top $right $bottom $left;
+}
+
+.infi-screen-details{
+  overflow: hidden;
+}
+.infi-container{
+  width: $widthFull;
+  @include padding($infi-padding-zero,$infi-padding-container,$infi-padding-zero,$infi-padding-container);
+
+  >.row{
+    line-height: $infi-container-row-line-height;
+  }
+}
+.infi-container-section{
+  @include padding($infi-padding-container-section,$infi-padding-container-section,$infi-padding-container-section,$infi-padding-container-section);
+  border: $borderStyle;
+}
+
+
+/************************************修改筛选条件***************************************/
+
+$infi-screen-modify-width: 80%;
+$infi-modify-title-margin: 10px;
+$infi-title-left: 20%;
+
+
+.infi-screen-modify{
+  width: $infi-screen-modify-width;
+  border: $borderStyle;
+  min-height:300px;
+}
+.infi-screen-modify-title{
+  width: $widthFull;
+  margin: $infi-modify-title-margin $infi-margin-zero;
+  overflow: hidden;
+}
+.infi-title-left{
+  display: inline-block;
+  width: $infi-title-left;
+  text-align: center;
+  float:left;
+}
+.infi-title-right{
+  display: inline-block;
+  width: $infi-title-left;
+  text-align: center;
+  float:right;
+}
+.infi-screen-modify-content{
+  width: $infi-screen-modify-width;
+  margin: $infi-margin-zero auto;
+}
+.infi-screen-modify-section{
+  border: $borderStyle;
+  margin: $infi-modify-title-margin;
+  padding: $infi-modify-title-margin;
+}
+.infi-section-title{
+  padding: $infi-modify-title-margin $infi-margin-zero;
+}
+.infi-logic-btn{
+  position:absolute;
+  left:0;
+}

@@ -1,0 +1,11 @@
+$infi-screen-title-width: 50%;
+$infi-screen-title-line-height: 24px;
+
+.infi-screen-title{
+  display: inline-block;
+  width: $infi-screen-title-width;
+  line-height: $infi-screen-title-line-height;
+}
+.infi-screen-btn{
+  display: inline-block;
+}

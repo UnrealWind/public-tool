@@ -1,0 +1,26 @@
+{
+  "status":"ok",
+  "description":"",
+  "data":[
+      {
+          "label":null,
+          "value":null,
+          "relation":[
+            {
+              "label":"请选择关联属性",
+              "value":null,
+              "options":[
+                {
+                  "label":"烟龄",
+                  "value":"yl78678"
+                },
+                {
+                  "label":"吸烟量",
+                  "value":"xyl789789"
+                }
+              ]
+            }
+          ]
+      }
+  ]
+}

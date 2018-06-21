@@ -1,0 +1,133 @@
+.pointer {
+  cursor: pointer;
+}
+
+.infi-show-list {
+  margin: 0 10px 10px 0;
+  padding-bottom: 5px;
+  width: 48%;
+  display: inline-block;
+  color: #797979;
+  vertical-align: top;
+}
+
+.infi-show-list > div {
+  border-bottom: 1px solid #ccc;
+}
+
+.infi-show-list-whole {
+  width: 100%;
+}
+
+.infi-choser-section {
+  padding: 10px 0 0 10px;
+}
+
+.infi-choser-section > div > .infi-choser-tab {
+  border: 1px solid #ccc;
+}
+
+.infi-second-level {
+  margin-left: 20px;
+}
+
+.infi-third-level {
+  margin-left: 40px;
+}
+
+.infi-forth-level {
+  margin-left: 60px;
+}
+
+.infi-choser-tab .selected {
+  background: #e3e5e8;
+  border-radius: 4px;
+}
+
+.infi-choser-tab .nav-pills {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+}
+
+.infi-choser-tab .nav-pills li {
+  padding: 8px 10px 2px 8px;
+  border-radius: 4px;
+}
+
+.infi-choser-tab .nav-pills li:hover {
+  background-color: #ddd;
+}
+
+.infi-choser-tab .nav-pills li label {
+  cursor: pointer;
+}
+
+.infi-choser-tab .nav-pills li:hover {
+  background-color: #eeeff1;
+}
+
+.infi-choser-tab .infi-choser-list li {
+  display: inline-block;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.infi-choser-tab .infi-tabs-show {
+  font-weight: bold;
+  color: #333;
+}
+
+.infi-choser-tab .infi-chorer-search {
+  margin-top: 10px;
+  width: 60%;
+}
+
+.infi-letter-box .infi-sort-box {
+  border-bottom: 1px solid #ddd;
+  height: 30px;
+  font-size: 13px;
+}
+
+.infi-letter-box .infi-sort-box li {
+  color: #00a346;
+  cursor: pointer;
+  display: inline;
+  float: left;
+  list-style: outside none none;
+  padding: 5px;
+}
+
+.infi-letter-box .infi-sort-box .on {
+  border-bottom: 1px solid #00a346;
+}
+
+.infi-letter-box .infi-city-tab {
+  margin-bottom: 10px;
+}
+
+.infi-letter-box .infi-city-tab dl {
+  margin-bottom: 0px;
+}
+
+.infi-letter-box .infi-city-tab dt {
+  color: #00a346;
+}
+
+.infi-letter-box .infi-city-tab .infi-md-1 {
+  float: left;
+  width: 5%;
+  text-align: right;
+  line-height: 48px;
+}
+
+.infi-letter-box .infi-city-tab .infi-md-11 {
+  float: left;
+  width: 95%;
+  padding-right: 15px;
+}
+
+@media screen and (max-width: 960px) {
+  .infi-show-list {
+    width: 100%;
+  }
+}

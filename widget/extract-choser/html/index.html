@@ -1,0 +1,31 @@
+<div>
+    <!--取数点击打开数据详情-->
+    <section class="infi-section">
+        <!--取数-条件选取页面右侧显示的'性别/年龄'-->
+        <div class="infi-listing">
+            <ul class="list-unstyled" ng-show="summaryData.status == SYS.STATUS_SUCCESS">
+                <li ng-repeat="infoList in summaryData.data">
+                    <ul ng-repeat="infos in infoList.options" ng-show="infoList.$active">
+                        <li>
+                            <!--第二层级,吸烟史--infos-->
+                            <h6 class="infi-listing-title" ng-bind="infos.label"></h6>
+                        </li>
+                        <li class="infi-show-list" ng-repeat="info in infos.children"
+                            ng-class="{true:'infi-show-list-whole'}[info.tabs.length>0]">
+                            <!--第三层级--info-->
+                            <div style="border-bottom: 1px solid #ccc;">
+                                <input type="checkbox" class="select-item" ng-model="info.$checked" ng-change="setTagDetail(info,infoList,'input')"/>
+                                <label class="pointer">
+                                    <span ng-bind="info.label" class="select-item" ng-click="setTagDetail(info,infoList,'label')"></span>
+                                </label>
+                            </div>
+                            <div class="extract-choser" choser-details ng-if="info.$active && !info.popUp"
+                                 contents="info" catogary="summaryData.data"></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div ng-show="summaryData.status != SYS.STATUS_SUCCESS" ng-bind="summaryData.message"></div>
+        </div>
+    </section>
+</div>

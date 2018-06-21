@@ -1,0 +1,69 @@
+
+//定义标题常量
+$infi-category-title-font:bold 16px "微软雅黑";
+$infi-category-title-margin:5px;
+//
+$infi-category-ul-li-pad-rt:30px;
+$infi-category-ul-li-pad-line-ht:24px;
+//定义按钮常量
+$infi-category-btn-wth:80px;
+$infi-category-btn-ht:30px;
+$infi-category-btn-font:12px;
+$infi-category-bt-bg:-webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#dddedf));
+$infi-category-bt-border:#CCC 1px solid;
+$infi-category-bt-border-radius:2px;
+
+.infi-category-title{
+  font:$infi-category-title-font;
+  margin-bottom:$infi-category-title-margin;
+  padding-top:10px;
+}
+.infi-category{
+  margin-left:20px;
+}
+.infi-category-title{
+  font:bold 16px "微软雅黑";
+  margin-bottom:5px;
+}
+.infi-category-list{
+  width:400px;
+  border: 1px solid #ccc;
+  padding: 20px 10px;
+  background:#fff;
+  z-index:20;
+  display: none;
+  &.active{
+    display:block;
+  }
+}
+.infi-ul-list{
+  display: inline-block;
+  //display:none;
+  >li{
+    padding-right:$infi-category-ul-li-pad-rt;
+    line-height: $infi-category-ul-li-pad-line-ht;
+    color:#797979 ;
+    vertical-align: middle;
+    width:150px;
+    >label{
+      cursor: pointer;
+    }
+    >input{
+      display: inline-block;
+    }
+  }
+}
+.infi-list-type >li>label{
+  cursor: pointer;
+  &:hover{
+    color:#797979;
+  }
+}
+.infi-category-btn{
+  display: inline-block;
+  width: $infi-category-btn-wth;
+  height: $infi-category-btn-ht;
+  background: $infi-category-bt-bg;
+  border:$infi-category-bt-border;
+  border-radius:$infi-category-bt-border-radius;
+}

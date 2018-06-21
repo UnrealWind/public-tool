@@ -1,0 +1,29 @@
+<!-- 左部导航 -->
+<div class="infi-navi">
+  <div class="infi-navi-toggle" ng-click="toggleNavi()">
+    <span class="glyphicon glyphicon-menu-left"></span>
+  </div>
+  <ul>
+    <li ng-repeat="navigator in navigators.data" class="infi-navi {{navigator.clazz}}" >
+      <a href="#/{{navigator.value}}" ng-if="!navigator.children || navigator.children.length==0">
+        <i class="glyphicon {{navigator.icon}}" ng-if="navigator.icon"></i>
+        <span ng-bind="navigator.label"></span>
+      </a>
+      <a ng-if="navigator.children && navigator.children.length>0" ng-click="toggle(navigator)" class="parent-navigator">
+        <i class="glyphicon {{navigator.icon}}" ng-if="navigator.icon"></i>
+        <span ng-bind="navigator.label"></span>
+        <i class="glyphicon glyphicon-menu-down toggle-btn" ng-if="!navigator.active"></i>
+        <i class="glyphicon glyphicon-menu-up toggle-btn" ng-if="navigator.active"></i>
+      </a>
+      <ul ng-if="navigator.children && navigator.active" >
+        <li ng-repeat="child in navigator.children" class="infi-navi infi-navi-sub {{navigator.clazz}}">
+          <a href="#/{{child.value}}">
+            <i class="glyphicon {{child.icon}}" ng-if="child.icon"></i>
+            <span ng-bind="child.label"></span>
+          </a>
+        </li>
+      </ul>
+    </li>       
+  </ul>
+</div>
+<!-- 左部导航 END -->

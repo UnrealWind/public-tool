@@ -1,0 +1,49 @@
+.infi-box-kpi {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.infi-box-kpi .infi-column-kpi {
+  border: #e9e7e7 solid 1px;
+  padding: 6px;
+  background: #FFF;
+}
+
+.infi-m-btn {
+  text-align: right;
+}
+
+.infi-m-ct .infi-u-tt {
+  border-bottom: #3f8ecb solid 1px;
+  font-size: 14px;
+  color: #006abb;
+}
+
+.infi-m-ct ul > li {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 5px;
+  padding-left: 30px;
+  line-height: 36px;
+}
+
+.infi-m-ct ul > li div {
+  display: inline-block;
+}
+
+.infi-m-fm .infi-m-btn {
+  text-align: center;
+}
+
+.infi-m-fm .infi-m-ipt label {
+  vertical-align: top;
+}
+
+.infi-m-fm .infi-m-ipt .infi-u-ipt {
+  padding: 13px;
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 40%;
+  min-height: 100px;
+  border-radius: 6px;
+  resize: none;
+}

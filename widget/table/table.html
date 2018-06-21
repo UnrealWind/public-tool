@@ -1,0 +1,75 @@
+<section class="infi-section">
+  <table class="table infi-table">
+    <thead>
+    <tr>
+      <th ng-if="tableCheckBox">
+        <label class="cursorPointer"><input type="checkbox" ng-model="selectMain.value"
+            ng-click="btnCallback({entity:selectMain.value,type: 'selectAll'})">
+          全选</label>
+      </th>
+      <th class="infi-table-ordernum">序号</th>
+      <th ng-repeat="column in $columns" ng-bind="column.label"></th>
+      <th ng-if="opts" ng-bind="opts.label"></th>
+      <th ng-if="consultationRole">会诊角色</th>
+      <th ng-if="$content[0].original.consultation">操作</th>
+    </tr>
+    </thead>
+    <tbody ng-if="$hasData">
+    <tr ng-repeat="entity in $content" ng-class="{'true':'asdf'}[entity.original.backgroundColor]">
+      <!--单选操作checkbox-->
+      <td ng-if="tableCheckBox">
+        <label class="cursorPointer">&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="checkbox" ng-model="entity.original.listSelect.value"
+                 ng-click="btnCallback({entity: entity.original,type:'select'})">&nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+      </td>
+      <td>{{$index+1}}</td>
+      <td ng-repeat="data in entity.plain">
+        <!-- <span class="infi-ellipsis" ng-bind="data.label|topicCharacter" title="{{data.label}}"></span> -->
+        <span class="infi-ellipsis" ng-bind="data.label" title="{{data.label}}"></span>
+      </td>
+      <td ng-if="opts" class="infi-operation-btn">
+                <span ng-if="!noAuthority" ng-repeat="btn in opts.btns"
+                      ng-click="btnCallback({entity: entity.original,type: btn.type})"
+                      ng-bind="btn.label"></span>
+        <span ng-if="noAuthority">-</span>
+      </td>
+
+      <td ng-if="entity.original.consultation" style="word-break : keep-all;">
+          <span ng-repeat="option in entity.original.consultation.operations" style="margin-right: 7px;cursor: pointer;"
+                ng-bind="option.name" ng-click="btnBack({entity:entity.original,type:option.type})">
+          </span>
+      </td>
+
+      <!--远程会诊-->
+      <td ng-if="consultationRole.name" class="infi-clt-radio">
+        <label>
+          <input type="radio" ng-model="entity.original.consultationRole.value"
+                 name="entity.original.consultationRole.value{{$index}}" value="attending">主诊医师
+        </label>
+        <label>
+          <input type="radio" ng-model="entity.original.consultationRole.value"
+                 name="entity.original.consultationRole.value{{$index}}" value="participation">参诊医师
+        </label>
+      </td>
+    </tr>
+    </tbody>
+    <tbody ng-if="!$hasData">
+    <tr>
+      <td colspan="{{$columnSize+1}}">
+        <p ng-bind="$description" class="bg-danger" style="line-height: 50px;"></p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="infi-page">
+    <uib-pagination total-items="content.page.totalElements" ng-model="content.page.number" max-size="7"
+        boundary-link-numbers="true" ng-change="updatePage({page:content.page.number})"
+        items-per-page="content.page.size"
+        num-pages="content.page.totalPages">
+
+    </uib-pagination>
+  </div>
+</section>
+
+

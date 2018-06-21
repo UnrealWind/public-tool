@@ -1,0 +1,62 @@
+{
+  "status":"ok",
+  "description":"",
+  "data":[
+      {
+          "label":null,
+          "value":null,
+          "context":[
+              {
+                  "label": "院内类",
+                  "value": "ynl909",
+                  "order": "",
+                  "options": [
+                      {
+                          "label": "院内",
+                          "value": "yn909"
+                      },
+                      {
+                          "label": "院外",
+                          "value": "yw909"
+                      }
+                  ]
+              },
+              {
+                  "label": "第几次",
+                  "value": "djc101",
+                  "order": "",
+                  "options": [
+                      {
+                          "label": "1次",
+                          "value": "d11"
+                      },
+                      {
+                          "label": "2次",
+                          "value": "d22"
+                      },
+                      {
+                          "label": "3次",
+                          "value": "d33"
+                      }
+                  ]
+              }
+          ],
+          "relation":[
+              {
+                  "label":null,
+                  "value":null,
+                  "options":[
+                      {
+                          "label":"烟龄",
+                          "value":"yl78678"
+                      },
+                      {
+                          "label":"吸烟量",
+                          "value":"xyl789789"
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
+}

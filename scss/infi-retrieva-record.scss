@@ -1,0 +1,32 @@
+.infi-record{
+  width:20%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  >p{
+    padding-left: 10px;
+  }
+  >ul>li{
+    padding-left:10px;
+   .infi-record-title{
+     font-weight:bold;
+     font-size: 13px;
+     color: #797979;
+   }
+    .infi-record-name-title{
+      font-weight:bold;
+      font-size: 14px;
+    }
+    >p{
+      display: inline-block;
+    }
+  }
+  .infi-list-group{
+    margin-top:15px;
+  }
+}
+.infi-record-first-title{
+  padding-left:10px;
+  font:bold 16px "微软雅黑";
+  margin-bottom:5px;
+  padding-top:10px;
+}

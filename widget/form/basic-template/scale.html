@@ -1,0 +1,14 @@
+<div class="infi-input-box">
+    <div class = "infi-input-left">
+        <p class="infi-font-red">
+            <span ng-if="input.notNull" class="infi-font-red">*</span>
+            <span ng-bind="input.label"></span>
+        </p>
+    </div>
+    <div class = "infi-input-right form-group">
+        <div class="infi-input-opt input-group">
+            <input class="form-control" type="text" name="{{input.name}}" ng-model="input.tip" readonly="readonly" ng-click="scaleModal(input)">
+        </div>
+    </div>
+    <scale-modal></scale-modal>
+</div>

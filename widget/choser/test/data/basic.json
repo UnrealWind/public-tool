@@ -1,0 +1,106 @@
+{
+  "data": [{
+    "label": "性别",
+    "id": "xb",
+    "options": [
+      {
+        "label": "男",
+        "id": "man"
+      },
+      {
+        "label": "女",
+        "id": "women"
+      },
+      {
+        "label": "不详",
+        "id": "unknow"
+      }
+    ]
+  },
+    {
+      "label":"年龄",
+      "id":"nl",
+      "range":[
+        {
+          "label":"小于50",
+          "id":"50"
+        },
+        {
+          "label":"大于等于50小于70",
+          "id":"50-70"
+        },
+        {
+          "label":"大于等于70小于80",
+          "id":"70-80"
+        }
+      ],
+      "customRange":[]
+    },
+    {
+      "label":"民族",
+      "id":"mz",
+      "options": [
+        {
+          "label": "汉族",
+          "id": "asplcyp909"
+        },
+        {
+          "label": "满族",
+          "id": "atfttdp121"
+        },
+        {
+          "label": "回族",
+          "id": "dgxp121"
+        }
+      ],
+      "more": [
+        {
+          "label": "汉族",
+          "id": "asplcyp909"
+        },
+        {
+          "label": "满族",
+          "id": "atfttdp121"
+        },
+        {
+          "label": "回族",
+          "id": "dgxp121"
+        },
+        {
+          "label": "维吾尔族",
+          "id": "ynsx121"
+        },
+        {
+          "label": "阿里克族",
+          "id": "amkx121"
+        },
+        {
+          "label": "彝族",
+          "id": "hbsx121"
+        }
+      ]
+    },
+    {
+      "label":"入院日期",
+      "id":"ryrq",
+      "type":"range",
+      "format":"yyyy-MM-dd",
+      "range":[]
+    },
+    {
+      "label":"住院天数",
+      "id":"zyts",
+      "type":"unit",
+      "unit":"天",
+      "range":[]
+    },
+    {
+      "label":"支架植入数量",
+      "id":"zjzrsl",
+      "type":"range",
+      "range":[]
+    }
+  ],
+  "status": "ok",
+  "description": "数据请求成功"
+}

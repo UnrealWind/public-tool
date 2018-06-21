@@ -1,0 +1,32 @@
+.infi-lefttab-active {
+  background-color: #d9edf7;
+  color: #6ec1eb;
+}
+
+.infi-lefttab-active > span {
+  width: 44px;
+  height: 44px;
+  float: right;
+  margin-right: -22px;
+  border: 22px solid #fff;
+  border-left: 22px solid transparent;
+}
+
+.infi-lefttab-active > a {
+  width: 68%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.infi-lefttab {
+  font-size: 12px;
+}
+
+.infi-lefttab-ul > li {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  padding-left: 8px;
+}

@@ -1,0 +1,84 @@
+
+<div class="modal fade" id="infi-third-step"> 
+	<div class="modal-dialog" style="width:1200px;"> 
+		<div class="modal-content"> 
+			<div class="modal-header"> 
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">CRF模板</h4> 
+			</div> 
+			<div class="modal-body"> 
+				<div class="infi-box ng-scope">
+					<button type="button" class="btn btn-primary" style='float: right;' ng-if="sysCollection" ng-click="sysCollectionClick()">收藏</button>
+					<h4 class="infi-title">查看详情&nbsp;&nbsp;<span style="color:red;font-size: 13px;font-weight:300;">(本弹出层中的数据无法进行保存，请在录入页面进行病历录入！)</span></h4>
+					<div class="infi-box-containter" style="overflow: hidden;"> 
+						<div class="dir-nav-container"> 
+							<div class="infi-box-containter"> 
+								<div class="dir-nav-container" style="overflow: hidden;"> 
+									<div class="infi-form-inputs col-md-12 row">
+										<div ng-if="!currentData" class="alert alert-info" role="alert">数据加载中……</div>
+										<form ng-if="currentData" ng-repeat="modal in currentData" class="infi-modal-box" ng-class="{true:'col-md-6 current form-inline',false:'col-md-12 current form-inline'}[auditPassData.length>0]" repeat-finish>
+											<!-- <h2 class="infi-modal-name" ng-bind="modal.label"></h2> -->
+											<h2 id="" class="infi-title">
+												<span>{{modal.label}}</span>
+												<div class="infi-tag infi-title-change-tip" ng-if="auditPassData.length>0">
+													<span class="infi-tag-red">共{{changed.num}}处修改</span>
+												</div>
+												<div class="infi-title-btn" ng-if="auditPassDataList.length>0">
+													<a class="btn btn-xs self-btn-w-sm self-radius btn-success" ng-click="contrastHistory()">{{discribe}}</a>
+												</div>
+												<span class="self-font-red infi-version-discribe" ng-if="auditPassData.length>0">当前版本</span>
+											</h2>
+
+											<ul class="infi-modal-inputs form-inline">
+												<li ng-repeat = "theme in modal.children">
+													<input-template input="theme" parent="modal.children"></input-template>
+
+													<!-- fydebug 这里因为复用了原有代码，抽出来的原因是因为要从顶级controller中获取方法 -->
+													<input-img-file-template ng-if="theme.type=='图片上传-多张' ||theme.type=='图片上传-单张'"></input-img-file-template>
+													
+													<div ng-if = "theme.type=='菜单'" class="infi-theme-box">
+														<h3 id="{{theme.name}}" class="infi-theme-name">
+															<p ng-bind="theme.label"></p>
+															<add-group ng-if="input.group && input.group!== null" input="theme" parent="modal.children"></add-group>
+														</h3>
+														<ul class="infi-theme-inputs">
+															<li ng-repeat = "childTheme in theme.children">
+																<input-template input="childTheme" parent="theme.children"></input-template>
+																<input-img-file-template ng-if="childTheme.type=='图片上传-多张' ||childTheme.type=='图片上传-单张'"></input-img-file-template>
+																
+																<div ng-if = "childTheme.type=='菜单'" class="infi-child-theme-box">
+																	<h4 id="{{childTheme.name}}" class="infi-child-theme-name">
+																		<p ng-bind="childTheme.label"></p>
+																		<add-group ng-if="input.group && input.group!== null" input="childTheme" parent="theme.children"></add-group>
+																	</h4>
+																	<ul class="infi-child-theme-inputs">
+																		<li ng-repeat="attribute in childTheme.children">
+																			<input-template input="attribute" parent="childTheme.children"></input-template>
+																			<input-img-file-template ng-if="attribute.type=='图片上传-多张'||attribute.type=='图片上传-单张'"></input-img-file-template>
+																		</li>
+																	</ul>
+																</div> <!-- end of infi-child-theme-box -->
+															</li>
+														</ul>
+													</div><!-- end of infi-theme-box -->
+												</li>
+											</ul>
+										</form><!-- end of infi-modal-box -->
+									</div>
+								</div> 
+							</div> 
+						</div> 
+					</div> 
+				</div>
+			<!-- end ngIf: step == 3 --> 
+			</div> 
+			<div class="modal-footer"> 
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> 
+				<button type="button" class="btn btn-primary" data-dismiss="modal">确定</button> 
+			</div> 
+		</div>
+	<!-- /.modal-content --> 
+	</div>
+<!-- /.modal-dialog --> 
+</div>
+

@@ -1,0 +1,28 @@
+{
+  "data":[
+      {
+          "label":null,
+          "value":null,
+          "options":[
+              {
+                  "label":"男",
+                  "value":"man"
+              },
+              {
+                  "label":"女",
+                  "value":"women"
+              },
+              {
+                  "label":"不详",
+                  "value":"unknow"
+              },
+              {
+                  "label":"自定义",
+                  "value":"zdy"
+              }
+          ]
+      }
+  ],
+  "status":"ok",
+  "description": "数据请求成功"
+}

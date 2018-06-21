@@ -1,0 +1,26 @@
+<div>
+	<input-text input="input" ng-if="input.type=='小文本输入'"></input-text>
+	<input-number input="input" ng-if="input.type=='数值输入-单值'"></input-number>
+	<input-text-double input="input" ng-if="input.type=='文本输入-双值'"></input-text-double>
+	<input-date input="input" ng-if="input.type.indexOf('时间')>-1"></input-date>
+	<input-radio input="input" parent="parent"  ng-if="input.type=='单选'"></input-radio>
+	<input-switch input="input" parent="parent"  ng-if="input.type=='开关'"></input-switch>
+	<input-checkbox input="input" parent="parent"  ng-if="input.type=='多选'"></input-checkbox>
+	<input-radio-extend input="input" parent="parent"  ng-if="input.type=='单选+扩充输入'"></input-radio-extend>
+	<input-checkbox-extend input="input" parent="parent" ng-if="input.type=='多选+扩充输入'"></input-checkbox-extend>
+	<input-textarea input="input" ng-if="input.type=='大文本输入'"></input-textarea>
+	<input-half-textarea input="input" ng-if="input.type=='中文本输入'"></input-half-textarea>
+	<input-file-template input="input" ng-if="input.type.indexOf('文件')>-1"></input-file-template>
+	<input-select input="input" ng-if="input.type.indexOf('下拉菜单')>-1"></input-select>
+	<input-scale input="input" ng-if="input.type=='量表'" parent="parent"></input-scale>
+
+	<ul ng-if="input.type=='虚拟菜单'" class="infi-form-group">
+	    <li ng-repeat="groupInput in input.children">
+	        <input-template input="groupInput" parent="parent"></input-template>
+	    </li>
+	    <li ng-if="input.group && input.group!== null">
+	    	<div add-group input="input" parent="parent"></div>
+	    </li>
+	</ul>
+	
+</div>

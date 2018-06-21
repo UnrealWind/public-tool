@@ -1,0 +1,60 @@
+<div style="display: inline-block;">
+    <!--取数-条件选取页面上面的筛选记录的前置条件-->
+    <div ng-show="contexts.contextRange" ng-repeat="contextRange in contexts.contextRange" class="infi-filter-context">
+        <div ng-show="contexts.valueType == 'numberic'&&(contextRange.min !='' || contextRange.max != '')" class="infi-inline-block">
+            <span>(</span>
+            <span ng-bind="contextRange.min"></span> -
+            <span ng-bind="contextRange.max"></span>
+            <span>)</span>
+        </div>
+        <div ng-show="contexts.valueType == 'term'&&contextRange.text != ''">
+            <span>(</span>
+            <span ng-bind="contextRange.text"></span>
+            <span>)</span>
+        </div>
+        <div ng-repeat="context in contextRange.contextCheck" class="infi-filter-context">
+            <div ng-repeat="contextTag in context" ng-show="context.$select == contextTag.id">
+                <span>[</span>
+                <span ng-bind="contextTag.label"></span>
+                <div ng-repeat="frequency in contextTag.eventPosition.options" ng-show="frequency.id==contextTag.eventPosition.value">
+                    _<span ng-bind="frequency.label"></span>
+                </div>
+                <div ng-repeat="names in contextTag.eventNames.options" ng-show="names.id==contextTag.eventNames.value">
+                    _<span ng-bind="names.label"></span>
+                </div>
+                <div ng-repeat="around in contextTag.relationship.options" ng-show="around.id==contextTag.relationship.value">
+                    _<span ng-bind="around.label"></span>
+                </div>
+                <div ng-show="contextTag.customAttributes">
+                    _<span ng-bind="contextTag.customAttributes.label"></span>
+                </div>
+                <div ng-repeat="time in contextTag.attributePosition.options" ng-show="time.id==contextTag.attributePosition.value">
+                    _<span ng-bind="time.label"></span>
+                </div>
+                <span>]</span>
+            </div>
+        </div>
+    </div>
+    <div ng-show="contexts.contextCheck" ng-repeat="context in contexts.contextCheck" class="infi-filter-context">
+        <div ng-repeat="contextTag in context" ng-show="context.$select == contextTag.id">
+            <span>[</span>
+            <span ng-bind="contextTag.label"></span>
+            <div ng-repeat="frequency in contextTag.eventPosition.options" ng-show="frequency.id==contextTag.eventPosition.value">
+                _<span ng-bind="frequency.label"></span>
+            </div>
+            <div ng-repeat="names in contextTag.eventNames.options" ng-show="names.id==contextTag.eventNames.value">
+                _<span ng-bind="names.label"></span>
+            </div>
+            <div ng-repeat="around in contextTag.relationship.options" ng-show="around.id==contextTag.relationship.value">
+                _<span ng-bind="around.label"></span>
+            </div>
+            <div ng-show="contextTag.customAttributes">
+                _<span ng-bind="contextTag.customAttributes.label"></span>
+            </div>
+            <div ng-repeat="time in contextTag.attributePosition.options" ng-show="time.id==contextTag.attributePosition.value">
+                _<span ng-bind="time.label"></span>
+            </div>
+            <span>]</span>
+        </div>
+    </div>
+</div>

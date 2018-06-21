@@ -1,0 +1,66 @@
+.infi-header-ul{
+  border:1px solid #ccc;
+  text-align: center;
+  overflow:auto;
+  box-shadow: 2px 2px 2px #dcdcdc;
+  margin:0;
+}
+.infi-header-ul > li{
+  float:left;
+  width:33.33%;
+  height:57px;
+  line-height:57px;
+  color:#797979;
+  background-color:#e0edf8;
+}
+.infi-header-ul >.infi-header-active{
+  position:relative;
+  font-weight:bold;
+  font-size:16px;
+  box-shadow:0 0 10px 2px #aaa;
+  background:#e0edf8;
+}
+
+.infi-header-ul-new{
+  border:1px solid #ccc;
+  text-align: center;
+  overflow:auto;
+  box-shadow: 2px 2px 2px #dcdcdc;
+  margin:0;
+}
+.infi-header-ul-new > li{
+  float:left;
+  width:25%;
+  height:57px;
+  line-height:57px;
+  color:#797979;
+  background-color:#e0edf8;
+}
+.infi-header-ul-new >.infi-header-active{
+  position:relative;
+  font-weight:bold;
+  font-size:15px;
+  box-shadow:0 0 10px 2px #dcdcdc;
+}
+
+.infi-header-ul-excel{
+  border:1px solid #ccc;
+  text-align: center;
+  overflow:auto;
+  box-shadow: 2px 2px 2px #dcdcdc;
+  margin:0;
+}
+.infi-header-ul-excel > li{
+  float:left;
+  width:50%;
+  height:57px;
+  line-height:57px;
+  color:#797979;
+  background-color:#e0edf8;
+}
+.infi-header-ul-excel >.infi-header-active{
+  position:relative;
+  font-weight:bold;
+  font-size:15px;
+  box-shadow:0 0 10px 2px #dcdcdc;
+}

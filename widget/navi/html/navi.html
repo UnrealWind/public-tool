@@ -1,0 +1,49 @@
+<div class="infi-navi-box">
+	<div ng-if="$root.naviData">
+		<div class="infi-first-navi" ng-class="{true:'shrink-first',false:'open-first'}[$root.shrinkfirst]">
+			<div class="shrinkNavi" ng-click="shrink('first')">
+				<span class="glyphicon glyphicon-menu-hamburger"></span>
+			</div>
+			<ul>
+				<li ng-repeat="opt in $root.naviData">
+					<p ng-click="choseNavi($event,opt,'first')" title="{{opt.name}}">
+						<i ng-if="opt.menus" class="glyphicon" ng-class="{'true':'glyphicon-triangle-bottom','false':'glyphicon-triangle-right'}[opt.show]"></i>
+						<a ng-bind="opt.name"></a>
+					</p>
+					<ul class="infi-child-navi" ng-class="{'true':'openChild-{{opt.menus.length}}','false':'shrinkChild-{{opt.menus.length}}'}[opt.show]">
+						<li ng-repeat = "children in opt.menus" title="{{children.name}}">
+							<p ng-click="choseNavi($event,children,'first')" ng-class="{'true':'active'}[children.active]">
+								<i class="infi-navi-icon"><img ng-src="/src/image/naviIcon/{{children.icon}}.png"></i>
+								<a ng-bind="children.name" href="javascript:;"></a>
+							</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="infi-second-navi" ng-if="$root.secondNavi !== null && $root.secondNavi.length>0" ng-class="{'true':'shrink-second','false':'open-second'}[shrinksecond]">
+			<div class="shrinkNavi">
+				<span class="glyphicon naviAbsolute" ng-click="shrink('second')" ng-class="{'true':'glyphicon-menu-right','false':'glyphicon-menu-left'}[shrinksecond]"></span>
+			</div>
+			<div class="secondTitle">
+				<a ng-bind="secondTitleOpt.name" href="javascript:;" ng-click="choseNavi($event,secondTitleOpt,'first')"></a>
+			</div>
+			<ul>
+				<li ng-repeat="opt in $root.secondNavi">
+					<p ng-click="choseNavi($event,opt)" ng-class="{'true':'active'}[opt.active]">
+						<i ng-if="opt.menus && !shrinksecond && !opt.href" class="glyphicon" ng-class="{'true':'glyphicon-triangle-bottom','false':'glyphicon-triangle-right'}[opt.show]"></i>
+						<a ng-bind="opt.name" href="javascript:;"></a>
+					</p>
+					<ul class="infi-child-navi" ng-show="!opt.href" ng-class="{'true':'openChild-{{opt.menus.length}}','false':'shrinkChild-{{opt.menus.length}}'}[opt.show]">
+						<li ng-repeat = "children in opt.menus">
+							<p ng-click="choseNavi($event,children)" ng-class="{'true':'active'}[children.active]">
+								<a ng-bind="children.name" href="javascript:;"></a>
+							</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,247 @@
+.infi-ele-form {
+  margin-top: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.infi-ele-form > div.infi-ele-form-content {
+  width: 60%;
+  float: left;
+  height: 780px;
+  border: solid 1px #ccc;
+  display: inline-block;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form {
+  height: 70%;
+  width: 100%;
+  border-bottom: solid #ccc 1px;
+  display: inline-block;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-left-form {
+  height: 100%;
+  width: 40%;
+  float: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-right: 1px solid #ccc;
+  display: inline-block;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-left-form > div .infi-ele-left-form-span {
+  width: 90%;
+  margin: 0px 15px;
+  background-color: #ddd;
+  line-height: 30px;
+  display: inline-block;
+  text-align: center;
+  color: #333;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-left-form > div > div > div.row {
+  margin: 0 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-left-form > div > div > div.row > div {
+  margin: 0 5px;
+  padding: 0;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-left-form > div > div > div.row > div > a {
+  cursor: pointer;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form {
+  display: inline-block;
+  height: 100%;
+  width: 60%;
+  float: left;
+  overflow-y: auto;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form > .infi-content {
+  margin: 10px 10px 10px 20px;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form > .infi-content > .infi-content-title {
+  overflow: hidden;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form > .infi-content > .infi-content-title > h5 {
+  font-weight: bold;
+  display: inline-block;
+  float: left;
+  color: #16a2da;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form > .infi-content > .infi-content-title > span {
+  float: left;
+  margin-left: 10px;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form > .infi-content > h5 {
+  font-weight: bold;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form > .infi-content > hr {
+  border-bottom: solid #ccc 1px;
+  margin: 5px 0px;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form > .infi-content > .table {
+  margin-top: 10px;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form > .infi-content > .row {
+  margin: 0;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form > .infi-content > .row > div {
+  padding: 0;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form > .infi-content > .row > div > h5 {
+  font-weight: bold;
+  display: inline-block;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-top-form > div.infi-ele-right-form > .infi-content > .row > .col-md-1 {
+  width: 70px;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-bottom-form {
+  display: inline-block;
+  width: 100%;
+  height: 30%;
+  overflow-y: auto;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-bottom-form > div > div > div {
+  line-height: 25px;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-bottom-form > div > div > div > h5 {
+  font-weight: bold;
+  display: inline-block;
+  width: 30%;
+}
+
+.infi-ele-form > div.infi-ele-form-content > div.infi-ele-bottom-form > div > div > div > div {
+  display: inline-block;
+  margin: 0;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.infi-ele-form div.chart {
+  width: 40%;
+  height: 780px;
+  float: left;
+  border-top: solid 1px #ccc;
+  border-left: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+}
+
+.infi-ele-form div.chart > div > a {
+  color: #333;
+  font-size: 16px;
+  float: right;
+  margin: 5px 5px;
+  text-decoration: none;
+}
+
+.infi-ele-form h4 {
+  display: inline-block;
+  margin: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.infi-ele-form-footer h4 {
+  display: inline-block;
+  margin: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.infi-ele-form-footer {
+  height: 500px;
+  width: 100%;
+  border-bottom: solid 1px #ccc;
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+}
+
+.infi-ele-form-footer .nav li a {
+  color: #16a2da;
+}
+
+.infi-ele-form-footer .nav li.active a {
+  color: #666;
+}
+
+.infi-ele-form-footer > .marginten > .infi-dietaryAdvice > div > h5 {
+  font-weight: bold;
+}
+
+.infi-ele-form-footer > .marginten > .infi-dietaryAdvice > div > div {
+  text-indent: 2em;
+}
+
+.infi-ele-form-footer > .marginten > .infi-sportAdvice {
+  line-height: 34px;
+  color: #666;
+}
+
+.infi-ele-form-footer > .marginten > .infi-medicalAdvice > .infi-head {
+  background-color: #cfe6f1;
+  margin: 0;
+}
+
+.infi-ele-form-footer > .marginten > .infi-medicalAdvice > .infi-head > div {
+  text-align: center;
+}
+
+.infi-ele-form-footer > .marginten > .infi-medicalAdvice > .infi-head > div > h5 {
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.infi-ele-form-footer > .marginten > .infi-medicalAdvice > .infi-content > div {
+  text-align: center;
+}
+
+.infi-ele-form-footer > .marginten > .infi-medicalAdvice > .infi-content > div > span {
+  line-height: 28px;
+}
+
+.infi-ele-danger {
+  text-align: center;
+  line-height: 40px;
+  background: #ffdddd;
+  width: 90%;
+  margin: 5px auto;
+}
+
+.infi-ele-abnormal {
+  margin: 10px 16px;
+  color: #538800;
+  font-size: 16px;
+}
+
+.chart-tooltip {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  background-color: #eef;
+  color: #333;
+  width: 30px;
+  height: auto;
+}
+
+.infi-ele-paragraph {
+  text-indent: 2em;
+}

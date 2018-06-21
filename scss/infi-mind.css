@@ -1,0 +1,138 @@
+.pointer {
+  cursor: pointer;
+}
+
+.mind-chart-box {
+  padding: 20px;
+}
+
+.mind-chart-box .infi-title {
+  margin-top: 0;
+}
+
+.mind-chart-box .infi-title .glyphicon {
+  margin-right: 5px;
+  font-size: 17px;
+  float: left;
+}
+
+.mind-chart-box .infi-box {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 2px #dcdcdc;
+  background-color: #FFF;
+  padding: 22px;
+}
+
+.mind-chart-box .infi-box > h4 {
+  border-bottom: #3f8ecb solid 1px;
+  padding-bottom: 5px;
+  color: #006abb;
+  font-size: 16px;
+}
+
+.mind-chart-box .infi-box > .infi-box-containter {
+  border: #e9e7e7 solid 1px;
+  padding: 13px;
+  margin-bottom: 10px;
+}
+
+.mind-chart .node circle, .mind-chart .node rect, .mind-chart .node polygon {
+  fill: #fff;
+  stroke-width: 2px;
+}
+
+.mind-chart .node rect {
+  x: -8px;
+  y: -7px;
+}
+
+.mind-chart .node text {
+  font-size: 12px;
+}
+
+.mind-chart .term circle, .mind-chart .term rect, .mind-chart .term polygon {
+  stroke: #f4606c;
+}
+
+.mind-chart .enum circle, .mind-chart .enum rect, .mind-chart .enum polygon {
+  stroke: steelblue;
+}
+
+.mind-chart .date circle, .mind-chart .date rect, .mind-chart .date polygon {
+  stroke: #d1ba74;
+}
+
+.mind-chart .numberic circle, .mind-chart .numberic rect, .mind-chart .numberic polygon {
+  stroke: #8cc7b5;
+}
+
+.mind-chart .noValue circle, .mind-chart .noValue rect, .mind-chart .noValue polygon {
+  stroke: #333;
+}
+
+.mind-chart .chart-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 350px;
+  margin-top: 20px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: absolute;
+}
+
+.mind-chart .chart-container .chart-demo circle, .mind-chart .chart-container .chart-demo rect, .mind-chart .chart-container .chart-demo polygon {
+  fill: #fff;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+.mind-chart .chart-container .color-demo > div {
+  width: 15px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.mind-chart .chart-container .color-demo .term {
+  background: #f4606c;
+}
+
+.mind-chart .chart-container .color-demo .enum {
+  background: steelblue;
+}
+
+.mind-chart .chart-container .color-demo .date {
+  background: #d1ba74;
+}
+
+.mind-chart .chart-container .color-demo .numberic {
+  background: #8cc7b5;
+}
+
+.mind-chart .chart-container .color-demo .noValue {
+  background: #333;
+}
+
+.mind-chart .link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+.mind-chart .linkColor {
+  stroke: #199ce2;
+  stroke-width: 1px;
+}
+
+.mind-chart .tool-tip {
+  display: none;
+  position: absolute;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 7px;
+  max-width: 200px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}

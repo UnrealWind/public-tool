@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "label": "检查名称",
+      "id": "jcmc",
+      "tabs": [
+        {
+          "label": "他汀类",
+          "id": "ttl34",
+          "options": [
+            {
+              "label": "阿托伐他汀",
+              "id": "atftt121"
+            },
+            {
+              "label": "辛伐他汀",
+              "id": "xftt121"
+            },
+            {
+              "label": "洛伐他汀",
+              "id": "lftt121"
+            }
+          ]
+        },
+        {
+          "label": "药品类",
+          "id": "ttl34",
+          "options": [
+            {
+              "label": "阿托伐他汀1",
+              "id": "atftt121"
+            },
+            {
+              "label": "辛伐他汀1",
+              "id": "xftt121"
+            },
+            {
+              "label": "洛伐他汀1",
+              "id": "lftt121"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "ok",
+  "description": "数据请求成功"
+}

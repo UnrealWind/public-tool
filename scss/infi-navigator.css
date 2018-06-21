@@ -1,0 +1,249 @@
+nav.infi_nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 72px;
+  z-index: 20;
+  width: 180px;
+  background-color: #FFF;
+  border-bottom: #F33 0px solid;
+  overflow: hidden;
+  box-shadow: 1px 0 10px #ccc;
+}
+
+nav.infi_nav .toolbar {
+  width: 180px;
+  line-height: 38px;
+  padding-left: 0px;
+  text-align: center;
+  cursor: pointer;
+}
+
+nav.infi_nav .toolbar span {
+  color: #6ec1eb;
+}
+
+nav.infi_nav .content ul.main {
+  width: 180px;
+}
+
+nav.infi_nav .content ul.main li {
+  border: none;
+  padding: 9px 20px 9px 34px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+nav.infi_nav .content ul.main li:hover {
+  background-color: #eeeff1;
+  color: #6ec1eb;
+}
+
+nav.infi_nav .content ul.main li i:first-child {
+  display: inline-block;
+  width: 25px;
+  color: #6ec1eb;
+  font-size: 17px;
+  float: left;
+}
+
+nav.infi_nav .content ul.main li a {
+  color: #8da0aa;
+}
+
+nav.infi_nav .content ul.main li .display-none {
+  display: none;
+}
+
+nav.infi_nav .content .hide-nav {
+  width: 180px;
+  margin-bottom: 0px;
+  display: block;
+  position: relative;
+  top: 9px;
+  left: -33px;
+}
+
+nav.infi_nav .content .hide-nav .list-group-item {
+  padding-left: 50px;
+}
+
+nav.infi_nav.inif-close {
+  width: 45px;
+}
+
+nav.infi_nav.inif-close .toolbar {
+  padding-left: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+
+nav.infi_nav.inif-close .toolbar span {
+  color: #6ec1eb;
+}
+
+nav.infi_nav.inif-close .content ul.main {
+  width: 180px;
+}
+
+nav.infi_nav.inif-close .content ul.main li {
+  border: none;
+  padding: 9px 20px 9px 34px;
+}
+
+nav.infi_nav.inif-close .content ul.main li > i:first-child {
+  left: -20px;
+}
+
+nav.infi_sub_nav {
+  position: fixed;
+  left: 180px;
+  bottom: 0;
+  top: 72px;
+  z-index: 20;
+  width: 168px;
+  background-color: #FFF;
+  border-bottom: #F33 0px solid;
+  overflow: hidden;
+  box-shadow: 1px 0 10px #ccc;
+}
+
+nav.infi_sub_nav .toolbar {
+  width: 20px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  position: fixed;
+  left: 329px;
+  top: 300px;
+  z-index: 25;
+}
+
+nav.infi_sub_nav .toolbar > div {
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  background-color: #eee;
+}
+
+nav.infi_sub_nav .toolbar > div:hover {
+  color: #333;
+  background-color: #ddd;
+}
+
+nav.infi_sub_nav .content ul.main {
+  width: 180px;
+}
+
+nav.infi_sub_nav .content ul.main li {
+  border: none;
+  padding: 0 0 0 34px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+nav.infi_sub_nav .content ul.main li:hover {
+  background-color: #eeeff1;
+  color: #6ec1eb;
+}
+
+nav.infi_sub_nav .content ul.main li i:first-child {
+  display: inline-block;
+  width: 25px;
+  color: #6ec1eb;
+  font-size: 17px;
+  float: left;
+}
+
+nav.infi_sub_nav .content ul.main li a {
+  padding: 9px 20px 9px 0;
+  width: 135px;
+  color: #8da0aa;
+}
+
+nav.infi_sub_nav .content .hide-nav {
+  width: 180px;
+  margin-bottom: 0px;
+  display: block;
+  position: relative;
+  top: 9px;
+  left: -33px;
+}
+
+nav.infi_sub_nav .content .hide-nav .list-group-item {
+  padding-left: 50px;
+}
+
+nav.infi_sub_nav.active {
+  left: 45px;
+}
+
+nav.infi_sub_nav.active .toolbar {
+  left: 193px;
+}
+
+nav.infi_sub_nav.active .toolbar > div {
+  border-radius: 5px 0 0 5px;
+}
+
+nav.infi_sub_nav.infi-close {
+  width: 0;
+}
+
+nav.infi_sub_nav.infi-close .toolbar {
+  left: 180px;
+}
+
+nav.infi_sub_nav.infi-close .toolbar > div {
+  border-radius: 0 5px 5px 0;
+}
+
+nav.infi_sub_nav.double-infi-close {
+  width: 0;
+}
+
+nav.infi_sub_nav.double-infi-close .toolbar {
+  left: 45px;
+}
+
+nav.infi_sub_nav.double-infi-close .toolbar > div {
+  border-radius: 0 5px 5px 0;
+}
+
+article.infi-main.double-infi-close {
+  margin-left: 45px;
+}
+
+article.infi-main.infi-close {
+  margin-left: 214px;
+}
+
+article.infi-main.active {
+  margin-left: 349px;
+}
+
+li.infi-nav-active {
+  background-color: #eeeff1;
+  color: #6ec1eb;
+}
+
+.infi-naviBox {
+  display: inline-block;
+  width: 100px;
+}
+
+.infi-naviBox i {
+  top: 3px;
+}
+
+.list-group-item {
+  padding: 0 0 0 50px;
+}
+
+.list-group-item a {
+  width: 85px;
+  display: inline-block;
+}
+
+body {
+  background-color: #fff;
+}

@@ -1,0 +1,50 @@
+body { font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+/* Layers */
+.layerContainer { position: relative; padding: 0; }
+.imageLayer { position: absolute; left: 0;}
+.drawDiv { position: absolute; pointer-events: none; }
+
+/* Info */
+.info { color: #cde; text-shadow: 1px 1px #000; font-size: 80%; }
+.infoc { color: #ff0; text-shadow: 1px 1px #000; font-size: 120%; }
+.infotl { position: absolute; top: 0; left: 0; text-align: left; }
+.infotc { position: absolute; top: 0; left: 50%; right: 50%; text-align: center; }
+.infotr { position: absolute; top: 0; right: 0; text-align: right; }
+.infocl { position: absolute; bottom: 50%; left: 0; text-align: left; }
+.infocr { position: absolute; bottom: 50%; right: 2px; text-align: right; }
+.infobl { position: absolute; bottom: 0; left: 0; text-align: left; }
+.infobc { position: absolute; bottom: 0; left: 50%; right: 50%; text-align: center; }
+.infobr { position: absolute; bottom: 0; right: 0; text-align: right; }
+
+.plot { position: absolute; width: 100px; height: 50px; bottom: 15px; right: 0; }
+.infoLayer ul { margin: 0; padding: 2px; list-style-type: none; }
+.infoLayer li { margin-top: 0; }
+.infoLayer canvas { margin: 0; padding: 2px; }
+
+#pageMain { position: absolute; height: 99%; width: 99%; bottom: 5px; left: 5px;}
+
+.ui-icon { zoom: 125%; }
+/*button, input, li, table { margin-top: 0.2em; }*/
+li button, li input { margin: 0; }
+
+.infoLayer > div{
+    text-shadow: 0 1px 0 #000;
+    color: #fff;
+}
+/*自定义样式里面li的颜色为黑色,行高为36,这里需要重置*/
+.infoLayer > div ul li{
+    line-height: 20px;
+    color:#fff;
+}
+/*自定义里面有行高,影响页面显示,这里需要重置*/
+#imgModal .modal-dialog .modal-body > .row > .col-md-9 .col-md-8{
+    line-height: 0;
+}
+/*自定义样式里面有滚动条,这里需要去掉*/
+.ui-dialog .ui-dialog-content{
+    overflow: visible !important;
+    padding:5px !important;
+}
+/*container框里面有个可以关闭的按钮,将按钮隐藏*/
+.ui-dialog .ui-dialog-titlebar{display: none;}

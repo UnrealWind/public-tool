@@ -1,0 +1,38 @@
+{
+    "data": [
+        {
+            "id": 3,
+            "filePath": "/home/web/infisa/upload_files/lili/ce9e51a7-9904-4a72-8b87-8b9fe51445ea.jpg",
+            "originalBakPath": null,
+            "originName": "1",
+            "destName": "ce9e51a7-9904-4a72-8b87-8b9fe51445ea.",
+            "creator": "lili",
+            "createTime": "2016-12-24_15-51-04",
+            "updator": null,
+            "updateTime": null,
+            "project": "B0901",
+            "dicomInfo": {
+                "patientName": "FU XIAN MING",
+                "patientId": "10114904",
+                "birthDate": "19840905",
+                "sex": "M",
+                "age": "031Y",
+                "imageDate": "20160122",
+                "modality": "CT",
+                "manufacturer": "GE MEDICAL SYSTEMS",
+                "stationName": "ct99",
+                "modelName": "LightSpeed VCT",
+                "seriesNumber": "103",
+                "xRayTubeCurrent": "178mA",
+                "windowCenter": "40",
+                "windowWidth": "350",
+                "institutionName": null,
+                "kvp": "120kV"
+            },
+            "markDestName": "ce9e51a7-9904-4a72-8b87-8b9fe51445eamark.jpg",
+            "markFilePath": "/home/web/infisa/upload_files/lili/ce9e51a7-9904-4a72-8b87-8b9fe51445eamark.jpg"
+        }
+    ],
+    "status": "ok",
+    "description": "成功"
+}

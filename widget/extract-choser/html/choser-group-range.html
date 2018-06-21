@@ -1,0 +1,20 @@
+<div modal-position style="left:0;">
+    <!--取数-分组功能-->
+    <div class="infi-group" ng-show="contents.type == 'date' && contents.format" ng-repeat="content in contents.range">
+        <input infi-date class="form-control infi-group-input datepicker" ng-model="content.min" placeholder="开始时间" ng-change="setTagCheck()"/>
+         -
+        <input infi-date class="form-control infi-group-input datepicker" ng-model="content.max" placeholder="结束时间" ng-change="setTagCheck()"/>
+    </div>
+    <div style="display: block;" class="infi-group" ng-show="contents.type == 'unit'||contents.type == 'group'||contents.customRange" ng-repeat="content in ranges">
+        <input class="form-control infi-group-input" type="text" placeholder="最小值" ng-model="content.min" ng-change="setTagCheck()"/>
+         -
+        <input class="form-control infi-group-input" type="text"  placeholder="最大值" ng-model="content.max" ng-change="setTagCheck()"/>
+        <span ng-bind="contents.unit" ng-show="contents.unit"></span>
+        <div class="infi-plus-minus" ng-show="contents.type == 'group'||contents.customRange">
+            <i class="glyphicon glyphicon-plus" ng-click="addRange(ranges);"></i>
+            <i class="glyphicon glyphicon-minus" ng-click="removeRange(ranges,$index);"
+               ng-show="ranges.length>1"></i>
+        </div>
+        <span class="infi-error-tip {{content | InputCheck:'range'}}">输入必须是数字</span>
+    </div>
+</div>

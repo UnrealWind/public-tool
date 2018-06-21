@@ -1,0 +1,61 @@
+@import "frame.scss";
+@import "infi-modal.scss";
+@import "infi-color.scss";
+@import "infi-outside.scss";
+@import "infi-listing.scss";
+@import "infi-category.scss";
+@import "infi-drug.scss";
+@import "infi-filter.scss";
+@import "infi-retrieva-record.scss";
+@import "infi-from-header.scss";
+@import "infi-confirm-export.scss";
+@import "infi-collection-screening.scss";
+@import "infi-lefttab.scss";
+@import "infi-screen-name.scss";
+@import "infi-screen-details.scss";
+@import "infi-time-control.scss";
+@import "infi-button.scss";
+@import "infi-timeline.scss";
+@import "infi-wj-print.scss";
+@import "infi-wj.scss";
+@import "infi-navi.scss";
+@import "infi-forty-two.scss";
+
+ul {
+  margin:0;
+}
+a {
+  cursor:pointer;
+  text-decoration: none;
+}
+
+.infi-btn-box {
+  margin: 15px 0;
+  float: right;
+}
+
+input[type="text"] {
+  height:auto;
+  line-height: inherit;
+}
+
+.form-group {
+  label {
+    margin-left: 15px;
+  }
+}
+
+#editor {
+  height: 500px !important;
+  max-height:500px !important;
+}
+
+.infi-box {
+  overflow: hidden;
+  .fix-input {
+    position: relative;top:3px;
+  }
+  .fix-input[type = 'file'] {
+    display: inline-block;width:auto;
+  }
+}

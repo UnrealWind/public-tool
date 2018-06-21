@@ -1,0 +1,9 @@
+.infi-screen-title {
+  display: inline-block;
+  width: 50%;
+  line-height: 24px;
+}
+
+.infi-screen-btn {
+  display: inline-block;
+}

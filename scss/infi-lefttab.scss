@@ -1,0 +1,29 @@
+$infi-leftactive:44px;
+.infi-lefttab-active{
+  background-color: #d9edf7;
+  color: rgb(110,193,235);
+  > span{
+    width:$infi-leftactive;
+    height:$infi-leftactive;
+    float: right;
+    margin-right:-22px;
+    border:$infi-leftactive/2 solid #fff;
+    border-left:$infi-leftactive/2 solid transparent;
+  }
+  >a{
+    width:68%;
+    display: inline-block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+}
+.infi-lefttab{
+  font-size: 12px;
+}
+.infi-lefttab-ul > li{
+  width:100%;
+  height:$infi-leftactive;
+  line-height:$infi-leftactive;
+  padding-left:8px;
+}

@@ -1,0 +1,46 @@
+<section class="infi-choser-section">
+    <!--搜索框的显示-->
+    <!--有searchId并且是options或者tabs才会有搜索框-->
+    <div style="padding:5px 0;" ng-if='contents.searchId != ""&&(contents.options || contents.tabs)'>
+        <input ng-model="contents.keyword" class="form-control infi-drug-input input-sm select-item" type="text"
+               placeholder="更多搜索" ng-change="searchMore(contents)" />
+    </div>
+
+    <!--未搜索时展示-->
+    <div ng-if="!contents.keyword || contents.keyword==''">
+        <!--带标签-->
+        <div ng-if="contents.tabs&&!contents.searchTab" choser-tab tabs="contents.tabs" contents="contents"
+             catogary="catogary" context="contents" type="'tabs'"></div>
+        <!--按首字母排序标签-->
+        <!--将tabs的数据整理放入searchTab里面方便展示-->
+        <div ng-if="contents.tabs&&contents.searchTab" search-tab contents="contents" catogary="catogary" type="'tabs'"></div>
+        <!--具体列表项-->
+        <!--时间,范围列表项有type属性,options,tabs没有type属性-->
+        <div ng-if="contents.options || (contents.range&&!contents.type)">
+            <!--普通option的显示-->
+            <div choser-option options="contents.options" contents="contents" catogary="catogary" ng-if="contents.options"></div>
+            <!--列表项为range和自定义-->
+            <div choser-option options="contents.range" contents="contents"
+                 ng-if="contents.range&& contents.customRange"></div>
+        </div>
+    </div>
+
+    <!--搜索到的内容展示-->
+    <div ng-if="contents.keyword && contents.keyword!=''">
+        <div choser-option options="contents.searchData.data" contents="contents" catogary="catogary" type="'search'"
+             ng-if="contents.searchData.status == SYS.STATUS_SUCCESS"></div>
+        <!--未搜到内容做提示-->
+        <div ng-if="contents.searchData.status != SYS.STATUS_SUCCESS" ng-bind="contents.searchData.description"></div>
+    </div>
+
+    <!--时间，带单位，添加组-->
+    <div choser-group-ranges ng-if="contents.type" ranges="contents.range" contents="contents"></div>
+
+    <!--前置条件-->
+    <div ng-if="contents.context && !contents.options && !contents.tabs" choser-contexts class="infi-group"
+         option="contents" contents="contents" catogary="catogary" style="width:100%;"></div>
+
+    <!--关联属性 gqm_debug原版中有个性化属性等，就在title这里做了区分，现在后台给的东西没有个性化属性等-->
+    <div choser-relations contents="contents" relations = "contents.relation"
+         ng-if="contents.relation" catogary="catogary" search-more="searchMore(tag)"></div>
+</section>

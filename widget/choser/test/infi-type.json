@@ -1,0 +1,128 @@
+{
+    "status":"",
+    "description":"",
+    "data":[
+        {
+            "label":null,
+            "value":"98",
+            "more":[
+                {
+                    "label":"",
+                    "value":"",
+                    "options":[
+                        {
+                            "label":"血小板计数",
+                            "value":"asplcyp121"
+                        },
+                        {
+                            "label":"淋巴细胞",
+                            "value":"atfttdp121"
+                        },
+                        {
+                            "label":"嗜酸性粒细胞",
+                            "value":"dgxp121"
+                        },
+                        {
+                            "label":"平均红细胞体积",
+                            "value":"ynsx121"
+                        },
+                        {
+                            "label":"红细胞分布宽度",
+                            "value":"amkx121"
+                        },
+                        {
+                            "label":" 血红蛋白浓度(HGB)",
+                            "value":"hbsx121"
+                        },
+                        {
+                            "label":"白细胞计数",
+                            "value":"tbsf121"
+                        },
+                        {
+                            "label":"单核细胞比例",
+                            "value":"tbak121"
+                        },
+                        {
+                            "label":"淋巴细胞比值",
+                            "value":"tbld121"
+                        },
+                        {
+                            "label":"血小板计数",
+                            "value":"tbms121"
+                        },
+                        {
+                            "label":"血小板压积",
+                            "value":"tms1211"
+                        },
+                        {
+                            "label":"红细胞检查",
+                            "value":"dxhs121"
+                        },
+                        {
+                            "label":"嗜中性粒细胞绝对值",
+                            "value":"jsms12123"
+                        }
+                    ]
+                }
+            ],
+            "context":[
+                {
+                    "label":"添加前置条件",
+                    "value":"tjqztj1213",
+                    "options":[
+                        {
+                            "label":"院内",
+                            "value":"yn123",
+                            "options":[
+                                {
+                                    "label":"院内",
+                                    "value":"yn1231"
+                                },
+                                {
+                                    "label":"院外",
+                                    "value":"yw1212"
+                                }
+                            ]
+                        },
+                        {
+                            "label":"第几次",
+                            "value":"djc898",
+                            "options":[
+                                {
+                                    "label":"第一次",
+                                    "value":"d111"
+                                },
+                                {
+                                    "label":"第二次",
+                                    "value":"d222"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "relation":[
+                {
+                    "label": "请选择关联属性",
+                    "value": "qxzglsx909",
+                    "options": [
+                        {
+                            "label": "医嘱类型",
+                            "value": "yzlx909"
+                        },
+                        {
+                            "label": "开始时间",
+                            "value": "starttime909"
+                        },
+                        {
+                            "label": "停止时间",
+                            "value": "endtime909"
+                        }
+                    ]
+                }
+
+            ]
+        }
+
+    ]
+}

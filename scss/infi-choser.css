@@ -1,0 +1,241 @@
+.test-choser.infi-section-choser {
+  max-width: 75%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fff;
+}
+
+.test-choser.infi-section-choser .glyphicon-plus {
+  cursor: pointer;
+}
+
+.extract-choser.infi-section-choser {
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: absolute;
+  background: #fff;
+  width: 60%;
+}
+
+.extract-choser.infi-section-choser .glyphicon-plus {
+  cursor: pointer;
+}
+
+.extract-choser.infi-section-choser .infi-choser-tabs li {
+  cursor: pointer;
+}
+
+.extract-choser.infi-section-choser .tab-content {
+  border-bottom: 1px solid #ccc;
+}
+
+.infi-choser-title {
+  background-color: #f8f9fd;
+  border-bottom: #ccc 1px solid;
+  line-height: 45px;
+  padding: 0 20px;
+}
+
+.infi-choser-title > button {
+  margin-top: 10px;
+}
+
+.infi-choser-rela-content {
+  position: absolute;
+  border: 1px solid #ccc;
+  padding: 0 15px 15px;
+  width: 400px;
+  z-index: 20;
+  background: #fff;
+}
+
+.infi-choser-normal {
+  position: absolute;
+  border: 1px solid #ccc;
+  top: 20px;
+  left: 0;
+  background: #fff;
+  width: 600px;
+  z-index: 20;
+}
+
+.infi-choser-rela-more {
+  list-style: none;
+  width: 600px;
+}
+
+.infi-choser-rela-more > li {
+  width: 150px;
+  position: relative;
+}
+
+.infi-choser-define {
+  position: absolute;
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 10px 0 10px 10px;
+  background: #fff;
+  z-index: 5;
+  right: 0;
+}
+
+.infi-choser-define > div {
+  padding: 5px 0;
+}
+
+.infi-choser-define input {
+  width: 40%;
+  display: inline-block;
+}
+
+.infi-choser-range {
+  padding: 15px;
+}
+
+.infi-choer-tabs {
+  margin: 0;
+  width: 100%;
+  background-color: #f8f9fd;
+  border-bottom: #CCC 1px solid;
+}
+
+.infi-choser-tabs > li.active {
+  border-top: #01bba4 2px solid;
+  margin-top: -1px;
+  height: 36px;
+}
+
+.infi-choser-tabs > li > a {
+  text-align: center;
+  font-size: 14px;
+  padding: 0 5px;
+  height: 35px;
+  line-height: 35px;
+  min-width: 100px;
+  margin: 0;
+  border: none;
+  background-color: #f8f9fd;
+  border-bottom: #ccc 1px solid;
+}
+
+.infi-chose-wrap {
+  min-height: 50px;
+  padding: 10px 15px 0 15px;
+}
+
+.infi-choser-tar {
+  padding-left: 0;
+  list-style: none;
+}
+
+.infi-choser-first-li > li {
+  padding-right: 15px;
+  display: inline-block;
+  position: relative;
+}
+
+.infi-choser-first-li .infi-listing-attribute {
+  cursor: pointer;
+}
+
+.infi-choser-first-li .infi-triangle-up {
+  width: 13px;
+  height: 13px;
+  top: 11px;
+  left: 20px;
+  background: #fff;
+}
+
+.infi-choser-more {
+  padding: 10px 15px;
+}
+
+.infi-choser-relation {
+  padding: 10px 15px;
+}
+
+.infi-choser-label {
+  cursor: pointer;
+  color: #797979;
+}
+
+.infi-choser-tabs-context {
+  position: absolute;
+  width: 500px;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 0 0 15px 15px;
+  color: #797979;
+  z-index: 10;
+  top: 31px;
+  left: 0;
+}
+
+.infi-choser-tabs-context > button {
+  margin: 5px 10px 0 0;
+}
+
+.infi-choser-tabs-context .infi-context-input {
+  width: 50px;
+  height: 28px;
+}
+
+.infi-choser-group-title {
+  font-weight: bold;
+}
+
+.infi-choser-context {
+  padding: 5px 0 5px 15px;
+}
+
+.infi-choser-context > i {
+  display: inline-block;
+}
+
+.infi-choser-context > p {
+  display: inline-block;
+}
+
+.infi-choser-parameter > p {
+  font-weight: bold;
+}
+
+.infi-choser-parameter > ul {
+  list-style: none;
+  margin: 0;
+}
+
+.infi-choser-parameter > ul > li {
+  display: inline-block;
+  padding: 0 10px 5px 0;
+  color: #797979;
+}
+
+.infi-choser-individuation .infi-individuation-title {
+  font-weight: bold;
+}
+
+.infi-choser-individuation .infi-choser-individuation-list {
+  position: relative;
+}
+
+.infi-choser-individuation .infi-choser-individuation-wrap {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 500px;
+}
+
+.infi-choser-individuation .infi-choser-individuation-label {
+  color: #797979;
+}
+
+.infi-choser-individuation .infi-choser-individuation-ul {
+  list-style: none;
+}
+
+.infi-choser-individuation .infi-choser-individuation-ul > li {
+  display: inline-block;
+  padding-right: 10px;
+}

@@ -1,0 +1,27 @@
+ <div>
+ 	<input multiple="true" type="file"  name="file" ngf-select="onFileSelects($files)">
+ 	<div ng-if = "input.value !== null">
+		<span ng-if="input.type.indexOf('图片')>-1" ng-repeat = "opt in input.value track by $index" class="img-box">
+			<span ng-click = "deleteFileSelect($index)" class="deleteImg" title="删除该图片">x</span>
+			<img ng-src="{{SYS.url}}/load/data/file/{{input.value[$index]}}" ng-click = "showImgModal(input.value[$index],input.callBackData)" class="img-thumbnail"/>
+			<a class="img-discribe">{{input.tip[$index]}}</a>
+		</span>
+		<p ng-if="input.type.indexOf('文件')>-1" ng-repeat = "opt in input.value track by $index">
+			<a href="{{url}}{{input.value[$index]}}?{{SYS.imgBack}}">{{input.tip[$index]}},点击下载</a>
+		</p>
+		<p class="infi-upload-discribe" ng-if="input.type.indexOf('不下载')>-1">
+			<table class="table">
+				<tr ng-repeat = "opt in basic.subjectFiles track by $index">
+					<td>
+						<span class="" ng-bind="opt.originName" title="{{opt.originName}}"></span>
+					</td>
+					<td>
+						<span ng-click = "deleteFileSelect($index)" class="btn btn-default">删除</span>
+					</td>
+				</tr>
+			</table>
+		</p>
+	</div>
+ 	<img-loads datas='datas' stopload='stopload' upls='upls'></img-loads>
+ </div>
+ 

@@ -1,0 +1,35 @@
+@import "frame";
+
+.infi-group{
+  display: inline-block;
+
+  .infi-group-input{
+    display: inline-block;
+    width:120px;
+    box-shadow: inset -1px -1px 0.5px #999;
+    color: #5b85b0;
+    padding: 0px 5px;
+    height: 27px;
+  }
+
+  .glyphicon{
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .title{
+    padding-top:15px;
+    font-weight: bold;
+  }
+
+  select{
+    background-color: #fff;
+    border: $borderStyle;
+    height:30px;
+    padding: 0 5px;
+  }
+
+  .infi-group-item{
+    margin-bottom: 5px;
+  }
+}

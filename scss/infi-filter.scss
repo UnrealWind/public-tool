@@ -1,0 +1,139 @@
+//筛选常量
+$infi-filter-width:100%;
+$infi-filter-border:1px solid #ccc;
+//筛选标题常量
+$infi-filter-title-width:9%;
+$infi-filter-title-text-align:left;
+$infi-filter-p-margin:0;
+$infi-filter-p-pd:0 0 0 6px;
+$infi-filter-p-font-size:14px;
+//筛选内容常量
+$infi-filter-content-wth:90%;
+$infi-filter-content-li-margin:10px 3px 10px 3px;
+$infi-filter-content-li-border:1px dotted #c40000;
+$infi-filter-content-li-font-size:14px;
+
+@mixin remove($a-position,$a-top,$a-right,$a-color,$a-text,$a-hover-color){
+  position:$a-position;
+  top: $a-top;
+  right:$a-right;
+  text-decoration:$a-text;
+  color: $a-color;
+  &:hover{
+    color:$a-hover-color;
+  }
+}
+
+.infi-filter{
+  width: $infi-filter-width;
+  border: $infi-filter-border;
+  background:#fff;
+  position: relative;
+
+  >a{
+    font-size:16px;
+    @include remove(absolute,5px,5px,#797979,none,#c40000);
+    cursor:pointer;
+  }
+
+  .filter-title{
+    display: inline-block;
+    width:$infi-filter-title-width;
+    text-align: $infi-filter-title-text-align;
+    vertical-align: middle;
+
+    >h6{
+      margin: $infi-filter-p-margin;
+      padding:$infi-filter-p-pd;
+      font:bold 14px "微软雅黑";
+      width:100px;
+    }
+  }
+  .filter-content{
+    display: inline-block;
+    vertical-align: middle;
+    width:$infi-filter-content-wth;
+
+    ul{
+      table-layout: fixed;
+      margin: 0;
+
+      li{
+        position: relative;
+        padding: 2px 10px;
+        font-size: $infi-filter-content-li-font-size;
+        cursor: pointer;
+        .infi-filter-title{
+          font-weight: bold;
+          padding-right:5px;
+        }
+        >span{
+          padding-right: 15px;
+          color: #797979;
+        }
+        >a{
+          @include remove(absolute,6px,0,#797979,none,#c40000);
+          display: inline-block;
+        }
+
+        >div{
+          display:inline-block;
+          >div{
+            display:inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+.filter-extract{
+
+  ul{
+    li{
+      margin:$infi-filter-content-li-margin;
+      border: $infi-filter-content-li-border;
+    }
+  }
+}
+.infi-filter-content{
+  //min-width: 30px;
+  padding-right: 10px;
+  color: #797979;
+}
+.infi-filter-context{
+  display: inline-block;
+  div{
+    display: inline-block;
+  }
+}
+.record-export {
+  .infi-inline-block{
+    display: inline-block;
+  }
+
+  .infi-inline{
+    display: inline;
+  }
+
+  .infi-block{
+    display: block;
+  }
+
+  .infi-title{
+    font-size: 14px;
+    font-weight: bold;
+    padding-right:10px;
+  }
+
+  .infi-record-title{
+    font-weight: bold;
+    font-size: 13px;
+    color: #797979;
+    border-bottom: none;
+  }
+
+  .infi-record-detail{
+    padding-right:10px;
+    display: inline-block;
+  }
+}

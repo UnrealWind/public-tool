@@ -1,0 +1,158 @@
+{
+  "data": [
+    {
+      "label":"检查名称",
+      "id":"jcmc",
+      "options": [
+        {
+          "label": "阿司匹林肠溶片",
+          "id": "asplcyp909"
+        },
+        {
+          "label": "阿托伐他汀钙片",
+          "id": "atfttdp121"
+        },
+        {
+          "label": "颉沙坦胶囊",
+          "id": "dgxp121"
+        }
+      ],
+      "context": [
+        {
+          "label": "院内",
+          "id": "yn",
+          "frequency": {
+            "multiple": true,
+            "options": [
+              {
+                "label": "首次",
+                "id": ""
+              },
+              {
+                "label": "末次",
+                "id": ""
+              }
+            ]
+          }
+        },
+        {
+          "label": "手术",
+          "id": "ss",
+          "frequency": {
+            "multiple": false,
+            "options": [
+              {
+                "label": "院内首次",
+                "id": ""
+              },
+              {
+                "label": "院内末次",
+                "id": ""
+              }
+            ]
+          },
+          "names": {
+            "multiple": false,
+            "options": [
+              {
+                "label": "冠状动脉造影数",
+                "id": ""
+              },
+              {
+                "label": "冠状动脉造影数1",
+                "id": ""
+              }
+            ]
+          },
+          "around": {
+            "multiple": false,
+            "options": [
+              {
+                "label": "前",
+                "id": ""
+              },
+              {
+                "label": "后",
+                "id": ""
+              },
+              {
+                "label": "前后",
+                "id": ""
+              }
+            ]
+          },
+          "time": {
+            "multiple": true,
+            "options": [
+              {
+                "label": "最近一次",
+                "id": ""
+              }
+            ]
+          }
+        },
+        {
+          "label": "用药",
+          "id": "yy",
+          "frequency": {
+            "multiple": false,
+            "options": [
+              {
+                "label": "院内首次",
+                "id": ""
+              },
+              {
+                "label": "院内末次",
+                "id": ""
+              }
+            ]
+          },
+          "names": {
+            "multiple": false,
+            "options": [
+              {
+                "label": "冠状动脉造影数2",
+                "id": ""
+              },
+              {
+                "label": "冠状动脉造影数3",
+                "id": ""
+              }
+            ]
+          },
+          "around": {
+            "multiple": false,
+            "options": [
+              {
+                "label": "前",
+                "id": ""
+              },
+              {
+                "label": "后",
+                "id": ""
+              },
+              {
+                "label": "前后",
+                "id": ""
+              }
+            ]
+          },
+          "time": {
+            "multiple": true,
+            "options": [
+              {
+                "label": "最近一次",
+                "id": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "status": "ok",
+  "description": "数据请求成功"
+}
+
+
+

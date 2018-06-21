@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.infi-category-title {
+  font: bold 16px "微软雅黑";
+  margin-bottom: 5px;
+  padding-top: 10px;
+}
+
+.infi-category {
+  margin-left: 20px;
+}
+
+.infi-category-title {
+  font: bold 16px "微软雅黑";
+  margin-bottom: 5px;
+}
+
+.infi-category-list {
+  width: 400px;
+  border: 1px solid #ccc;
+  padding: 20px 10px;
+  background: #fff;
+  z-index: 20;
+  display: none;
+}
+
+.infi-category-list.active {
+  display: block;
+}
+
+.infi-ul-list {
+  display: inline-block;
+}
+
+.infi-ul-list > li {
+  padding-right: 30px;
+  line-height: 24px;
+  color: #797979;
+  vertical-align: middle;
+  width: 150px;
+}
+
+.infi-ul-list > li > label {
+  cursor: pointer;
+}
+
+.infi-ul-list > li > input {
+  display: inline-block;
+}
+
+.infi-list-type > li > label {
+  cursor: pointer;
+}
+
+.infi-list-type > li > label:hover {
+  color: #797979;
+}
+
+.infi-category-btn {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#dddedf));
+  border: #CCC 1px solid;
+  border-radius: 2px;
+}

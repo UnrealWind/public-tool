@@ -1,0 +1,47 @@
+<section class="infi-section">
+    <!--取数-条件选取页面上面的筛选记录-->
+    <div class="infi-filter filter-extract">
+        <div class="filter-title">
+            <h6>筛选条件:</h6>
+        </div>
+        <div class="filter-content">
+            <div ng-repeat="summary in summaryData.data" class="infi-inline-block">
+                <ul class="list-unstyled list-inline" ng-repeat="options in summary.options" style="display: inline;">
+                    <li ng-repeat="option in options.children" ng-if="option.$checked">
+                        <!-- 标题 -->
+                        <span class="infi-filter-title" ng-bind="option.label"></span>:
+                        <!-- 内容option情况-->
+                        <div title="{{child.label}}" class="infi-filter-content" ng-repeat="child in option.options"
+                             ng-if="option.options && child.$checked" class="infi-inline-block">
+                            <span ng-bind="child.label"></span>
+                            <!--显示前置条件和分组-->
+                            <div record-contexts contexts="child" ng-if="child.contextCheck || child.contextRange"></div>
+                        </div>
+
+                        <div record-tabs tabs="option.tabs" parent="option" contents="option" ng-if="option.tabs&&option.$checked" style="display: inline;"></div>
+
+                        <!-- 内容range情况,包括日期，带单位，小分组情况 -->
+                        <div title="{{child.label}}" class="infi-filter-content" ng-repeat="child in option.range"
+                             ng-if="option.range && (child.$checked || option.type)" class="infi-inline-block">
+                            <span ng-bind="child.label"></span>
+                            <div ng-if="option.type">
+                                <span ng-bind="child.min"></span>
+                                <span ng-if="child.min!=''||child.max!=''">~</span>
+                                <span ng-bind="child.max"></span>
+                            </div>
+                            <span ng-bind="option.unit" ng-if="option.type=='unit'"></span>
+                        </div>
+                        <!-- 内容自定义情况 -->
+                        <div ng-repeat="range in option.customRange" style="display: inline-block;padding-right:15px;" ng-if="range.min!=''||range.max!=''">
+                            <span ng-bind="range.min"></span>
+                            <span>~</span>
+                            <span ng-bind="range.max"></span>
+                        </div>
+                        <a class="glyphicon glyphicon-remove" ng-click="deleteFilter(option)"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a class="glyphicon glyphicon-remove" ng-click="deleteAllFilter(summaryData.data)"></a>
+    </div>
+</section>

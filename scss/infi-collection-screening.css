@@ -1,0 +1,72 @@
+.infi-collection-screening {
+  width: 500px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: auto;
+  margin: 10px;
+  padding: 10px;
+}
+
+.infi-collection-screening-body {
+  color: #797979;
+}
+
+.infi-collection-screening-footer {
+  color: #797979;
+}
+
+.infi-collection-screening-footer {
+  margin-top: 5px;
+}
+
+.infi-collection-body-name {
+  padding: 5px 20px 5px 0px;
+  overflow: auto;
+}
+
+.infi-collection-body-name > .col-xs-2 {
+  padding: 0;
+  text-align: right;
+}
+
+.infi-collection-body-name > .col-xs-2 > label {
+  margin-top: 5px;
+}
+
+.infi-collection-body-name > div > input {
+  width: 100%;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #797979;
+  padding: 3px;
+  display: inline-block;
+}
+
+.infi-collection-body-remarks {
+  padding: 5px 20px 5px 0px;
+  overflow: auto;
+}
+
+.infi-collection-body-remarks > .col-xs-2 {
+  padding: 0;
+  text-align: right;
+}
+
+.infi-collection-body-remarks > .col-xs-2 > label {
+  margin-top: 5px;
+}
+
+.infi-collection-body-remarks > div > textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #797979;
+  display: inline-block;
+  padding: 3px;
+}
+
+.infi-confirm-export-footer {
+  text-align: right;
+}

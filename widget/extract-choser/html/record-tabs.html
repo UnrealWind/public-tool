@@ -1,0 +1,11 @@
+<div>
+    <div ng-repeat="entity in tabs" ng-if="entity.$checked||entity.nodeType=='classity'" style="display: inline;">
+        <div ng-if="entity.$checked&&entity.nodeType!='classity'"
+             class="infi-inline-block infi-filter-content {{parent | recordExtractTabs:entity:contents:$index}}">
+            <span ng-bind="entity.label" ng-if="entity.label != '其他'"></span>
+            <!--显示前置条件和分组-->
+            <div record-contexts contexts="entity" ng-if="entity.contextCheck || entity.contextRange" style="display: inline;"></div>
+        </div>
+        <div record-tabs tabs="entity.children" parent="entity" contents="contents" ng-if="entity.children" style="display: inline;"></div>
+    </div>
+</div>

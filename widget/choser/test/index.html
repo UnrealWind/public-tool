@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>数据提取</title>
+
+    <link href="../../../../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../../datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="../../../scss/frame.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-modal.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-color.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-outside.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-listing.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-category.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-drug.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-filter.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-retrieva-record.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-from-header.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-confirm-export.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-collection-screening.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-lefttab.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-screen-name.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-screen-details.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-time-control.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-button.scss" rel="stylesheet" />
+    <link href="../../../scss/infi-choser.scss" rel="stylesheet">
+    <script type="text/javascript" src="../../../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../../datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="../../../datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+
+<body ng-app="infi-basic" ng-controller="HomeController">
+<!-- 头部导航 -->
+<header class="navbar navbar-default infi-header clearfix">
+    <div class="navbar-header infi-header-logo">
+        <span class="logo" href="#/home">
+            <a href="#/infi-task"></a>
+        </span>
+    </div>
+
+    <div class="infi-header-title pull-left">
+        数据提取
+    </div>
+
+    <div class="box-user pull-right">
+        <img src="../src/image/doctor.png" class="user-logo"/>
+        王中艺
+        <i class="pull-right glyphicon glyphicon-menu-down"></i>
+    </div>
+
+    <div class="box-button pull-right">
+        <i class="glyphicon glyphicon-fullscreen"></i>
+        <i class="glyphicon glyphicon-bell"></i>
+    </div>
+</header>
+<!-- 头部导航 END -->
+
+<!-- 左部导航 -->
+<nav class="infi-main-nav">
+    <ul class="list-group">
+        <li class="list-group-item {{nav.active}}" ng-mouseenter="liHover()" ng-repeat="nav in extract_navigation">
+            <i class="icon glyphicon glyphicon{{nav.cls}}"></i>
+            <a href="#/{{nav.route}}" ng-click="extract_nav(nav)">{{nav.name}}</a>
+        </li>
+    </ul>
+</nav>
+<!-- 左部导航 END -->
+
+<!-- 右部内容 -->
+<article class="infi-main test-choser">
+    <div ng-view style="overflow: auto"></div>
+</article>
+<!-- 右部内容 END-->
+
+<footer class="infi-footer">
+    <p class="infi-footer-detail">
+        北京无极慧通科技公司 | 北京市海淀区苏州街18号长远天地大厦A1座906室 | 联系电话:010-82686850
+    </p>
+</footer>
+</body>
+</html>
+<script type="text/javascript" src="../../../../bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="../../../../bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="../../../../src/angular-ui-bootstrap.js"></script>
+<script type="text/javascript" src="../../../../src/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="../../../../src/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript" src="js/app.module.js"></script>
+<script type="text/javascript" src="js/home.controller.js"></script>
+<script type="text/javascript" src="js/route.js"></script>
+<script type="text/javascript" src="js/constant.js"></script>
+<!--<script type="text/javascript" src="js/basic.directive.js"></script>-->
+<script type="text/javascript" src="../choser.js"></script>
+<script type="text/javascript" src="../../../../src/widget/system/system.directive.js"></script>
+<script type="text/javascript" src="js/data.service.js"></script>
+<script type="text/javascript" src="js/task.controller.js"></script>
+<script type="text/javascript" src="js/task.service.js"></script>
+<script type="text/javascript" src="js/view.controller.js"></script>
+<script type="text/javascript" src="js/audit.controller.js"></script>
+<script type="text/javascript" src="js/total.controller.js"></script>

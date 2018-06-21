@@ -1,0 +1,100 @@
+.infi-report-tab > div {
+  text-align: center;
+}
+
+.infi-report-screen > .row {
+  margin: 10px 0;
+}
+
+.infi-report-screen > .row .infi-report-screen-title {
+  text-align: right;
+  min-width: 72px;
+}
+
+.infi-report-screen > .row .infi-report-screen-title > span {
+  margin-right: 10px;
+}
+
+.infi-report-screen > .row .infi-report-screen-time {
+  min-width: 290px;
+}
+
+.infi-report-screen > .row .infi-report-screen-time > input {
+  display: inline-block;
+  width: 120px;
+}
+
+.infi-report-screen > .row > div > select {
+  display: inline-block;
+  width: 200px;
+}
+
+.infi-report-target {
+  text-align: right;
+}
+
+.infi-report-target > select {
+  display: inline-block;
+  width: 180px;
+  margin-right: 50px;
+}
+
+.infi-report-box {
+  position: relative;
+}
+
+.infi-report-box > .infi-report-fix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 19;
+  height: 150px;
+  padding-top: 10px;
+}
+
+.infi-report-box > .infi-report-fix-period {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 19;
+  height: 180px;
+  padding-top: 10px;
+}
+
+.infi-report-box > .infi-report-fix-disease {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 19;
+  height: 60px;
+  padding-top: 10px;
+}
+
+.infi-report-box > .infi-report-average {
+  margin-top: 150px;
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.infi-report-box > .infi-report-period {
+  margin-top: 180px;
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.infi-report-box > .infi-report-hospital {
+  margin-top: 150px;
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.infi-report-box > .infi-report-disease {
+  margin-top: 60px;
+}
+
+.time-active {
+  background-color: #eee;
+}

@@ -1,0 +1,52 @@
+<div class="infi-timeline">
+  <div class="timeline_nav">
+    <ul>
+      <li ng-repeat="year in $navigators" style="cursor: pointer;" ng-click="scrollOption(year)">
+        <a  class="detail-year" ng-bind="year.label"></a>
+        <ol>
+          <li ng-repeat="month in year">
+            <a class="action-month" ng-bind="month.label" ></a>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+  <div class="timeline_wrapper clearfix">
+    <div class="drupName" ng-repeat="year in $navigators">
+      <div class="timeline_year" id="timeline-{{year.year}}">
+        <span ng-bind="year.label"></span>
+      </div>
+      <section id="{{year.id}}">
+        <div ng-repeat="event in year.events" id="{{event.id}}" class="timeline_feed">
+          <section class="tl-feed">
+            <div class="share-feed" ng-click="openTarget(event)" style="cursor: pointer;">
+              <div class="main-count timeline-{{event.type}}">
+                <h3 ng-bind="event.label"></h3>
+                <dl>
+                 <dd ng-repeat="label in event.details" ng-bind="label"></dl>
+                </dl>
+              </div>
+              <div class="tl-time">{{event.year}}年{{event.month}}月{{event.day}}日 </div>
+              <div ng-if="event.btns2" class="marginten" style="float: right;">
+                <button class="btn infi-btn-linear-green-l"
+                        ng-click="btn2Click({entity:event});$event.stopPropagation();">{{event.btns2.label}}</button>
+              </div>
+              <div ng-if="event.btns" class="marginten" style="float:right;">
+                <button class="btn infi-btn-linear-green-l"
+                        ng-click="btnClick({entity:event});$event.stopPropagation();">{{event.btns.label}}</button>
+              </div>
+            </div>
+            <!--<div class="tool-bar">-->
+              <!--<a href="{{event.url}}" target="_blank" class="timeline-detial">查看详情↓</a>-->
+            <!--</div>-->
+          </section>
+          <i></i>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,858 @@
+.infi-header-other{
+  display: inline-block !important;
+}
+.infi-opt-article{
+  min-height: 600px;
+  margin-left: 0;
+}
+.infi-opt-access{
+  width:100%;
+  padding:5px 0;
+}
+.infi-opt-access div{
+  display:inline-block;
+  vertical-align: top;
+}
+.infi-opt-access div p{
+  display: inline-block;
+}
+
+.infi-opt-access-num{
+  font-size: 15px;
+  color: #757575;
+}
+.infi-opt-access-date{
+  padding-left:30px;
+  font-size: 15px;
+  color:#b88348;
+}
+.infi-title{
+  display: inline-block;
+}
+.infi-opt-search{
+  display: inline-block;
+  float: right;
+  line-height: 43px;
+}
+.infi-opt-self-box{
+  position: relative;
+  border: rgba(233,231,231,0.5) 1px solid;
+  margin-bottom: 20px;
+  background-color: #fff;
+
+  .infi-draw-chart{
+    padding:10px 14px 10px 20px;
+    width:100%;
+
+    .col-md-6:first-child{
+      border-right:#e9e7e7 1px solid;
+    }
+
+    .infi-chart-title{
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .infi-opt-search{
+      line-height: 30px;
+    }
+
+    .infi-opt-search-select{
+      background-color: #fff;
+      width: 53%;
+      height: 25px;
+      display: inline-block;
+    }
+
+    .infi-half-chart{
+      height:350px;
+      width:100%;
+    }
+    .infi-half-cost-chart{
+      height:500px;
+      width:100%;
+    }
+
+    .infi-whole-chart{
+      height:350px;
+      width:100%;
+    }
+    .infi-whole-cost-chart{
+       height:500px;
+       width:100%;
+    }
+
+
+    //表格不设置宽度
+    .infi-nopage-table{
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      border-collapse: initial;
+      table-layout: fixed;
+
+      .pointer{
+        cursor:pointer;
+      }
+      td{
+        //width:auto;
+        word-wrap: break-word;
+        padding: 6px 2px;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        border-top: none;
+        text-align: center;
+        vertical-align: middle;
+      }
+      thead{
+        td{
+          font-weight: bold;
+          background-color: RGB(240,248,255);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      .infi-td-hasBag{
+        td{
+          background: rgba(0,0,0,0.1);
+        }
+      }
+
+      .text-right{
+        text-align: right;
+      }
+    }
+    .infi-nopage-table.infi-table-striped>tbody>tr:nth-of-type(even) {
+      background-color: #f9f9f9;
+    }
+
+    //给表格设置表头固定 start
+    .infi-table-scoll-y{
+      overflow-y: auto;
+      table{
+        margin-bottom: 0px;
+      }
+    }
+    .infi-table-scoll-y-noh{
+      max-height: 350px;
+    }
+    .infi-table-scoll-y-h{
+      height: 350px;
+      table{
+        thead{
+          tr{
+            height:35.85px; /*因为table定义了高度，火狐浏览器会把thead拉长，（谷歌就不会），拉长之后固定表头就不能覆盖，所以定义高度不要超出固定表头*/
+          }
+        }
+      }
+    }
+
+    .infi-nopage-table-title{
+      position: relative;
+      padding-right:10px;
+      z-index:2;
+
+      table{
+        margin-bottom: -1px;
+      }
+    }
+    //end
+
+    .infi-table-cell{
+      display: table;
+
+      .infi-cell-child{
+        display: table-cell;
+      }
+    }
+
+    .infi-up-down{
+      position: relative;
+
+      .selected{
+        color:#000;
+      }
+      i{
+        position: absolute;
+        color:#797979;
+        margin-left: 2px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+
+      i:first-child{
+        top:-2px;
+      }
+
+      i:last-child{
+        top:12px;
+      }
+    }
+
+    .col-md-5 .infi-cell-child:first-child{
+      width:25%;
+    }
+    .col-md-7 .infi-cell-child:first-child{
+      width:10%;
+    }
+
+    .infi-created-img{
+      display: none;
+    }
+  }
+}
+
+.infi-opt-access-title{
+  margin-right:10px;
+}
+.infi-opt-title{
+  padding: 0 20px;
+  height: 45px;
+  line-height: 45px;
+  background-color: RGB(240,248,255);
+  font-size: 15px;
+  border-bottom: 1px solid rgba(233, 231, 231, 0.5);
+}
+.infi-opt-search button{
+  display: inline-block;
+  margin-left:20px;
+}
+.infi-opt-search label{
+  margin-left:20px;
+}
+.infi-opt-search-time{
+  display: inline-block;
+  width:110px;
+  height: 30px;
+  padding: 0px 6px;
+}
+.infi-opt-cont{
+  width:100%;
+  padding:0 1%;
+}
+.infi-opt-cont .infi-opt-cont-rgt,.infi-opt-cont .infi-opt-cont-lft{
+  display: inline-block;
+  margin:1%;
+  width: 46%;
+  vertical-align: top;
+}
+.infi-opt-table-title{
+  font-size:18px;
+  font-weight: bold;
+}
+.infi-opt-echarts-title{
+  font-size:18px;
+  font-weight: bold;
+  margin-left:1%;
+}
+.infi-opt-echarts-title p{
+  margin-bottom: 0;
+}
+#infi-opt-gh,#infi-opt-ff,#infi-opt-ks,#infi-opt-tj,#infi-opt-mz-ks,#infi-opt-tj,#infi-opt-zj{
+  width:100%;
+  height:260px;
+  line-height: 260px;
+  text-align: center;
+  font-size: 20px;
+  color:darkred;
+}
+#infi-opt-tj{
+  height:312px;
+}
+.infi-opt-explain{
+  width:94%;
+  min-height: 50px;
+  padding:10px;
+  margin-left:3%;
+  border:1px dashed #757575;
+  margin-bottom:20px;
+}
+.infi-opt-explain p{
+  display: inline-block;
+  overflow: hidden;
+}
+.infi-opt-explain-title{
+  float: left;
+  width:10%;
+}
+.infi-opt-tab{
+  width: 96%;
+  max-width: 100%;
+  margin: 21px 2%;
+}
+.infi-opt-tab tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.infi-opt-tab p{
+  color: #757575;
+}
+.self-opt-label{
+  text-align: right;
+  width: 120px;
+  padding-left:20px;
+}
+.self-opt-label p{
+  color: #6c91b7;
+  font-size: 15px;
+}
+.infi-opt-tab tbody tr td{
+  padding:5px 0;
+}
+.infi-opt-tab tbody tr td label{
+  padding-left:6px;
+}
+.infi-wj-first-ipt-label{
+  padding-left: 20px;
+}
+.infi-opt-thead{
+  background: #e4eef8;
+}
+.infi-opt-tab-content{
+  width:98%;
+  margin-left: 1.5%;
+  margin-top:20px;
+}
+.infi-opt-mointor-tab thead th{
+  vertical-align: middle;
+  text-align: center;
+}
+.infi-opt-mointor-tab tbody td{
+  vertical-align: middle;
+  text-align: center;
+}
+.infi-opt-yy{
+  margin-top:20px;
+}
+.infi-opt-btn{
+  margin-left:5px;
+
+}
+.infi-opt-danger{
+  color: darkred;
+}
+
+/*重写kpi样式*/
+.infi-box-kpi{
+  border-bottom: #e9e7e7 1px solid;
+  padding-top: 10px;
+
+  .infi-kpi-img{
+    margin:0;
+
+    .col-md-3{
+      text-align: right;
+      margin-top: 5px;
+    }
+
+    img{
+      width:60px;
+    }
+
+    .infi-column-kpi{
+      text-align: left;
+    }
+  }
+
+  .infi-kpi-circle{
+    border: 1px solid #ccc;
+    width:100px;
+    height:100px;
+    border-radius: 50px;
+    margin:0 auto;
+
+    >div:first-child{
+      margin-top:10px;
+      color:#0bc0cf;
+      font-weight: bold;
+    }
+
+    .infi-title{
+      font-weight: bold;
+    }
+  }
+
+  div[class^='col-md']{
+    padding:0px;
+  }
+
+  .infi-column-kpi{
+    text-align: center;
+    border:none;
+    border-right:#e9e7e7 1px solid;
+    margin-bottom: 10px;
+
+    .infi-no-third{
+      margin-top:8px;
+    }
+
+    span{
+      color:#333;
+      margin-left:5px;
+    }
+
+    .infi-kpi-col7{
+      width:50%;
+      text-align: left;
+      display: inline-block;
+    }
+    .infi-kpi-col5{
+      width:48%;
+      text-align: left;
+      display: inline-block;
+    }
+  }
+
+  > div:last-child .infi-column-kpi{
+    border-right:none;
+  }
+}
+.infi-kpi-circle-middle{
+  .infi-kpi-circle{
+    padding-top:13px;
+  }
+}
+
+.infi-filter-form{
+  .infi-filter-row{
+    padding:5px;
+
+    div[class^="infi-col-md-"]{
+      display: inline-block;
+    }
+
+    .infi-col-md-1 {
+      width: 10%;
+      text-align: right;
+    }
+
+    .infi-col-md-3 {
+      width: 22%;
+    }
+
+    .infi-col-md-11 {
+      width: 85%;
+    }
+
+    .infi-text-half{
+      width:45%;
+    }
+
+    .infi-text-all{
+      width:95%;
+    }
+
+    input[type=text],select{
+      display: inline-block;
+      height:30px;
+      padding: 0 5px;
+    }
+  }
+
+}
+
+.inif-select-input{
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+  max-height: 300px;
+  overflow: auto;
+  border:1px solid #ccc;
+
+  .inif-select-item{
+    padding:5px;
+    cursor: pointer;
+  }
+}
+
+.infi-selected-tag{
+  display: inline-block;
+  background: #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.infi-fix-header{
+  position: fixed;
+  top: 71px;
+  z-index: 10;
+  background: #fff;
+  width: 100%;
+  line-height: 40px;
+
+  .infi-fix-right{
+    position: fixed;
+    right: 35px;
+    top: 75px;
+  }
+
+  .infi-title-print{
+    float:right;
+    margin-right: 20%;
+    display: inline-block;
+  }
+}
+.infi-hide-header{
+  background: #fff;
+  width: 100%;
+  line-height: 40px;
+  display: none;
+}
+
+.infi-title-time{
+  position: fixed;
+  top: 28px;
+  font-size: 16px;
+  z-index: 30;
+  left: auto;
+  right:250px;
+  color: #fff;
+}
+.infi-today-time{
+  display: none;
+  float:right;
+}
+
+.infi-select-simulate{
+  input[type=text]{
+    background-color: #fff;
+  }
+
+  .infi-select-list{
+    width: 100%;
+    border: 1px solid;
+    position: absolute;
+    background: #fff;
+    z-index: 2;
+    top: 36px;
+    left: 1px;
+    max-height: 520px;
+    overflow-y: auto;
+    font-size: 14px;
+    font-weight: normal;
+    color:#555;
+
+    ul{
+      li{
+        line-height:26px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-left:5px;
+        cursor: default;
+
+        &:hover{
+          background-color: #f07746;
+          color:#fff;
+        }
+      }
+
+      .selected{
+        background-color: #f07746;
+        color:#fff;
+      }
+    }
+  }
+}
+
+/*表格带有电话独立设置宽度*/
+.infi-other-num{
+  table{
+    tr{
+      td{
+        &:nth-child(2){
+          width:95px;
+        }
+        &:nth-child(4){
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+//就诊监控表格第二列电话不折行
+.infi-visit-phone{
+  table{
+    tr{
+      td{
+        &:nth-child(2){
+          width: 95px;
+        }
+      }
+    }
+  }
+}
+article.infi-main{
+  padding-top:127px;
+}
+//打印相关css
+.infi-print-section{
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  z-index: 100000;
+  width: 110px;
+  background: #fff;
+  text-align: center;
+  max-height:98vmin;
+  overflow-y: auto;
+
+  .infi-print-header{
+    height: 30px;
+    background: #199ce2;
+    background: #199ce2;
+    padding: 5px 10px;
+    font-size: 12px;
+    color:#fff;
+
+    .glyphicon{
+      float: right;
+      cursor: pointer;
+
+      &:hover{
+        color:#ddd;
+      }
+    }
+
+    h4{
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 0px;
+    }
+  }
+
+  ul{
+    margin-bottom: 0px;
+
+    li{
+      border: 1px solid #ddd;
+      border-bottom: 0 none;
+      height: 80px;
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      -webkit-align-items: center;
+      justify-content: center;
+      -webkit-justify-content: center;
+      position: relative;
+
+      &:hover{
+        border:1px dashed #4595e6;
+        margin-bottom: -1px;
+        .glyphicon{
+          display: inline-block;
+        }
+      }
+
+      .glyphicon{
+        position: absolute;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+        background: #4595e6;
+        color: #fff;
+        display: none;
+
+        &:hover{
+          color:#eee;
+        }
+      }
+
+      .glyphicon-remove{
+        right:0px;
+      }
+      .glyphicon-chevron-up{
+        left:48px;
+      }
+      .glyphicon-chevron-down{
+        left:48px;
+        top:60px;
+      }
+    }
+  }
+
+  .infi-opt-div{
+    border: 1px solid #ddd;
+    height: 70px;
+    padding-top: 10px;
+
+    .infi-print-submit{
+      border-radius: 2px;
+      background: #199ce2;
+      color: #fff;
+    }
+
+    .infi-print-clear{
+      color: #0a50a1;
+      font-size: 12px;
+      cursor: pointer;
+      margin-top: 7px;
+      display: inline-block;
+
+      &:hover{
+        color:#c00;
+      }
+    }
+  }
+}
+
+.table td .infi-hide-column{
+  display: none;
+}
+.infi-print-add{
+  display: inline-block;
+  float: right;
+  margin-left: 10px;
+  margin-top: -2px;
+}
+
+@media (min-width: 0px){
+  .infi-md-2 {
+    width: 20%;
+    float:left
+  }
+  .col-md-2 {
+    width: 16.66666666%;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-12{
+    width:100%;
+  }
+}
+
+
+@media (min-width: 0px)
+{
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+}
+
+//打印特有样式
+@media print{
+  .print-container{
+    margin:0 0 10px 40px;
+  }
+  .noprint{
+    display: none !important;
+  }
+  .infi-main{
+    padding-top: 0px;
+    height:auto;
+    overflow: inherit;
+
+    >div{
+      >div.infi-opt-self-box{
+        display: none;
+      }
+    }
+  }
+  .infi-hide-header{
+    display: block;
+    border-bottom:solid #eee 1px;
+    position: inherit !important;
+    //text-align: center;
+    >h4{
+      display: inline-block;
+      text-align: left;
+    }
+    >.infi-fix-right{
+      position: inherit !important;
+    }
+    >.infi-today-time{
+      display: inline-block;
+    }
+
+    i{
+      display: none;
+    }
+  }
+
+  .infi-opt-self-box{
+    .infi-opt-title{
+      text-align:center;
+      height:auto;
+      line-height: 30px;
+
+      .infi-opt-search{
+        display: block;
+        text-align: right;
+        float: none;
+      }
+
+      i{
+        display: none;
+      }
+    }
+
+    .infi-box-kpi{
+      .infi-kpi-img.col-md-3{
+        width:25%;
+      }
+    }
+
+    .infi-draw-chart{
+      >.row{
+        >div.col-md-6{
+          width:100%;
+        }
+      }
+      >div.col-md-6{
+        width:100%;
+      }
+      .infi-table-scoll-y{
+        height:auto !important;
+        max-height:inherit;
+        margin-top: auto !important;
+      }
+
+      .infi-nopage-table{
+        thead{
+          td{
+            white-space: normal;
+          }
+        }
+      }
+      .col-md-6{
+        &:first-child{
+          border-right:none;
+        }
+      }
+
+      .infi-created-img{
+        display: inline-block;
+      }
+    }
+
+    .infi-kpi-img{
+      .infi-column-kpi{
+        width:100% !important;
+      }
+    }
+  }
+  .print-container .table .infi-up-down i{
+    display: none;
+  }
+  .table td .infi-hide-column{
+    display: inline;
+  }
+  .table .infi-hide-column{
+    display: inline;
+  }
+  .print-container .infi-opt-self-box .infi-draw-chart .infi-up-down{
+    display: none;
+  }
+  .print-container .btn-success{
+    background-color: #333 !important;
+    font-weight: bold;
+    border-width:2px;
+  }
+}
+

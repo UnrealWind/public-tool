@@ -1,0 +1,27 @@
+//定义分类list
+$infi-list-type-margin:10px 0;
+//定义具体分类
+$infi-list-type-list-pd-rt:20px;
+//定一搜索框宽度
+//
+.infi-drug-input{
+  width: 220px;
+}
+.infi-drug-title{
+  font:bold 16px "微软雅黑";
+  margin-bottom:5px;
+}
+.infi-drug-list{
+  color: #797979;
+  width:90%;
+  position: relative;
+  >li{
+    width:150px;
+    >label{
+      cursor:pointer;
+    }
+  }
+  .infi-list-content{
+    position: relative;
+  }
+}

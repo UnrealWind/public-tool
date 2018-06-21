@@ -1,0 +1,43 @@
+<div class="infi-choser-tab">
+    <!--取数多标签显示-->
+    <!--分类,直接展示分类项-->
+    <ul ng-if="contents.$active" class="infi-second-level">
+        <li ng-repeat="entity in tabs" ng-if="entity.nodeType=='classity'">
+            <span class="infi-tabs-show">{{entity.label}}</span>
+            <div choser-tab tabs="entity.children" contents="entity" context="context" catogary="catogary"></div>
+        </li>
+    </ul>
+    <!--点击可以出自己的tab标签-->
+    <ul class="nav nav-pills infi-second-level {{tabs | tabsShow}}" >
+        <li ng-repeat="entity in tabs" ng-class="{true:'selected'}[entity.$active]"
+            ng-show="($index<=21||contents.showAll)&&(entity.nodeType=='label'||entity.nodeType=='leaf')">
+            <input ng-if="entity.label != '其他'" type="checkbox" class="select-item" ng-model="entity.$checked" ng-change="showTabDetail(entity,tabs,'input')"/>
+            <label class="pointer">
+                <span ng-bind="entity.label" class="select-item" ng-click="showTabDetail(entity,tabs,'label')"></span>
+            </label>
+            <!--点击出前置条件的按钮-->
+            <i class="glyphicon glyphicon-cog pointer select-item" title="前置条件"
+               ng-click="showContext(entity)" ng-if="(entity.contextCheck||entity.contextRange)"></i>
+            <!--前置条件-->
+            <span class="infi-triangle-up" ng-if="context.context && entity.$contextActive"></span>
+            <div class="infi-group infi-choser-tabs-context" modal-position
+                 ng-if="(entity.contextCheck||entity.contextRange) && entity.$contextActive">
+                <div choser-contexts option="entity" contents="context" catogary="catogary" type="type"></div>
+            </div>
+        </li>
+        <!--展开收起按钮-->
+        <li style="margin-top: 4px;cursor: pointer;" ng-show="tabs.length > 21">
+            <i title="展开" class="glyphicon glyphicon-circle-arrow-down select-item" ng-show="!contents.showAll" ng-click="showTabsAll('down')"></i>
+            <i title="收起" class="glyphicon glyphicon-circle-arrow-up select-item" ng-show="contents.showAll" ng-click="showTabsAll('up')"></i>
+        </li>
+    </ul>
+    <!--多层级的递归调用-->
+    <div>
+        <div class="infi-second-level" ng-repeat="child in tabs" ng-if="child.children&&child.$active">
+            <div choser-tab tabs="child.children" contents="child" context="context" catogary="catogary"></div>
+        </div>
+    </div>
+    <!--tab最后层级的显示,与options相同-->
+    <div style="margin-top: 10px;" choser-option class="infi-second-level" options="tabs" contents="context" catogary="catogary" type="type"
+         ng-if="contents.$active&&contents.nodeType == 'leaf'&&contents.children.length > 0"></div>
+</div>

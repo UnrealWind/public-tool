@@ -1,0 +1,103 @@
+.infi-chart{
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+
+  .infi-chart-detail{
+    display: inline-block;
+    margin: 0 20px 20px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+
+  .infi-chart-title{
+    font-size: 16px;
+  }
+
+  .infi-chart-single,.infi-chart-multiple{
+    height: 35px;
+    display: inline-block;
+  }
+
+  .infi-chart-single{
+    background-color: #e2c2de;
+    margin-right: -4px;
+  }
+
+  .infi-chart-multiple{
+    background-color: #00caca;
+  }
+
+  .infi-chart-tip{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+  }
+}
+.infi-tooltip{
+  position: absolute;
+  text-align: left;
+  pointer-events: none;
+  background: #FFFFEF;
+  width: 400px;
+  height: 165px;
+  padding: 10px;
+  font-family: arial,helvetica,sans-serif;
+  font-size: 1.1em;
+  color: #333;
+  border-radius: 3px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+  border: 1px solid rgba(200,200,200,0.85);
+  opacity: 0;
+
+  .header2 {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 2px;
+    text-align: center;
+  }
+
+  .header-rule {
+    height: 1px;
+    margin: 1px auto 3px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    background: #ddd;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: #666;
+    text-align: center;
+  }
+
+  .header3 {
+    color: #333;
+    font-size: 15px;
+    font-style: italic;
+    font-family: Georgia;
+    text-align: center;
+    /* width: 170px; */
+  }
+}
+
+.infi-main .infi-box{
+  position: static;
+}
+text.chord{
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1280px) {
+  #svgDiv{width:90%};
+}
+@media screen and (min-width: 1280px) {
+  #svgDiv{width:878px};
+}

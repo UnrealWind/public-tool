@@ -1,0 +1,36 @@
+//@import "color";
+$infi-margin-top: 5px;
+$infi-margin-right: 10px;
+$infi-margin-zero: 0px;
+$infi-header-padding: 15px;
+$infi-modal-border-bottom: 2px;
+$infi-detail-modal-top: 260px;
+
+@mixin margin($top,$right,$bottom,$left){
+  margin:$top $right $bottom $left;
+}
+@mixin padding($top,$right,$bottom,$left){
+  padding: $top $right $bottom $left;
+}
+
+.infi-modal-header{
+  padding: $infi-header-padding;
+  border-bottom: #ccc $infi-modal-border-bottom solid;
+  background-color: #f8f9fd;
+
+  >h4{
+    display: inline-block;
+    margin: $infi-margin-zero;
+  }
+}
+//---------------------临时加上，为了让模态框显示------------------------
+.infi-screen-modal{
+  display: block;
+}
+.infi-details-modal{
+  display: block;
+}
+
+.infi-modal-half-width{
+  width:50%;
+}
